@@ -1,6 +1,6 @@
 # RaCE-PV — legacy source-library snapshot
 
-**Local release draft, not yet published. Historical research code, not the final paper artifact.**
+**Historical source-library release candidate. Not the final paper artifact or a complete experiment reproduction package.**
 
 This is a byte-preserving subset of the source snapshot taken on 2026-09-15,
 before the reliability-gate A candidate was added. It includes the original
@@ -10,7 +10,7 @@ modules. The A candidate and its independent objective are not included.
 
 ## 中文说明
 
-这是旧版代码公开前的整理草稿，不是当前改进版，也不是完整实验复现包。
+这是 RaCE-PV-v1 旧版研究源码快照，不是当前改进版，也不是完整实验复现包。
 保留原模型和原配置，不将旧结果重新包装为新结果。`configs/base.yaml`
 中的 `specialist_loss_weight: 0.15` 是历史默认值，不代表当前最终模型决定，
 也不能据此认定任意历史实验都使用了这一配置。
@@ -27,7 +27,9 @@ modules. The A candidate and its independent objective are not included.
   directories, cloud-operation scripts, manuscript/PPT, chat attachments,
   environment directories, third-party checkouts, credentials and Git history.
 - Original copied file identities are listed in `SNAPSHOT.json`. `SHA256SUMS`
-  records this assembled release draft (excluding the checksum file itself).
+  records the current release files (excluding the checksum file itself). `SNAPSHOT.json`
+  retains the original extraction-time status; current publication preparation is
+  recorded separately in `RELEASE_STATUS.json`.
 - The wider historical scripts and fixtures are intentionally omitted. Only the
   CPU synthetic model/loss checks below are the supported validation route for
   this extract. Do not assume all historical CLI workflows are self-contained.
@@ -51,20 +53,30 @@ they do not establish official Mamba/CUDA equivalence or prediction performance.
 No GPU, raw data, calibration, or heldout evaluation is needed for these checks.
 The tests perform forward/backward checks, not an experimental training run.
 
-This draft passed 71 synthetic tests. Static lint passes with the original
+The original extract passed 71 synthetic tests. Static lint passes with the original
 first-party classification recorded in `ruff.toml`; format check still reports
 57 historical files. Source bytes were not reformatted. See
 [VERIFICATION.md](VERIFICATION.md) for the exact scope and limitations.
 
-## Reuse and release status
+## License, attribution and release status
 
-`LICENSE` preserves the existing project's MIT notice; it was copied separately
-and is identified in `SNAPSHOT.json`. Public release still requires confirmation
-that the owner/contributors can distribute this code and that any adapted
-third-party portions have all required notices. An MIT notice for this project
-does not grant redistribution rights to datasets or external dependencies.
-See [THIRD_PARTY_NOTICE.md](THIRD_PARTY_NOTICE.md).
+The existing MIT [LICENSE](LICENSE) applies to RaCE-PV contributions for which
+the contributors hold the relevant rights. It does not replace upstream terms.
+See [THIRD_PARTY_NOTICE.md](THIRD_PARTY_NOTICE.md) for file-level attribution,
+fixed upstream revisions and full license copies in `licenses/`.
 
-No GitHub repository or remote was created by this extraction. If publishing
-later, start from **this directory only**, not its parent workspace or audit
-directory, and do not import the original project's Git history.
+The repository owner confirmed on 2026-09-16 that they have the right to publish
+this historical extract, that necessary collaborator/institution permissions
+have been obtained or are unnecessary, and that no relevant confidentiality or
+patent restriction prevents publication. This is the owner's statement, not an
+independent legal certification.
+
+The source-only publication checks are recorded in
+[PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md) and
+[RELEASE_STATUS.json](RELEASE_STATUS.json). Preparing these documents does not
+change GitHub visibility. This version is not a validated replacement for the
+ongoing corrected-data/model experiments, and no new experiment is claimed.
+
+Keep future uploads source-only. Do not upload the parent workspace, local audit
+records, credentials, original Git history, raw data, predictions or checkpoints
+as part of this historical release.

@@ -1,0 +1,108 @@
+{
+  "schema": "racepv.legacy-publication-preparation.v1",
+  "date": "2026-09-16",
+  "status": "READY_FOR_OWNER_PUBLICATION_DECISION",
+  "repository": "https://github.com/NaotoShirogane331/RaCE-PV-v1",
+  "based_on_commit": "a5b339c3e8837f628f5659bbc78250f78d0ef085",
+  "source_snapshot": "pre-reliability-gate-A, 2026-09-15",
+  "visibility_changed_by_this_preparation": false,
+  "owner_statement": {
+    "status": "confirmed_by_user",
+    "date": "2026-09-16",
+    "scope": "This historical source-only extract",
+    "statement_zh_CN": "我有权发布，必要许可已取得或不需要，且无上述限制",
+    "question_scope": [
+      "right to publish",
+      "required collaborator or institution permissions obtained or unnecessary",
+      "no relevant confidentiality or patent restriction"
+    ],
+    "independently_verified": false
+  },
+  "review_scope": {
+    "original_files": 147,
+    "original_source_config_and_project_license_files_preserved": 139,
+    "declared_source_references_scanned": true,
+    "targeted_adapter_code_inspection": true,
+    "upstream_license_byte_matches": 5,
+    "full_semantic_similarity_audit": false,
+    "independent_legal_opinion": false,
+    "experimental_validity_certification": false,
+    "new_tests_run": false
+  },
+  "upstreams": [
+    {
+      "project": "FACT",
+      "repository": "https://github.com/wanghq21/FACT",
+      "commit": "aa825721d1a0a6032b2f8bcccc6e0f7b14884ae4",
+      "license": "MIT",
+      "license_url": "https://github.com/wanghq21/FACT/blob/aa825721d1a0a6032b2f8bcccc6e0f7b14884ae4/LICENSE",
+      "license_file": "licenses/FACT-LICENSE.txt",
+      "license_sha256": "8a6caa178ea3f33ebff5d7bb5558628cf5b423305dc30d3630f86564c7db94a2",
+      "license_verified_against_official_fixed_revision": true,
+      "scope": "src/racepv/baselines/fact_qr.py: backbone_features follows the upstream FACT forecast branch; time/frequency features are retained, the point projection is replaced by a seven-quantile head, and protocol-specific input/output handling is added. The MIT notice is retained for adapted portions."
+    },
+    {
+      "project": "iTransformer",
+      "repository": "https://github.com/thuml/iTransformer",
+      "commit": "c2426e68ca13f74aaec08045c5c724d8ad328124",
+      "license": "MIT",
+      "license_url": "https://github.com/thuml/iTransformer/blob/c2426e68ca13f74aaec08045c5c724d8ad328124/LICENSE",
+      "license_file": "licenses/iTransformer-LICENSE.txt",
+      "license_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+      "license_verified_against_official_fixed_revision": true,
+      "scope": "src/racepv/baselines/itransformer_qr.py and extension_registry.py: fixed upstream class loading and an encoder/quantile-head adaptation. The upstream inverted embedding/encoder are obtained externally, not vendored here. Retain MIT attribution for adapted call sequences."
+    },
+    {
+      "project": "SOFTS",
+      "repository": "https://github.com/Secilia-Cxy/SOFTS",
+      "commit": "f5d35fd7c3e716b6383ce6d3cc42c131e32c3c44",
+      "license": "MIT",
+      "license_url": "https://github.com/Secilia-Cxy/SOFTS/blob/f5d35fd7c3e716b6383ce6d3cc42c131e32c3c44/LICENSE",
+      "license_file": "licenses/SOFTS-LICENSE.txt",
+      "license_sha256": "02ad41e7363e960b1fa91658d0c21bdebf9ccb9881323606412dd39e79a3a178",
+      "license_verified_against_official_fixed_revision": true,
+      "scope": "src/racepv/baselines/softs_qr.py and extension_registry.py: fixed upstream class loading and a STAR-encoder/quantile-head adaptation. The external backbone is not bundled. This historic file remains for snapshot fidelity, not as a claim that SOFTS is in the current comparison."
+    },
+    {
+      "project": "OpenLTM",
+      "repository": "https://github.com/thuml/OpenLTM",
+      "commit": "0b3005099d380ecc00d512f72553c7fe8fccca99",
+      "license": "MIT",
+      "license_url": "https://github.com/thuml/OpenLTM/blob/0b3005099d380ecc00d512f72553c7fe8fccca99/LICENSE",
+      "license_file": "licenses/OpenLTM-LICENSE.txt",
+      "license_sha256": "29d2a4c09fa577780522219dc248466977f77cd420354c5e9a0e86550be2b849",
+      "license_verified_against_official_fixed_revision": true,
+      "scope": "src/racepv/baselines/modern.py: Timer-XL adapter loads an identity-audited external OpenLTM model, adds covariate projection and ordered quantile readout. The upstream model/layers are not bundled."
+    },
+    {
+      "project": "CycleNet",
+      "repository": "https://github.com/ACAT-SCUT/CycleNet",
+      "commit": "d807e51fc2dcd143885ee639d97965a7ab0926f4",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/ACAT-SCUT/CycleNet/blob/d807e51fc2dcd143885ee639d97965a7ab0926f4/LICENSE",
+      "license_file": "licenses/CycleNet-LICENSE.txt",
+      "license_sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+      "license_verified_against_official_fixed_revision": true,
+      "scope": "src/racepv/baselines/cyclenet_qr.py: wrapper loads an external CycleNet class, maps masked history and cycle phase, and adds a seven-quantile readout. RecurrentCycle and the upstream Model are not bundled or modified in this extract."
+    }
+  ],
+  "excluded_payload": [
+    "datasets",
+    "calibration/test arrays",
+    "predictions",
+    "checkpoints",
+    "run logs",
+    "third-party source checkouts",
+    "original Git history",
+    "credentials"
+  ],
+  "remaining_actions": [
+    "Owner's separate decision to change repository visibility; this preparation leaves it private"
+  ],
+  "limitations": [
+    "Owner confirmation is an attestation, not independently established title.",
+    "Reference/import scanning and targeted adapter reading cannot prove absence of all unattributed similarities.",
+    "No claim is made about dependency or weight licenses beyond the fixed license evidence explicitly listed.",
+    "Historical experiment and partial-package limitations remain in KNOWN_LIMITATIONS.md."
+  ]
+}

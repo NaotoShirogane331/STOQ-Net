@@ -19,10 +19,13 @@
 5. **Tests are scoped.** Only the listed synthetic model/loss tests are verified
    for this draft. No full-suite, clean-environment installation, official Mamba
    execution, real-data inference, or performance reproduction is claimed.
-6. **License and secrets review.** Existing notices are retained; ownership and
-   third-party notice completeness remain release checks. Pattern scanning is a
-   useful screen, not proof that every possible secret has been detected. No
-   original Git history is included or claimed to have been sanitized.
+6. **License and secrets review.** The owner's publication-rights statement and
+   the bounded upstream attribution review are recorded in PUBLICATION_CHECKLIST.md
+   and RELEASE_STATUS.json. Full pinned license texts are retained in licenses/.
+   This is not an independent ownership determination or an exhaustive
+   similarity/legal audit. Pattern scanning is a useful screen, not proof that
+   every possible secret has been detected. No original Git history is included
+   or claimed to have been sanitized.
 
 Negative or invalidated results must not be reclassified as confirmed positive
 evidence. Future final artifacts should identify their own data/code/configuration

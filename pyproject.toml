@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "race-pv"
+version = "0.1.0"
+description = "Ramp-aware Calibrated Experts for probabilistic photovoltaic forecasting"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "RaCE-PV contributors" }]
+keywords = [
+  "photovoltaic forecasting",
+  "probabilistic forecasting",
+  "mixture of experts",
+  "conformal prediction",
+  "mamba",
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "PyYAML>=6.0",
+  "scipy>=1.11",
+  "scikit-learn>=1.4",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+physics = ["pvlib>=0.11"]
+trees = ["lightgbm>=4.3"]
+forecasting = [
+  "neuralforecast>=3.2.1,<4",
+  "pytorch-forecasting>=1.2",
+  "xlstm>=2.0,<3",
+]
+# mamba-ssm requires a CUDA-capable Linux environment and a matching PyTorch build.
+mamba = ["mamba-ssm>=2.2.4; platform_system == 'Linux'"]
+dev = [
+  "pytest>=8.1",
+  "pytest-cov>=5.0",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+racepv-train = "racepv.cli.train:main"
+racepv-evaluate = "racepv.cli.evaluate:main"
+racepv-prepare = "racepv.cli.prepare:main"
+racepv-smoke = "racepv.cli.smoke:main"
+racepv-baseline = "racepv.cli.baseline:main"
+racepv-external-baseline = "racepv.cli.external_baseline:main"
+racepv-modern-baseline = "racepv.cli.modern_baseline:main"
+racepv-aggregate = "racepv.cli.aggregate:main"
+racepv-select-reference = "racepv.cli.select_reference:main"
+racepv-score-validation = "racepv.cli.score_validation:main"
+racepv-analyze-validation = "racepv.cli.analyze_validation:main"
+racepv-analyze-adjustment = "racepv.cli.analyze_adjustment:main"
+racepv-scenario = "racepv.scenario.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

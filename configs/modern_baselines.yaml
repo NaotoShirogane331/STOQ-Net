@@ -1,0 +1,26 @@
+timemixerpp_qr:
+  d_model: 64
+  layers: 2
+  downsampling_scales: [1, 2, 4]
+  periods: [4, 8, 24]
+  dropout: 0.1
+  implementation_kind: paper_derived_protocol_reproduction
+
+timer_xl_qr:
+  patch_len: 16
+  d_model: 256
+  n_heads: 8
+  e_layers: 4
+  dropout: 0.1
+  initialization: task_specific_from_scratch
+  implementation_kind: official_backbone_protocol_adaptation
+
+rqr_tft:
+  hidden_size: 64
+  attention_heads: 4
+  lstm_layers: 1
+  dropout: 0.1
+  ramp_loss_weight: 1.0
+  ramp_weighted_quantile_multiplier: 6.0
+  ramp_decision_threshold: 0.35
+  implementation_kind: paper_derived_protocol_reproduction

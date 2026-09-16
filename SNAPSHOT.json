@@ -1,0 +1,708 @@
+{
+  "schema": "racepv.legacy-source-extract.v1",
+  "status": "LOCAL_RELEASE_DRAFT_NOT_PUBLISHED",
+  "source_snapshot": "pre-reliability-gate-A, 2026-09-15",
+  "extracted_date": "2026-09-16",
+  "frozen_source_inventory_sha256": "9e4ece082311b5926dd9e12d9f1f1b641248e78c7e3d281d2102fa7079cb3fb4",
+  "subset": "source-library, four historical configs, three synthetic test modules",
+  "files": [
+    {
+      "path": "src/racepv/__init__.py",
+      "sha256": "a21e0e493aa67186c4b83fd9dfa9c3b16494e690d1cd4236493c462d80e975f6",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/adjustment.py",
+      "sha256": "2edf3edf36866c2be6b52dd898f20ccb86685b1fa550acafa39d834069bba5e4",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/audit.py",
+      "sha256": "1c3d69e4557075069f297b7684c1287713aa753d97798519cf118aa1aaea0af0",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/__init__.py",
+      "sha256": "fc5dd44bc664018314de2101167c09bf64fd7ddca8ddf7c8446c4ecec5728f29",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/classical.py",
+      "sha256": "d8ae71cd076f5e30d11bf48011a2130b7f441bb506bc3709868eae0da72016e9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/cyclenet_qr.py",
+      "sha256": "baae4f107e3e201a942ce349ad9f54d6742892e77e9a7ff2da3a6cb2ba435be9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/extension_registry.py",
+      "sha256": "6097165cc4b3059788885f78e0374b92277aedf68fb23aeadd5edf456bd72ed7",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/external.py",
+      "sha256": "07ca23ba209dfbe178c34f21d1dfc4f6ee646381fc28ed01f1c593b006b31fc3",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/fact_qr.py",
+      "sha256": "514a359a3131ec5ce696f157bb2fe7ff3097b6e1cc41a6e775254fa6d92b022c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/foundation_extension.py",
+      "sha256": "e34ce02148311a178f7c3bfb11e7adb2914638b33c1427e8ab5581ef85860c29",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/foundation_runtime.py",
+      "sha256": "7b0ef336c7f69f055f86315d166078b310237932647040fd30fa1d6c651136db",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/itransformer_qr.py",
+      "sha256": "a27245286032c6c173171ec658a4ee4c0e5fde6a068456d522c90e6decd67881",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/modern.py",
+      "sha256": "fc91b021a837bbf8ee7b8fb9d5926a737d4695c0bd8a34b8500fccc5dd889981",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/neural.py",
+      "sha256": "de4a53b07a1f230000a6238c8c7491bdf5566b33245be1e758e9eeac6af33847",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/registry.py",
+      "sha256": "0c0a9310110606bbcf601e52092ff98dd5b7931c672fb7184f508a8be778de1d",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/s_mamba.py",
+      "sha256": "7f31bdada9f646042256372f93069e6d27bf95e4e1d7e1c0393039ebb079b284",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/baselines/softs_qr.py",
+      "sha256": "902095a0edc69fc4f19d8510fe2c65c06d1d8ba2ad31a539fee2b9fe91ca73a8",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/calibration/__init__.py",
+      "sha256": "82d47a367c0694a58a4003e9bfc4775462b4283ad9b187b712e38696f2589d6a",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/calibration/cqr.py",
+      "sha256": "8066f7000abad3c163995df1b7180ca5507cf3592266f7d999fa2d76779394d5",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/__init__.py",
+      "sha256": "a2ffeffd4abcae6b0ee3bc1d488a4d1f5273522004d312f151a98a163d61d9ce",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/aggregate.py",
+      "sha256": "d7066dd6659d4b0650afbd64563b838468fd895ff5a85f3a8c993b4afe584060",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/analyze_adjustment.py",
+      "sha256": "304eaaf6a89d5fd52a0ca42f0a6279087998515cfb68f5f9fb8ab8d86d240f69",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/analyze_validation.py",
+      "sha256": "bbecb913e2786fa701130f01171d42043ec90ded7adb040ec44cb028be658fc9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/baseline.py",
+      "sha256": "271e0af2b3e88d2481733dec2dc0b5be32c25997bf886f7c4be2bcaa48d711f8",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/cyclenet_baseline.py",
+      "sha256": "23474c392848342c0efec61e1ab5c648f00e3e87124c03f65ff8f26ae2cab2f9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/evaluate.py",
+      "sha256": "892d05551c8382fcf1c359800671424932820a1d520f2a8a44524ae1cff1e44b",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/extension_baseline.py",
+      "sha256": "ad17db355ea808f7a708830da3cde47ddc9652f11395c4fe25b45eb3d41f6ed2",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/external_baseline.py",
+      "sha256": "ef233b71657624a5773a62aae3c809bf1647ab8bff102abb79981899c586152f",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/modern_baseline.py",
+      "sha256": "66092f695dc12b27f8f9c64a3184782ec7284bcddd5c669e3adaf552a22ef278",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/prepare.py",
+      "sha256": "cf2c585d8d368691d998af608da310ff285de36f5d3da6b4daad97d8253f2cad",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_acceptance.py",
+      "sha256": "859e4f3999ad9c2fbfd0927a38634aa43304a314d4c1bb9464420d4c4e670e67",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_extraction.py",
+      "sha256": "2eca53d20626085e2b557a0a53f4fa1925f549870b88f53448fc9ab4f3aa5773",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_fit.py",
+      "sha256": "2886ccdb67fd23bd83fd1cdccf5ebe8337ed4b207f72c5bd7adef64c044348b5",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_pipeline.py",
+      "sha256": "bc0584052314d81bb6593e5540446cbf8baa9cf3c2db44240712224529161b1c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_prepare.py",
+      "sha256": "046e6f0ef3b6cc9d503da6467aedd6a86fc2f87b182e960f9be63020b6c8466c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_source_stage.py",
+      "sha256": "943c93ec7ccb35a08cf76652b27c0c43f55eaecc3f8cb6dff525e791f79c0a24",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/scoped_stage_binding.py",
+      "sha256": "f4e8c246d36a475b81eeb601b622182ffb463ca6d6b5523df236b6c353144891",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/score_validation.py",
+      "sha256": "49edd76fb6ecf3e96f3f3dfc1d6c491fa089ecc000920135ff51f318354e291a",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/select_reference.py",
+      "sha256": "385eae191434b55ee26a43b48af7dfaa106a399855ea88c35c59a2a34eddbacb",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/smoke.py",
+      "sha256": "89396d679b7ec79c603d9625c7814c1d926427851bd1e935d143ff20de951d8a",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/cli/train.py",
+      "sha256": "56ad3840fc9a43db0fafa38c8837a26f1eb7d106c17eaf83e0d08da465afb541",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/config.py",
+      "sha256": "f789b3a1a1a3b70fccf16b928a5dcf0ac71dd869f90a9b287f4735fd1f1b0f1c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/__init__.py",
+      "sha256": "55a781c1881a858f7bb5155c13e89e4d03f3ce8e1c28c4552c54f639719d495e",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/adapters.py",
+      "sha256": "196001e64c8c2419ac5696a62d066e4ed0a7e2f2e48414c292e9b5fea62cb145",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/causal_history.py",
+      "sha256": "815a0d781f7ce88de34c241241182185df3831b3aeb248e053814317b8d33aeb",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/dataset.py",
+      "sha256": "1d8a74f8679a66cf09731d32fc424181227069cf8af53398a8def14d9606dc08",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/metadata_preflight.py",
+      "sha256": "0b8a13e23d6932d4048575ea950b15f3531e2ae000a89312177dbaeb01337861",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/origin_clock.py",
+      "sha256": "5ab153fefe3d9056e5e012a74a1fb840a122c51fdb36c0794916eb450d53cbf4",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/prepared_contract.py",
+      "sha256": "61355d19e89845bc4c003a8d34eb67cc2d1f44af39b691782d324f928782a2d0",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/preprocessing.py",
+      "sha256": "b2e54b4eaaba9936b59e6e2b1409c385c73fd88a991cf676a3715558bb088293",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/quality.py",
+      "sha256": "508f8805ceee55b4b73f02bb29f5e9668f4d9c051092ba7d968a06a93efa3456",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/ramp.py",
+      "sha256": "a3f1d308dcd7704a519c8011c05ab83c994d25ca88e6a6de7143c69d4cf577f9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scientific_view.py",
+      "sha256": "59b92d936d871808da57309f9370f5dd9b1b3506f7d42173aa3ea3a475de2661",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_chronology.py",
+      "sha256": "3ab2ea9b7966f4fd8b2969d667dc1ec157e321e29a998ab8db9a282219c80ce1",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_consumer.py",
+      "sha256": "6c1c8fa75779b4a7c20d8a7b5dd9feb2c0b76270bbac92d48acd61cab9d622a1",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_input.py",
+      "sha256": "947d1fe2f93ceba2433221dd920aa227a4b795d2f3c16a1525c175fc2add7c97",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_prepared.py",
+      "sha256": "abf4b54fd2860417dd4ea46e597c9cda2ba16d7a3aaf8901df5c2f3ae411aa47",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_publication.py",
+      "sha256": "3af2599d3a9248617da013367c6fb98f79361558186995b1e68dccf0b93b5f70",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_scientific_view.py",
+      "sha256": "0d979d92cb015476af15a2c87251072032834af219564c61bc6a2076fb197ca9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_source_correspondence.py",
+      "sha256": "26e03861a9b1c4d1fb2a7848f5f0093b260df9e77816827805f38206e0893f4f",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/scoped_store.py",
+      "sha256": "c59f01602df9724db5e02523d9b4527ae01bcefa2a27b400b7a21ab98c2c1704",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/source_registration.py",
+      "sha256": "741936b2c170c00482c8df56f3dad06dafd10f98ab67bcd9388d630f3744eb6f",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/splits.py",
+      "sha256": "aceb5efce306f8432c1ec61a0ff3e97c09b35b04b4e50c4df3873ae44061c763",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/data/weather.py",
+      "sha256": "b9275ab944d11a430e8681a0418235b80cdff717c0d4cd59a2f753d37c378137",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/diagnostics.py",
+      "sha256": "8893a1e43d1f4345be613861b5e3e4cc0b1839769d5af2e668dfb0500520dfd2",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/environment.py",
+      "sha256": "b6751ecd51fe8c647e7267e2e702ca756e61f13863ac65b48518066b9f228b57",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/evidence.py",
+      "sha256": "b26980622127673519ab9554165cb419871f2c068178e088b97d6c5642800621",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/io.py",
+      "sha256": "a9f33e63c155219f2b391e39789ce46b7a0789acde4bfaa45c4dc1d646f7fc2d",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/losses.py",
+      "sha256": "f64d346d4b03efcd97c3d54cc2a3af53fea96378636ec655baaf8f0f2b140fda",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/__init__.py",
+      "sha256": "8acb13cb46dceb8a570b57c46682dc0c5c0c062e8a4048e0294668ee3d1b350c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/calendar_bootstrap.py",
+      "sha256": "76e4132436944d52e4db312eb140fc6b9dc4a463a531b3b2a084ebd33b8dbab8",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/common_cells.py",
+      "sha256": "8f026b7d7accb8017098583b0d7fbc2f669b2ef8a9b70ace04ae28b2b17aa2ad",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/inference_family.py",
+      "sha256": "2960f1320dd85aa2dd0f118b4d69bf1d7bfbce7b88ff6adcd156e28e0ff82527",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/point.py",
+      "sha256": "40e58ae7a8dd0c1b91ff56890e7a2deafd777b76a46f7dc5d4fff858f5cd991c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/probabilistic.py",
+      "sha256": "a9e096193908a0280b80c9bc10c502bd6d45d8880c6ccbc8f89d5eb2ae288afe",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/quantile_scoring.py",
+      "sha256": "920cc2f8993d1a3474227fc2a5b6cd3de8dc87828de834d225000715d5ef74df",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/ramp.py",
+      "sha256": "94070e1ab69759da77f5260abb0829630db359b200689306e47e1a01b4ecf3d5",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/statistics.py",
+      "sha256": "cd38737294bec113c12e6c546813dcea831357f6592eae75cda0f6a95b75e02e",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/metrics/temporal_inference.py",
+      "sha256": "1ad20c479b59aa0f4b53c9506bef18afb7084b205183136469682f158c80b196",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/__init__.py",
+      "sha256": "6126d969a06cd6bd5974a66fc262ed286a3b4f8f3a5753d8ca401623d7e03339",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/components.py",
+      "sha256": "c5d75aa264bbdc1a23ed7df50d323f7b485cd3b49fca0243af55ad3373f103b0",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/config.py",
+      "sha256": "367a6c5e883e3bb64875457a7532bbadc18a08409524d54624cce531cba587eb",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/experts.py",
+      "sha256": "13881838c2515a84570d7cb89623a6efe06e5795cd3edd164a9eca01cef36e7b",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/race_pv.py",
+      "sha256": "71291d2ddff2e039b176affd0c1fde620943c93c0a5c9a1056fb229bdd1a436e",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/models/tail_residual.py",
+      "sha256": "bf0804867e1aaefaee3ec06f210c17c5d02f3bc1eb44b973d59bbd95695f60f7",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/physics/__init__.py",
+      "sha256": "4f3ff994e09afe23b1dbc9539f31d68650319b0c5a084686e92622b3068d0d7c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/physics/clear_sky.py",
+      "sha256": "89c889086ad31390dab6cce2b2568da7b20c7922c89caa5160f9d01fb8933b4c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/prediction_state_ablation.py",
+      "sha256": "9c5ea40d578ad687d1748fe8cad868eb198ae2bc41687e6004587526fbcf3eed",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/prediction_state_forensics.py",
+      "sha256": "c1c140500298036f4ba72b38b28ec868404bd4013446e2f9bdd15af6d1040f3d",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/ramp_diagnostics.py",
+      "sha256": "2f2f8a163c6189616d5a1b185aa85e4d19dadfe42af6e5caa9e840bee2e9c51b",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/__init__.py",
+      "sha256": "42eacb9dc2868135bafb2cf407054f9fef0de31c965d82b9ef490b1060bcdbdb",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/cohort.py",
+      "sha256": "6ac97510ffbb014b9831e497b15bc9658a9b49eda041471970dea7b688be4719",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/compact_storage.py",
+      "sha256": "336394c9d032c71aa41f0b2f2ffc3609a0c9fb2476236665717b389a0c093a4b",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/constants.py",
+      "sha256": "a157245ca403d626c431594f877d55c88fce0d5200b0784b5cef954d45b89805",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/evaluation.py",
+      "sha256": "e638e42ede4d34c3b3529964f175f05533c7e54d85445cb1a5b5a1693f99465f",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/loader.py",
+      "sha256": "ddb507afb8031a8059f9088471bdd8e0869d6aba2daf7e95ec82989ee92444fd",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/nested_validation.py",
+      "sha256": "9f86975fcf2aa787e2a117464c1f2be92ab3c49a1da370b18a793fdb164ce115",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/pipeline.py",
+      "sha256": "fecd5d3487afb8a8f46c7c79a1a53df9f3d1e9b4daf1f0f5d15041b81bb0a6c7",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/preflight.py",
+      "sha256": "eb17c586fbe892ca4db6d959260b55317dc7c81b0d38847856abb4b3baab663c",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/realism.py",
+      "sha256": "4704f245ff1af80899f6b3b84e7ebb1673505cb4b6757f1ab1f6854ffff42655",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_artifacts.py",
+      "sha256": "1cc0d62759f02f420d8283d4b233c756acccc77c7dba27fcab856e26348454b9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_candidate.py",
+      "sha256": "8fc17417f3cc58d1ba535b3ae33b616ca45d72fe6cba0610a82bb0b36d23fec3",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_confirmation.py",
+      "sha256": "a206c80820fd7d19ae0e43917586b7e615366f4c634e50164202697c88d51bde",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_evaluate.py",
+      "sha256": "ec115854104a50274713142bd3e69ee0423ff69c9c9f4ea812fa5584d1e6921d",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_export.py",
+      "sha256": "016f19b588899ac74a0ecb8a85d89be1a68287c4ae7586825fd79bc1b366bc8f",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_manifest.py",
+      "sha256": "bf04abd0f11b0f9b891b40168e3560c4988d7720f44b4a51c7fa808dfec62df0",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_promote.py",
+      "sha256": "fca544a26630fe6f22dfdf1f1b067f19483b314aae28d2932ddb386bfed35110",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_r6.py",
+      "sha256": "c0f779e3969914fab99f256fa75391a9aec449fb1e9b1a2c613034f287d38e75",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_r6b_design.py",
+      "sha256": "4bb9807d4aa1640324e378ffbebb5fa2b13f3d404426dc93df3f412ca2eca240",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_r6b.py",
+      "sha256": "86a38a71c6a797eab724b714840ac9e50194f097f2e3638547f876db5b228675",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_revision_verify.py",
+      "sha256": "263612bdc6b05cf9409ef604cc08a5b5e6c8ac2224d0ac49b6f38fe425b381c0",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_revision.py",
+      "sha256": "a597b1b79e7ec8e79d496f5fa9ca3027a22c21bba166bda04fb2fc8d76a52699",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_unified.py",
+      "sha256": "6c380b13a7e2bf993338ad731205c587629b8befe390ecdcc33e2ccc06f6e3fa",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/scenario_verify.py",
+      "sha256": "7934fa5363d96528677ff2604312820417c8a6626655ade20f5e8398acc6e755",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/scenario/synthesis.py",
+      "sha256": "05a4dc82594dcd3e18faa00a0639f9c2dcd6cbca13b59594dbd417539bec3e41",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/sparse_tail_analysis.py",
+      "sha256": "b912a9ab1f6fb0528129f094d23b058f15534ecfd38c3179390d25b6cc7c423e",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/sparse_tail_forensics.py",
+      "sha256": "37a393a50bdf69b62416fb75ff2bb3ea01ac78d33b0f6f2a20731e3a975bfee4",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/state_error_diagnostics.py",
+      "sha256": "e50c623374c81d4ddbe0286716cfc0f39ffe719cb76dfc0b17e827f5b348d929",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/__init__.py",
+      "sha256": "fc0a42fd47898a2b74f3fe664a43cf3ed609202dfa1476a05b6751d47febb247",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/checkpoint.py",
+      "sha256": "bdd69710cdc0814a76d396c19071c13f2aee7f97d5158f83023534cbc9f822d4",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/engine.py",
+      "sha256": "aa4c63bc0d70896644ec402b75de51a0c49f1e9071160341c93e1599d8b1daa5",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/frozen_adapter.py",
+      "sha256": "4ae19e622754fec5305133b25db15d56a95dbc09ad803f028b4b9fbdb973ecc6",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/loading.py",
+      "sha256": "01e85db242534b658b8a3870183018afba1a82b03d3d20a4d0effab2cefd9a23",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/recoverable_run.py",
+      "sha256": "49ea4bf714137a1d969a9e992ada725224f9f947d29e8b7bba8e0752a0d47b22",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/recovery.py",
+      "sha256": "368ff593f137a339bdb557bf5520a22356f4e510f969b80ee4234391cb602bc9",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/search.py",
+      "sha256": "0eabf878386f8be7a07290f3d9df66f5ed939f6bb685294181cf4846879c2410",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/splits.py",
+      "sha256": "d167f9e43e5ee303c60631066ccba264876962dbef0d6cb2eb03146c089b6ea8",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/training/timing.py",
+      "sha256": "f926404d603368e72bdadfd28ac173e1732c7209c16e3bf25969cd3e629237fb",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/utils.py",
+      "sha256": "9176fe879272fca1e3a4b560d43bbfc1e089d1095afdc2fab6dab18d7855d2c7",
+      "kind": "python"
+    },
+    {
+      "path": "src/racepv/validation_screening.py",
+      "sha256": "588d54504651fab6d98af7024e1060bb1f6427a7c3efc9c9aa83dc1cbf40e573",
+      "kind": "python"
+    },
+    {
+      "path": "tests/test_model.py",
+      "sha256": "2a240e582f3a2a1785037e7eb3ff216f6e2597902ad4bbd7e7c5f7a54e0c593d",
+      "kind": "python"
+    },
+    {
+      "path": "tests/test_ramp_refinement_losses.py",
+      "sha256": "398cc6e5e65306eb301b269307436ec36fa99a25ae3b9833acda68dbbb621fb8",
+      "kind": "python"
+    },
+    {
+      "path": "tests/test_sparse_tail_losses.py",
+      "sha256": "3abf7e81255b12f6cc0b6c5c79a4146bfb4c3c5a339542bf67e983741a7d1110",
+      "kind": "python"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "8e60ca5546301bf8b4d297a6857009cfd94ac5d64aab37dc1fcad35a6d41ec4f",
+      "kind": "resource"
+    },
+    {
+      "path": "configs/base.yaml",
+      "sha256": "de1f616e753a4ae71b01b4c1bc9376c849f13f9492b6194ee19244ee49073653",
+      "kind": "resource"
+    },
+    {
+      "path": "configs/baseline_extension_supervised_fp32_remediation.yaml",
+      "sha256": "58cc6d05c8cd803f6cdb2cbb0cccccf8baac099e9c346c6d2caa48af86700c1e",
+      "kind": "resource"
+    },
+    {
+      "path": "configs/baseline_extension_supervised.yaml",
+      "sha256": "86b60d2841b86fa82ed61c4b48f35a95c53d22f5de16a592ccccecef6ff65236",
+      "kind": "resource"
+    },
+    {
+      "path": "configs/modern_baselines.yaml",
+      "sha256": "65207b0f18e8453816371d6cdd9574c51fd50100854574ed1d4547ab0ff35522",
+      "kind": "resource"
+    }
+  ],
+  "license_sha256": "658c18a68fb1b1071d773555498206b9e1366bb5e33329f945e5bfec0c04c2c7",
+  "license_provenance": "Separately copied existing project LICENSE; not in frozen Python/config inventory.",
+  "new_candidate_included": false,
+  "data_included": false,
+  "checkpoints_included": false,
+  "experiment_results_included": false,
+  "git_history_included": false,
+  "full_reproduction_claim": false
+}

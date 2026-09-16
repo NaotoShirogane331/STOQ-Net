@@ -1,0 +1,46 @@
+run_name: racepv-main
+output_dir: runs/racepv-main
+
+quantiles: [0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95]
+
+data:
+  frequency_minutes: 15
+  history_length: 192
+  horizon: 24
+  stride: 1
+  max_interpolation_minutes: 30
+  daylight_threshold: 0.01
+  power_upper_bound: 1.05
+  capacity_fallback_quantile: 0.995
+  ramp_window_steps: 2
+  ramp_quantile: 0.90
+  split_ratios: [0.60, 0.15, 0.10, 0.15]
+  allowed_future_features:
+    - clear_sky_power_norm
+    - solar_elevation
+    - solar_azimuth_sin
+    - solar_azimuth_cos
+    - hour_sin
+    - hour_cos
+    - day_of_year_sin
+    - day_of_year_cos
+    - lead_time_hours
+
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 80
+  patience: 10
+  gradient_clip_norm: 1.0
+  state_loss_weight: 1.0
+  specialist_loss_weight: 0.15
+  num_workers: 0
+  seed: 13
+  mixed_precision: true
+
+calibration:
+  coverages: [0.80, 0.90]
+  min_group_scores: 200
+  steps_per_day: 96
+  horizon_bands: [[0, 4], [4, 12], [12, 24]]

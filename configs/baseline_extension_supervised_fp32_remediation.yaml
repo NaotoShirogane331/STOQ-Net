@@ -1,0 +1,81 @@
+schema_version: 2
+purpose: racepv_baseline_extension_fp32_remediation
+selection_boundary: validation_only
+selection_metric: daylight_qcrps
+quantiles: [0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95]
+seeds: [13, 29, 47, 71, 101]
+common_config:
+  path: configs/final_day1_4090.yaml
+  sha256: 8a1d7eb02b4773d200c759050c9e7e11d8f3f2da9698539cbda7608d1101e1b0
+data_protocol:
+  train_descriptor:
+    path: data/processed/dkasc-tail-confirm-4site-s4/train.index.json
+    sha256: 652586ce411a393dfca6e4c1a884debd06c698be8749b893431b4b765bdd2559
+    content_sha256: 7b51eb990737a4de6b2258c5388d81170f0c8aa104f6c978ccf17cfcb56e5f37
+  validation_descriptor:
+    path: data/processed/dkasc-tail-confirm-4site-s4/validation.index.json
+    sha256: 11a49549d9bff5a434bfb2bd62fc01595cbaf6e4213e90a80d99c8116be0b8fd
+    content_sha256: 5fed358f7cf1d0db3fd0f8f5d3013e8757d6a7ccf324225de4289ad4ffc1bcd7
+  future_target: forbidden
+models:
+  fact_qr:
+    implementation_kind: paper_derived_protocol_adaptation
+    upstream_defaults:
+      d_model: 512
+      d_ff: 1024
+      dropout: 0.1
+      use_norm: true
+      freq: n
+      num_kernels: 4
+      dilation: [1, 2, 3, 2, 1]
+      core: 0.5
+  itransformer_qr:
+    implementation_kind: paper_derived_protocol_adaptation
+    upstream_defaults:
+      d_model: 512
+      n_heads: 8
+      e_layers: 2
+      d_ff: 2048
+      factor: 1
+      dropout: 0.1
+      embed: timeF
+      freq: h
+      activation: gelu
+      output_attention: false
+      use_norm: true
+      class_strategy: projection
+  softs_qr:
+    implementation_kind: paper_derived_protocol_adaptation
+    upstream_defaults:
+      d_model: 512
+      d_core: 512
+      e_layers: 2
+      d_ff: 2048
+      dropout: 0.0
+      activation: gelu
+      use_norm: true
+remediation_cells:
+  - {model_id: fact_qr, seed: 71}
+  - {model_id: itransformer_qr, seed: 13}
+  - {model_id: itransformer_qr, seed: 29}
+  - {model_id: itransformer_qr, seed: 47}
+  - {model_id: itransformer_qr, seed: 71}
+  - {model_id: itransformer_qr, seed: 101}
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 8
+  patience: 2
+  gradient_clip_norm: 1.0
+  num_workers: 0
+  mixed_precision: false
+  hyperparameter_search: false
+  maximum_fit_count: 6
+  epoch_recovery: true
+  wall_clock_timeout_seconds: null
+  completed_cell_action: skip_verified
+  fit_complete_missing_export_action: export_only
+  invalid_cell_action: preserve_and_fail_closed
+heldout:
+  calibration_or_test_loaded: false

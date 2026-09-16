@@ -1,0 +1,6 @@
+# Packaging-only context: these were first-party modules in the complete snapshot.
+# Keep every original lint rule; do not suppress any diagnostic.
+extend = "pyproject.toml"
+
+[lint.isort]
+known-first-party = ["racepv", "scripts"]

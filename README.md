@@ -10,7 +10,7 @@ modules. The A candidate and its independent objective are not included.
 
 ## 中文说明
 
-这是 RaCE-PV-v1 旧版研究源码快照，不是当前改进版，也不是完整实验复现包。
+这是 RaCE-PV-v1 旧版研究源码快照，不是当前改进版，不是完整实验复现包。
 保留原模型和原配置，不将旧结果重新包装为新结果。`configs/base.yaml`
 中的 `specialist_loss_weight: 0.15` 是历史默认值，不代表当前最终模型决定，
 也不能据此认定任意历史实验都使用了这一配置。

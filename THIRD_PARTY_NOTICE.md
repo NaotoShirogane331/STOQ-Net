@@ -1,6 +1,14 @@
 # Third-party notices and source boundaries
 
-Reviewed 2026-09-16 for the historical RaCE-PV-v1 source-library extract.
+Historical attribution review: 2026-09-16. Retained for the private source-only
+update on 2026-10-03; this update is not a new exhaustive licensing audit.
+
+The runtime-v4 library additionally includes `research_official.py` (external
+NeuralForecast backbones), `research_foundation.py` (existing external foundation
+adapters), and `research_tcn.py` (local decoder). These files do not bundle the
+external packages, weights or upstream source trees. The C-pilot adapter calls
+the existing local library. The historical rights confirmation below applies
+to the historical extract and must not be read as a new independent certification.
 
 ## Attribution and retained license texts
 

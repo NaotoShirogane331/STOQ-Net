@@ -127,6 +127,34 @@ class StablePeriodicExpert(nn.Module):
         history_power_available: Tensor,
         weather_context: Tensor | None = None,
     ) -> tuple[Tensor, Tensor, Tensor, Tensor]:
+        forecast_hidden, state_hidden, physical_location = self.encode(
+            history_values,
+            history_mask,
+            future_known,
+            site_metadata,
+            physical_time_hours,
+            lead_time_hours,
+            last_power,
+            history_power_available,
+            weather_context,
+        )
+        forecast_quantiles = self.quantile_head(forecast_hidden, physical_location)
+        state_quantiles = self.quantile_head(state_hidden, physical_location)
+        return forecast_quantiles, forecast_hidden, state_quantiles, state_hidden
+
+    def encode(
+        self,
+        history_values: Tensor,
+        history_mask: Tensor,
+        future_known: Tensor,
+        site_metadata: Tensor,
+        physical_time_hours: Tensor,
+        lead_time_hours: Tensor,
+        last_power: Tensor,
+        history_power_available: Tensor,
+        weather_context: Tensor | None = None,
+    ) -> tuple[Tensor, Tensor, Tensor]:
+        """Return horizon representations and the original periodic physical location."""
         power = history_values[..., self.config.power_index : self.config.power_index + 1]
         if self.config.use_clear_sky_prior:
             clear_sky = history_values[
@@ -202,9 +230,7 @@ class StablePeriodicExpert(nn.Module):
             if weather_context is None:
                 raise ValueError("weather-enabled stable expert requires weather_context")
             forecast_hidden = state_hidden + self.weather_projection(weather_context)
-        forecast_quantiles = self.quantile_head(forecast_hidden, physical_location)
-        state_quantiles = self.quantile_head(state_hidden, physical_location)
-        return forecast_quantiles, forecast_hidden, state_quantiles, state_hidden
+        return forecast_hidden, state_hidden, physical_location
 
 
 class TransientDirectionalExpert(nn.Module):
@@ -302,6 +328,57 @@ class TransientDirectionalExpert(nn.Module):
         history_power_available: Tensor,
         weather_context: Tensor | None = None,
     ) -> tuple[Tensor, Tensor, Tensor, Tensor, Tensor, Tensor, Tensor, Tensor]:
+        forecast_shared, state_shared = self.encode(
+            history_values,
+            history_mask,
+            future_known,
+            site_metadata,
+            lead_time_hours,
+            physical_time_hours,
+            weather_context,
+        )
+        state_up_hidden = self.up_hidden(state_shared)
+        state_down_hidden = self.down_hidden(state_shared)
+        forecast_up_hidden = self.up_hidden(forecast_shared)
+        forecast_down_hidden = self.down_hidden(forecast_shared)
+
+        # Direction was supplied by specialist supervision, never a hard sign rule.
+        fallback = (
+            future_known[..., self.config.future_clear_sky_index]
+            if self.config.use_clear_sky_prior
+            else torch.zeros_like(lead_time_hours)
+        )
+        physical_anchor = torch.where(
+            history_power_available.unsqueeze(1),
+            last_power.unsqueeze(1).expand(-1, future_known.shape[1]),
+            fallback,
+        )
+        forecast_up_quantiles = self.up_quantile_head(forecast_up_hidden, physical_anchor)
+        forecast_down_quantiles = self.down_quantile_head(forecast_down_hidden, physical_anchor)
+        state_up_quantiles = self.up_quantile_head(state_up_hidden, physical_anchor)
+        state_down_quantiles = self.down_quantile_head(state_down_hidden, physical_anchor)
+        return (
+            forecast_up_quantiles,
+            forecast_down_quantiles,
+            forecast_up_hidden,
+            forecast_down_hidden,
+            state_up_quantiles,
+            state_down_quantiles,
+            state_up_hidden,
+            state_down_hidden,
+        )
+
+    def encode(
+        self,
+        history_values: Tensor,
+        history_mask: Tensor,
+        future_known: Tensor,
+        site_metadata: Tensor,
+        lead_time_hours: Tensor,
+        physical_time_hours: Tensor,
+        weather_context: Tensor | None = None,
+    ) -> tuple[Tensor, Tensor]:
+        """Return the shared horizon representation before the independent heads."""
         power = history_values[..., self.config.power_index : self.config.power_index + 1]
         if self.config.use_clear_sky_prior:
             clear_sky = history_values[
@@ -366,38 +443,7 @@ class TransientDirectionalExpert(nn.Module):
             if weather_context is None:
                 raise ValueError("weather-enabled transient expert requires weather_context")
             forecast_shared = state_shared + self.weather_projection(weather_context)
-        state_up_hidden = self.up_hidden(state_shared)
-        state_down_hidden = self.down_hidden(state_shared)
-        forecast_up_hidden = self.up_hidden(forecast_shared)
-        forecast_down_hidden = self.down_hidden(forecast_shared)
-
-        # A last-power anchor makes the transient experts model changes instead
-        # of relearning the absolute site scale.  Direction is learned by the
-        # supervised specialist loss, not imposed by a brittle hard sign rule.
-        fallback = (
-            future_known[..., self.config.future_clear_sky_index]
-            if self.config.use_clear_sky_prior
-            else torch.zeros_like(lead_time_hours)
-        )
-        physical_anchor = torch.where(
-            history_power_available.unsqueeze(1),
-            last_power.unsqueeze(1).expand(-1, future_known.shape[1]),
-            fallback,
-        )
-        forecast_up_quantiles = self.up_quantile_head(forecast_up_hidden, physical_anchor)
-        forecast_down_quantiles = self.down_quantile_head(forecast_down_hidden, physical_anchor)
-        state_up_quantiles = self.up_quantile_head(state_up_hidden, physical_anchor)
-        state_down_quantiles = self.down_quantile_head(state_down_hidden, physical_anchor)
-        return (
-            forecast_up_quantiles,
-            forecast_down_quantiles,
-            forecast_up_hidden,
-            forecast_down_hidden,
-            state_up_quantiles,
-            state_down_quantiles,
-            state_up_hidden,
-            state_down_hidden,
-        )
+        return forecast_shared, state_shared
 
 
 def ramp_history_statistics(config: RaCEPVConfig, history_values: Tensor) -> Tensor:

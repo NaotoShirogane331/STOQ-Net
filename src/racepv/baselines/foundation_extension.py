@@ -436,9 +436,12 @@ def _validate_point_predictions(value: object, batch: int, horizon: int) -> np.n
         raise ValueError(f"point prediction shape must be {expected}")
     if not np.isfinite(array).all():
         raise ValueError("point predictions must be finite")
-    if np.any(array < 0.0) or np.any(array > MAXIMUM_POWER):
-        raise ValueError("point predictions must remain within the physical range [0, 1.05]")
-    result = np.array(array, dtype=np.float32, copy=True, order="C")
+    result = np.array(
+        np.clip(array, 0.0, MAXIMUM_POWER),
+        dtype=np.float32,
+        copy=True,
+        order="C",
+    )
     result.setflags(write=False)
     return result
 
@@ -524,11 +527,6 @@ class _SealedFoundationForecastAdapter:
             )
         if not np.isfinite(raw_samples).all():
             raise ValueError(f"{self.model_id} samples must be finite")
-        if np.any(raw_samples < 0.0) or np.any(raw_samples > MAXIMUM_POWER):
-            raise ValueError(
-                f"{self.model_id} samples must remain within the physical range [0, 1.05]"
-            )
-
         input_digest = hashlib.sha256()
         input_digest.update(str(past_target.shape).encode("ascii"))
         input_digest.update(past_target.tobytes())
@@ -542,7 +540,8 @@ class _SealedFoundationForecastAdapter:
         if previous != observed_digest:
             raise ValueError(f"{self.model_id} stochastic repeat mismatch for the fixed RNG seed")
 
-        quantiles = np.quantile(raw_samples, QUANTILES, axis=1).transpose(1, 2, 0)
+        bounded_samples = np.clip(raw_samples, 0.0, MAXIMUM_POWER)
+        quantiles = np.quantile(bounded_samples, QUANTILES, axis=1).transpose(1, 2, 0)
         return _validate_predictions(
             quantiles, past_target.shape[0], int(self._identity["horizon"])
         )

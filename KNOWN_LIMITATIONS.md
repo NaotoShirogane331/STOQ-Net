@@ -1,32 +1,24 @@
-# Known limitations of the legacy extract
+# Scope and limitations
 
-1. **Historical, non-final artifact.** The source was frozen before candidate A.
-   Its auxiliary specialist loss remains present. Removing that term or setting
-   its weight to zero must not be described as an independently proven gain.
-2. **Data provenance is not established by code tests.** Timestamp anchoring,
-   measurement intervals, time zones, observation masks, interpolation causality,
-   split boundaries, and permitted source use must be validated for each actual
-   export. This extract does not certify historical datasets or results.
-3. **No experimental claims.** No result table, predictions, statistical
-   significance, best-model claim, or paper-ready comparison is supplied.
-   Previously inspected heldout outcomes cannot become a new blind evaluation.
-4. **Partial distribution.** Cloud/recovery operations, historical orchestration
-   scripts, many test fixtures, source-audit capsules and third-party checkouts
-   are not included. Original packaging/CLI entry points are preserved for source
-   fidelity, but are not all supported end-to-end by this library-only extract.
-   Do not run the historical data-preparation/training commands as a shortcut to
-   bypass a corrected protocol.
-5. **Tests are scoped.** Only the listed synthetic model/loss tests are verified
-   for this draft. No full-suite, clean-environment installation, official Mamba
-   execution, real-data inference, or performance reproduction is claimed.
-6. **License and secrets review.** The owner's publication-rights statement and
-   the bounded upstream attribution review are recorded in PUBLICATION_CHECKLIST.md
-   and RELEASE_STATUS.json. Full pinned license texts are retained in licenses/.
-   This is not an independent ownership determination or an exhaustive
-   similarity/legal audit. Pattern scanning is a useful screen, not proof that
-   every possible secret has been detected. No original Git history is included
-   or claimed to have been sanitized.
-
-Negative or invalidated results must not be reclassified as confirmed positive
-evidence. Future final artifacts should identify their own data/code/configuration
-and evaluation protocol rather than inheriting this snapshot's status.
+1. This is a current source-library synchronization, not a complete experimental
+   release. Raw data, prepared arrays, predictions, trained weights, cloud
+   controllers and private execution bindings are excluded.
+2. Synthetic CPU checks validate only their stated code paths. Native
+   Mamba/CUDA execution, every optional dependency, all CLI routes and the
+   complete original workspace test suite are not validated by these checks.
+3. Runtime-v4 source is preserved exactly. Historical configuration examples
+   must not be substituted for a specific experiment's resolved contract.
+4. The new C pilot uses training/validation development data only. Its variants
+   and policy are included without execution results. Short development trials
+   cannot replace the previously reported final-test results or establish a
+   new blind improvement after heldout outcomes have been inspected.
+5. This code release independently establishes neither provider consent,
+   field timestamp/arrival guarantees nor historical heldout independence.
+   Previously recorded unknowns and non-blind retrospective limitations remain.
+6. Full native FLOPs/MACs/coverage remain unavailable where the actual FFT
+   dispatch and fused Mamba implementation evidence is insufficient. Synthetic
+   CPU tests are not a substitute count or GPU-speed/energy benchmark.
+7. External backbones and pretrained weights require their own dependencies,
+   licenses and identity checks. They are not redistributed here.
+8. Secret/path screening is bounded, not proof of exhaustive detection; the
+   existing project and third-party licenses are retained, not re-certified.

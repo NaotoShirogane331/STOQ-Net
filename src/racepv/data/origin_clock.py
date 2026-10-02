@@ -225,7 +225,11 @@ def validate_source_time_contract(value: Mapping[str, object]) -> dict[str, obje
     if set(evidence) != _EVIDENCE_FIELDS:
         raise ValueError("evidence fields must match the exact schema")
     kind = evidence["kind"]
-    if not isinstance(kind, str) or kind not in {"provider_document", "synthetic_fixture"}:
+    # Structural validation is not formal source qualification. The latter
+    # independently rejects research assumptions in its evidence-domain guard.
+    if not isinstance(kind, str) or kind not in {
+        "provider_document", "synthetic_fixture", "research_assumption"
+    }:
         raise ValueError("evidence kind is invalid")
     reference = evidence["reference"]
     if not isinstance(reference, str):

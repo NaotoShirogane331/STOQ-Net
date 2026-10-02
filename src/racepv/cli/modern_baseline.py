@@ -129,8 +129,26 @@ def _require_prepared_scientific_evidence(identity):
 
 def _prepared_output_metadata(identities, *, split=None):
     """Project verified identities into outputs without changing qualification claims."""
-    from racepv.baselines.extension_registry import validate_prepared_identity
+    from racepv.baselines.extension_registry import (
+        prepared_contract_version,
+        validate_prepared_identity,
+    )
 
+    if identities and "qualification_schema" in identities:
+        from racepv.data.scoped_qualification import validate_qualified_output_identity
+
+        checked = validate_qualified_output_identity(identities)
+        contracts = checked["prepared_contracts"]
+        result = {
+            "prepared_schema_version": 3,
+            "prepared_contracts": contracts,
+            "qualified_prepared_inputs": checked,
+        }
+        if split is not None:
+            if split not in contracts:
+                raise ValueError("qualified output split is missing")
+            result["prepared_contract"] = contracts[split]
+        return result
     if not identities or "prepared_contracts" not in identities:
         return {}
     contracts = {
@@ -139,7 +157,10 @@ def _prepared_output_metadata(identities, *, split=None):
     }
     if not contracts or any(value["split"] != name for name, value in contracts.items()):
         raise ValueError("prepared output split identity differs")
-    result = {"prepared_schema_version": 2, "prepared_contracts": contracts}
+    result = {
+        "prepared_schema_version": prepared_contract_version(contracts),
+        "prepared_contracts": contracts,
+    }
     if split is not None:
         if split not in contracts:
             raise ValueError("prepared output source split is missing")

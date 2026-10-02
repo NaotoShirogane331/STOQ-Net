@@ -140,6 +140,7 @@ class EarlyStoppingTrainer:
         weight_decay: float = 1e-4,
         max_epochs: int = 80,
         patience: int = 10,
+        min_epochs: int = 0,
         gradient_clip_norm: float = 1.0,
         mixed_precision: bool = True,
         checkpoint_path: str | Path | None = None,
@@ -155,6 +156,9 @@ class EarlyStoppingTrainer:
         )
         self.max_epochs = int(max_epochs)
         self.patience = int(patience)
+        if type(min_epochs) is not int or not 0 <= min_epochs <= self.max_epochs:
+            raise ValueError("min_epochs must be an integer within the epoch budget")
+        self.min_epochs = min_epochs
         self.gradient_clip_norm = float(gradient_clip_norm)
         self.checkpoint_path = Path(checkpoint_path) if checkpoint_path else None
         self.checkpoint_metadata = dict(checkpoint_metadata or {})
@@ -262,6 +266,10 @@ class EarlyStoppingTrainer:
         self._assert_finite_optimizer_state(stage=stage)
         self._assert_finite_gradients(stage=stage)
 
+    def _clear_optimizer_gradients(self) -> None:
+        for optimizer in self._optimizers():
+            optimizer.zero_grad(set_to_none=True)
+
     def _step_separated_losses(
         self,
         *,
@@ -293,6 +301,7 @@ class EarlyStoppingTrainer:
         if state_loss is not None:
             self.scaler.step(self.state_optimizer)
         self.scaler.update()
+        self._clear_optimizer_gradients()
         self._assert_finite_training_state(stage="after optimizer step")
 
     def _move(self, batch: Batch) -> dict[str, Tensor]:
@@ -302,11 +311,19 @@ class EarlyStoppingTrainer:
         self, outputs: Mapping[str, Tensor], batch: Batch
     ) -> tuple[Tensor, dict[str, Tensor]]:
         daylight = batch.get("daylight_mask")
+        from racepv.reliability_a_loss import ReliabilityAObjective
+
+        candidate_masks = (
+            {"target_mask": batch.get("target_mask")}
+            if isinstance(self.criterion, ReliabilityAObjective)
+            else {}
+        )
         result = self.criterion(
             outputs,
             batch["targets"],
             batch["state_labels"],
             daylight_mask=daylight,
+            **candidate_masks,
         )
         loss = _loss_value(result)
         metrics = {"loss": loss}
@@ -363,12 +380,17 @@ class EarlyStoppingTrainer:
                         )
                         self.scaler.step(self.optimizer)
                         self.scaler.update()
+                        self._clear_optimizer_gradients()
                         self._assert_finite_training_state(stage="after optimizer step")
                 batch_size = int(batch["targets"].shape[0])
                 samples += batch_size
                 finite_targets = torch.isfinite(batch["targets"])
                 daylight = batch.get("daylight_mask")
                 valid_daylight = finite_targets
+                from racepv.reliability_a_loss import ReliabilityAObjective
+
+                if isinstance(self.criterion, ReliabilityAObjective) and "target_mask" in batch:
+                    valid_daylight = valid_daylight & batch["target_mask"].bool()
                 if daylight is not None:
                     valid_daylight = valid_daylight & daylight.bool()
                 daylight_weight = float(valid_daylight.sum())
@@ -586,7 +608,11 @@ class EarlyStoppingTrainer:
                 terminal_reason = None
             else:
                 stale_epochs += 1
-                terminal_reason = "early_stopping" if stale_epochs >= self.patience else None
+                terminal_reason = (
+                    "early_stopping"
+                    if stale_epochs >= self.patience and epoch + 1 >= self.min_epochs
+                    else None
+                )
             if terminal_reason is None and epoch + 1 >= self.max_epochs:
                 terminal_reason = "max_epochs"
             progress = self.capture_progress(
@@ -628,6 +654,10 @@ class EarlyStoppingTrainer:
                 "targets",
                 "state_labels",
                 "daylight_mask",
+                "target_mask",
+                "target_interval_start_ns",
+                "target_local_day_ids",
+                "issue_ns",
                 "timestamps",
                 "day_ids",
                 "site_ids",

@@ -28,12 +28,12 @@ from .recovery import (
     RecoveryIntegrityError,
     RecoveryUnsupportedError,
     RunBinding,
-    _manifest_pins,
     decode_progress,
     encode_progress,
     load_binding,
     load_tensor_mapping,
     parse_json_bytes,
+    policy_dependency_pins,
     read_pinned_binding_inputs,
     read_regular_file_nofollow,
     restore_rng_state,
@@ -144,6 +144,7 @@ class SeedRunRequest:
     mode: str
     run_root: Path
     binding: RunBinding
+    candidate_data_root: Path | None = None
 
 
 @dataclass(frozen=True)
@@ -312,7 +313,8 @@ def create_run(
         if reference_path not in input_files:
             raise RecoveryIntegrityError("reference policy snapshot is missing")
         expected_input_paths.update(
-            str(pin["path"]) for pin in _manifest_pins(input_files[reference_path]).values()
+            str(pin["path"])
+            for pin in policy_dependency_pins(binding, input_files[reference_path]).values()
         )
         if set(input_files) != expected_input_paths:
             raise RecoveryIntegrityError("pinned input snapshot paths differ from binding")
@@ -438,6 +440,12 @@ class RecoverableRunController:
         train_loader: object,
         validation_loader: object,
     ) -> tuple[Path, TrainerProgress | None, Callable[[TrainerProgress], None]]:
+        if self.request.binding.raw.get("schema_version") == 2:
+            from .candidate_recovery import validate_candidate_trainer
+
+            validate_candidate_trainer(
+                self.request.binding, trainer, train_loader, validation_loader
+            )
         contract = _loader_contract(train_loader, validation_loader)
         self.loader_contract = contract
         initial_progress: TrainerProgress | None
@@ -569,6 +577,16 @@ class RecoverableRunController:
             )
             if observed.sha256 != item["sha256"] or observed.size_bytes != item["size_bytes"]:
                 raise RecoveryIntegrityError("export stage file drifted")
+        if self.request.binding.raw.get("schema_version") == 2:
+            from .candidate_recovery import validate_candidate_export_stage
+
+            validate_candidate_export_stage(
+                self.request.binding,
+                self.run_root,
+                relative_directory,
+                stage,
+                terminal_commit_sha256,
+            )
         return {"path": record_relative.as_posix(), "sha256": record_raw.sha256}
 
     def publish_export_stage(self, stage: str, output: Path) -> dict[str, str]:
@@ -587,6 +605,16 @@ class RecoverableRunController:
             dependencies[predecessor] = pin
         if stage not in _STAGE_ROLES:
             raise RecoveryIntegrityError("unknown export stage")
+        if self.request.binding.raw.get("schema_version") == 2:
+            from .candidate_recovery import validate_candidate_export_stage
+
+            validate_candidate_export_stage(
+                self.request.binding,
+                self.run_root,
+                output_relative,
+                stage,
+                inspection.terminal.commit_sha256,
+            )
         staging = self.run_root / "staging" / f"stage-{stage}-{uuid.uuid4().hex}"
         staging.mkdir(mode=0o700)
         files: list[dict[str, object]] = []
@@ -864,6 +892,13 @@ def inspect_run(run_root: Path, *, binding_sha256: str) -> RunInspection:
     binding = load_binding(run_root, Path("binding.json"), binding_sha256)
     read_pinned_binding_inputs(binding)
     generations = read_generation_chain(run_root, binding_sha256=binding_sha256)
+    if binding.raw.get("schema_version") == 2:
+        from .candidate_recovery import validate_candidate_metadata
+
+        for generation in generations:
+            selected = generation.state["best_checkpoint"]
+            if selected is not None:
+                validate_candidate_metadata(binding, selected.get("metadata"))
     inspection = infer_run_inspection(binding, generations)
     if inspection.terminal is None:
         return inspection
@@ -908,6 +943,21 @@ def inspect_run(run_root: Path, *, binding_sha256: str) -> RunInspection:
         validated = stage_validator._validated_stage_pin(stage, inspection.terminal.commit_sha256)
         if validated != stages[stage]:
             raise RecoveryIntegrityError(f"{stage} export stage identity differs")
+        if binding.raw["schema_version"] == 2:
+            stage_raw = read_regular_file_nofollow(run_root, Path(validated["path"]))
+            if stage_raw.sha256 != validated["sha256"]:
+                raise RecoveryIntegrityError("candidate stage record changed during inspection")
+            record = parse_json_bytes(stage_raw.data, "candidate export stage")
+            final_files = {item["path"]: item for item in files}
+            for stage_file in record["files"]:
+                name = stage_file["path"]
+                if name in final_files and (
+                    final_files[name]["sha256"] != stage_file["sha256"]
+                    or final_files[name]["size_bytes"] != stage_file["size_bytes"]
+                ):
+                    raise RecoveryIntegrityError(
+                        "candidate final export differs from verified stage"
+                    )
     ready = RunInspection(
         RunStatus.EXPORTS_READY,
         binding,

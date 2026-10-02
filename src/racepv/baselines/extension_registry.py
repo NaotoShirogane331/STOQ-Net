@@ -157,6 +157,14 @@ def _validate_prepared_provenance(value):
 
 def validate_prepared_identity(value):
     """Validate serialized v2 identity, without asserting scientific qualification."""
+    if (
+        type(value) is dict
+        and type(value.get("schema_version")) is int
+        and value["schema_version"] == 3
+    ):
+        from racepv.data.scoped_output import validate_scoped_output_identity
+
+        return validate_scoped_output_identity(value)
     required = {
         "schema_kind",
         "schema_version",
@@ -240,6 +248,24 @@ def validate_prepared_identity(value):
     return copy.deepcopy(value)
 
 
+def prepared_contract_version(contracts):
+    """Derive the version only after validating every serialized contract."""
+    if type(contracts) is not dict or not contracts:
+        raise ValueError("nonempty prepared contracts required")
+    checked = {name: validate_prepared_identity(item) for name, item in contracts.items()}
+    if any(item["split"] != name for name, item in checked.items()):
+        raise ValueError("prepared contract split role differs")
+    versions = {item["schema_version"] for item in checked.values()}
+    if len(versions) != 1:
+        raise ValueError("mixed prepared contract versions")
+    version = next(iter(versions))
+    if version == 3:
+        from racepv.data.scoped_output import require_scoped_output_pair
+
+        require_scoped_output_pair(checked)
+    return version
+
+
 def validate_prepared_protocol(value):
     """Versioned recovery identities; legacy five-pin records remain exact."""
     keys = {
@@ -261,14 +287,15 @@ def validate_prepared_protocol(value):
         if type(value[field]) is not str or re.fullmatch(r"[0-9a-f]{64}", value[field]) is None:
             raise ValueError("binding protocol SHA-256 differs")
     if "prepared_contracts" in value:
-        if (
-            type(value["prepared_schema_version"]) is not int
-            or value["prepared_schema_version"] != 2
-        ):
+        if type(value["prepared_schema_version"]) is not int or value[
+            "prepared_schema_version"
+        ] not in (2, 3):
             raise ValueError("prepared binding version differs")
         contracts = value["prepared_contracts"]
         if type(contracts) is not dict or set(contracts) != {"train", "validation"}:
             raise ValueError("prepared binding splits differ")
+        if prepared_contract_version(contracts) != value["prepared_schema_version"]:
+            raise ValueError("prepared binding version differs from nested contracts")
         for split, identity in contracts.items():
             identity = validate_prepared_identity(identity)
             if (
@@ -286,7 +313,9 @@ def prepared_protocol_from_identities(identities, common_config_sha256):
         protocol[f"{split}_descriptor_sha256"] = identities["descriptor_hashes"][split]
         protocol[f"{split}_content_sha256"] = identities["content_hashes"][split]
     if "prepared_contracts" in identities:
-        protocol["prepared_schema_version"] = 2
+        protocol["prepared_schema_version"] = prepared_contract_version(
+            identities["prepared_contracts"]
+        )
         protocol["prepared_contracts"] = identities["prepared_contracts"]
     return validate_prepared_protocol(protocol)
 

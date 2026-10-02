@@ -34,6 +34,14 @@ from racepv.models.config import (
     FORECAST_SELECTION_METRIC,
     REGISTERED_SPECIALIST_LOSS_WEIGHT,
 )
+from racepv.reliability_experiment import (
+    PAIR_PROTOCOL,
+    require_reliability_recovery_binding,
+    resolve_reliability_request,
+)
+from racepv.reliability_experiment import (
+    make_reliability_components as _build_reliability_components,
+)
 from racepv.training import (
     EFFICIENCY_BENCHMARK_BATCH_SIZE,
     EFFICIENCY_BENCHMARK_REPETITIONS,
@@ -990,6 +998,11 @@ def _fit_training_stage(
     """Persist resolved inputs and run fit through an optional recovery controller."""
 
     fit_kwargs: dict[str, object] = {}
+    binding = getattr(getattr(recovery_controller, "request", None), "binding", None)
+    if binding is not None and binding.raw.get("schema_version") == 2:
+        from racepv.training.candidate_recovery import validate_candidate_resolved
+
+        validate_candidate_resolved(binding, resolved_run)
     if recovery_controller is not None:
         output_dir, initial_progress, on_epoch_committed = recovery_controller.prepare(
             trainer,
@@ -1045,6 +1058,9 @@ def build_parser() -> argparse.ArgumentParser:
     from racepv.cli.modern_baseline import _add_prepared_expectations
 
     _add_prepared_expectations(parser)
+    from racepv.cli.scoped_candidate import add_candidate_qualification_arguments
+
+    add_candidate_qualification_arguments(parser)
     parser.add_argument("--train", type=Path, required=True)
     parser.add_argument("--validation", type=Path, required=True)
     parser.add_argument("--calibration", type=Path)
@@ -1158,6 +1174,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--seed", type=int)
     parser.add_argument(
+        "--reliability-cell",
+        choices=("control", "A"),
+        help="matched no-specialist candidate pair; requires qualified corrected schema3 inputs",
+    )
+    parser.add_argument(
         "--allow-development-data",
         action="store_true",
         help=(
@@ -1175,7 +1196,62 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         _prepared_output_metadata,
     )
 
-    prepared_identities = _preflight_prepared_inputs(args)
+    reliability_protocol = resolve_reliability_request(args)
+    if reliability_protocol is not None and recovery_controller is not None:
+        if getattr(getattr(recovery_controller, "request", None), "binding", None) is None:
+            raise ValueError("candidate recovery executor requires a pinned schema2 binding")
+        from racepv.training.candidate_recovery import inspect_candidate_recovery
+        from racepv.training.recovery import validate_runtime_contract
+        from scripts.run_racepv_reference_seed import _collect_runtime_contract
+
+        pinned_candidate = inspect_candidate_recovery(recovery_controller.request.binding, args)
+        seed_everything(args.seed)
+        validate_runtime_contract(
+            recovery_controller.request.binding,
+            _collect_runtime_contract(
+                args.seed,
+                num_workers=pinned_candidate["experiment"]["training"]["num_workers"],
+                amp_enabled=pinned_candidate["experiment"]["training"]["mixed_precision"],
+            ),
+        )
+    elif (
+        recovery_controller is not None
+        and recovery_controller.request.binding.raw.get("schema_version") == 2
+    ):
+        raise ValueError("candidate binding requires explicit candidate cell")
+    require_reliability_recovery_binding(
+        recovery_controller, reliability_protocol, seed=getattr(args, "seed", None)
+    )
+    candidate = None
+    if reliability_protocol is not None:
+        from racepv.data.scoped_qualification import load_qualified_candidate
+
+        if not any(
+            getattr(args, name, None) is not None
+            for name in (
+                "qualification_root",
+                "qualification_name",
+                "qualification_sha256",
+                "producer_root",
+                "producer_review_sha256",
+            )
+        ):
+            _preflight_prepared_inputs(
+                args
+            )  # Preserve the existing missing-qualification diagnosis.
+            raise ValueError("schema3 qualification is required for the candidate")
+        candidate = load_qualified_candidate(args)
+        prepared_identities = candidate["identities"]
+        if recovery_controller is not None:
+            from racepv.training.candidate_recovery import _equal
+
+            _equal(
+                prepared_identities,
+                pinned_candidate["qualified_prepared_inputs"],
+                "fresh prepared inputs",
+            )
+    else:
+        prepared_identities = _preflight_prepared_inputs(args)
     prepared_expectations = _prepared_expectations(args)
     if recovery_controller is not None and (
         args.calibration is not None
@@ -1209,6 +1285,8 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
     )
     if bool(coupling_protocol["prediction_state_coupling_requested"]):
         run_mode = {**run_mode, **coupling_protocol}
+    if reliability_protocol is not None:
+        run_mode = {**run_mode, **reliability_protocol}
     treatment = _resolve_training_treatment(
         adjustment_cell=args.adjustment_cell,
         specialist_ramp_cell=args.specialist_ramp_cell,
@@ -1228,27 +1306,34 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         output_dir.mkdir(parents=True, exist_ok=True)
         save_config(experiment, output_dir / "resolved_config.yaml")
 
-    train_data = load_window_dataset(
-        input_paths["train"], verify_content=True, **prepared_expectations
-    )
-    validation_data = load_window_dataset(
-        input_paths["validation"], verify_content=True, **prepared_expectations
-    )
-    train_data.require_registered_schema()
-    validation_data.require_registered_schema()
-    train_data.require_registered_evidence(allow_ineligible=args.allow_development_data)
-    validation_data.require_registered_evidence(allow_ineligible=args.allow_development_data)
-    _require_collection_split(train_data, "train")
-    _require_collection_split(validation_data, "validation")
-    train_roles = _spatial_roles(train_data)
-    if not train_roles.issubset({"standard", "source_train"}):
-        raise ValueError(
-            "training weights may only use standard/source_train archives; "
-            f"received roles {sorted(train_roles)}"
+    if candidate is not None:
+        train_data = candidate["datasets"]["train"]
+        validation_data = candidate["datasets"]["validation"]
+    else:
+        train_data = load_window_dataset(
+            input_paths["train"], verify_content=True, **prepared_expectations
         )
-    _require_non_target_fit_split(validation_data, purpose="validation/early stopping")
-    if train_data.registered_schema_signature() != validation_data.registered_schema_signature():
-        raise ValueError("train and validation archives do not share the same feature schema")
+        validation_data = load_window_dataset(
+            input_paths["validation"], verify_content=True, **prepared_expectations
+        )
+        train_data.require_registered_schema()
+        validation_data.require_registered_schema()
+        train_data.require_registered_evidence(allow_ineligible=args.allow_development_data)
+        validation_data.require_registered_evidence(allow_ineligible=args.allow_development_data)
+        _require_collection_split(train_data, "train")
+        _require_collection_split(validation_data, "validation")
+        train_roles = _spatial_roles(train_data)
+        if not train_roles.issubset({"standard", "source_train"}):
+            raise ValueError(
+                "training weights may only use standard/source_train archives; "
+                f"received roles {sorted(train_roles)}"
+            )
+        _require_non_target_fit_split(validation_data, purpose="validation/early stopping")
+        if (
+            train_data.registered_schema_signature()
+            != validation_data.registered_schema_signature()
+        ):
+            raise ValueError("train and validation archives do not share the same feature schema")
     registered_datasets: dict[str, WindowDataset] = {
         "train": train_data,
         "validation": validation_data,
@@ -1277,7 +1362,14 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         if test_data.registered_schema_signature() != train_data.registered_schema_signature():
             raise ValueError("test archive feature schema differs from training")
         registered_datasets["test"] = test_data
-    spatial_protocol = require_registered_spatial_protocol(registered_datasets)
+    spatial_protocol = (
+        {
+            split: sorted(set(dataset.view.spatial_roles.values()))
+            for split, dataset in registered_datasets.items()
+        }
+        if candidate is not None
+        else require_registered_spatial_protocol(registered_datasets)
+    )
     if args.tail_residual_cell is not None:
         if train_data.schema is None or validation_data.schema is None:
             raise ValueError("tail residual treatment requires registered schemas")
@@ -1290,9 +1382,12 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         if recovery_controller is None:
             output_dir.mkdir(parents=True, exist_ok=True)
             save_config(experiment, output_dir / "resolved_config.yaml")
-    temporal_audit = _resolve_temporal_boundary_audit(
-        registered_datasets,
-        tail_residual_cell=args.tail_residual_cell,
+    temporal_audit = (
+        candidate["engineering"]["chronology"]
+        if candidate is not None
+        else _resolve_temporal_boundary_audit(
+            registered_datasets, tail_residual_cell=args.tail_residual_cell
+        )
     )
     if weather_store is not None:
         train_data = WeatherAugmentedDataset(train_data, weather_store, **prepared_expectations)
@@ -1312,40 +1407,49 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         horizon_steps=experiment.data.horizon,
         origin_stride_steps=experiment.data.stride,
     )
-    sample = train_data[0]
-    if train_data.schema is None:  # pragma: no cover - narrowed by schema validation
-        raise RuntimeError("registered training schema unexpectedly missing")
-    feature_indices = _required_future_feature_indices(
-        tuple(str(name) for name in train_data.schema["future_known_columns"])
-    )
-    model_config = RaCEPVConfig(
-        history_features=sample["history_values"].shape[-1],
-        future_features=sample["future_known"].shape[-1],
-        site_features=sample["site_metadata"].shape[-1],
-        history_length=experiment.data.history_length,
-        horizon=experiment.data.horizon,
-        sampling_minutes=experiment.data.frequency_minutes,
-        quantiles=experiment.quantiles,
-        power_index=0,
-        history_clear_sky_index=1,
-        **feature_indices,
-        backbone=args.backbone,
-        use_clear_sky_prior=not args.no_clear_sky_prior,
-        clear_sky_history_feature_indices=(2, 7),
-        router_mode=args.router_mode,
-        fusion_mode=args.fusion_mode,
-        state_head_mode=str(treatment["state_head_mode"]),
-        state_representation_mode=str(treatment["state_representation_mode"]),
-        prediction_state_coupling=str(coupling_protocol["prediction_state_coupling"]),
-        enable_auxiliary_gate_path=bool(treatment["enable_auxiliary_gate_path"]),
-        tail_residual_mode=str(treatment["tail_residual_mode"]),
-        future_weather_features=(
-            len(FORECAST_WEATHER_FEATURES) if weather_store is not None else 0
-        ),
-        forecast_weather_mode=str(weather_protocol["forecast_weather_mode"]),
-        active_experts=tuple(args.active_experts),
-    )
-    model = RaCEPV(model_config)
+    if candidate is not None:
+        from racepv.cli.scoped_candidate import candidate_model_config
+
+        model_config = candidate_model_config(train_data, experiment, backbone=args.backbone)
+        model, reliability_objective = _build_reliability_components(
+            model_config, args.reliability_cell
+        )
+    else:
+        sample = train_data[0]
+        if train_data.schema is None:  # pragma: no cover - narrowed by schema validation
+            raise RuntimeError("registered training schema unexpectedly missing")
+        feature_indices = _required_future_feature_indices(
+            tuple(str(name) for name in train_data.schema["future_known_columns"])
+        )
+        model_config = RaCEPVConfig(
+            history_features=sample["history_values"].shape[-1],
+            future_features=sample["future_known"].shape[-1],
+            site_features=sample["site_metadata"].shape[-1],
+            history_length=experiment.data.history_length,
+            horizon=experiment.data.horizon,
+            sampling_minutes=experiment.data.frequency_minutes,
+            quantiles=experiment.quantiles,
+            power_index=0,
+            history_clear_sky_index=1,
+            **feature_indices,
+            backbone=args.backbone,
+            use_clear_sky_prior=not args.no_clear_sky_prior,
+            clear_sky_history_feature_indices=(2, 7),
+            router_mode=args.router_mode,
+            fusion_mode=args.fusion_mode,
+            state_head_mode=str(treatment["state_head_mode"]),
+            state_representation_mode=str(treatment["state_representation_mode"]),
+            prediction_state_coupling=str(coupling_protocol["prediction_state_coupling"]),
+            enable_auxiliary_gate_path=bool(treatment["enable_auxiliary_gate_path"]),
+            tail_residual_mode=str(treatment["tail_residual_mode"]),
+            future_weather_features=(
+                len(FORECAST_WEATHER_FEATURES) if weather_store is not None else 0
+            ),
+            forecast_weather_mode=str(weather_protocol["forecast_weather_mode"]),
+            active_experts=tuple(args.active_experts),
+        )
+        model = RaCEPV(model_config)
+        reliability_objective = None
     if model.backbone_name == "mamba_ssm" and torch.device(device).type != "cuda":
         raise RuntimeError(
             "official mamba_ssm is a registered CUDA/WSL path; choose a CUDA device "
@@ -1355,12 +1459,16 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         experiment.training.state_loss_weight,
         args.state_loss_weight,
     )
-    selected_specialist_weight, diagnostic_metadata = _resolve_specialist_objective(
-        configured=experiment.training.specialist_loss_weight,
-        override=args.specialist_loss_weight,
-        diagnostic_ablation=args.diagnostic_ablation,
-        validation_only=args.validation_only,
-    )
+    if reliability_protocol is None:
+        selected_specialist_weight, diagnostic_metadata = _resolve_specialist_objective(
+            configured=experiment.training.specialist_loss_weight,
+            override=args.specialist_loss_weight,
+            diagnostic_ablation=args.diagnostic_ablation,
+            validation_only=args.validation_only,
+        )
+    else:
+        selected_specialist_weight = None
+        diagnostic_metadata = {"diagnostic_ablation": None}
     if (
         not bool(coupling_protocol["prediction_state_coupling_requested"])
         and args.tail_residual_cell is None
@@ -1378,18 +1486,22 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
                 experiment.training.num_workers,
             )
         )
-    criterion = RaCEPVLoss(
-        quantiles=experiment.quantiles,
-        specialist_weight=selected_specialist_weight,
-        active_experts=model_config.active_experts,
-        state_head_mode=model_config.state_head_mode,
-        ramp_positive_weight=ramp_positive_weight,
-        ramp_auxiliary_weight=float(treatment["ramp_auxiliary_weight"]),
-        ramp_auxiliary_beta=float(treatment["ramp_auxiliary_beta"]),
-        ramp_auxiliary_scope=str(treatment["ramp_auxiliary_scope"]),
-        state_boundary_weight=float(treatment["state_boundary_weight"]),
-        tail_auxiliary_weight=float(treatment["tail_auxiliary_weight"]),
-        tail_sparsity_weight=float(treatment["tail_sparsity_weight"]),
+    criterion = (
+        reliability_objective
+        if reliability_objective is not None
+        else RaCEPVLoss(
+            quantiles=experiment.quantiles,
+            specialist_weight=selected_specialist_weight,
+            active_experts=model_config.active_experts,
+            state_head_mode=model_config.state_head_mode,
+            ramp_positive_weight=ramp_positive_weight,
+            ramp_auxiliary_weight=float(treatment["ramp_auxiliary_weight"]),
+            ramp_auxiliary_beta=float(treatment["ramp_auxiliary_beta"]),
+            ramp_auxiliary_scope=str(treatment["ramp_auxiliary_scope"]),
+            state_boundary_weight=float(treatment["state_boundary_weight"]),
+            tail_auxiliary_weight=float(treatment["tail_auxiliary_weight"]),
+            tail_sparsity_weight=float(treatment["tail_sparsity_weight"]),
+        )
     )
     loss_weights = {
         "state": selected_state_weight,
@@ -1399,6 +1511,8 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         "tail_auxiliary": float(treatment["tail_auxiliary_weight"]),
         "tail_sparsity": float(treatment["tail_sparsity_weight"]),
     }
+    if reliability_protocol is not None:
+        loss_weights = {"forecast": 1.0, "state": 1.0}
     if model_config.state_head_mode == "hierarchical":
         state_objective = "hierarchical_train_only_sqrt_balanced"
     elif float(treatment["state_boundary_weight"]) > 1.0:
@@ -1416,7 +1530,11 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
             tuple(weather_store.feature_names) if weather_store is not None else ()
         ),
     )
-    training_protocol = str(adapter_request["training_protocol"])
+    training_protocol = (
+        PAIR_PROTOCOL
+        if reliability_protocol is not None
+        else str(adapter_request["training_protocol"])
+    )
     optimizer_schema = (
         FROZEN_WEATHER_ADAPTER_SCHEMA
         if bool(adapter_request["enabled"])
@@ -1498,6 +1616,10 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
             "population": "first validation windows in registered order",
         },
     }
+    if candidate is not None and recovery_controller is not None:
+        from racepv.training.candidate_recovery import validate_candidate_resolved
+
+        validate_candidate_resolved(recovery_controller.request.binding, resolved_run)
     trainer = EarlyStoppingTrainer(
         model,
         criterion,
@@ -1561,6 +1683,10 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         False,
         experiment.training.num_workers,
     )
+    if candidate is not None:
+        from racepv.data.scoped_qualification import reverify_qualified_candidate
+
+        reverify_qualified_candidate(args, prepared_identities)
     result, output_dir = _fit_training_stage(
         trainer,
         train_loader,
@@ -1570,6 +1696,8 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         experiment=experiment,
         recovery_controller=recovery_controller,
     )
+    if candidate is not None:
+        reverify_qualified_candidate(args, prepared_identities)
     model_stage_restored = False
     validation_stage_restored = False
     summary_stage_restored = False
@@ -1587,6 +1715,21 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
         *,
         include_moe_audit: bool,
     ) -> dict[str, object]:
+        if candidate is not None:
+            from racepv.cli.scoped_candidate import candidate_dataset_metadata
+
+            dataset_metadata = candidate_dataset_metadata(dataset, prepared_identities)
+        else:
+            dataset_metadata = {
+                name: dataset.schema[name]
+                for name in (
+                    "site_id_map",
+                    "dataset_kind",
+                    "simulated",
+                    "ramp_method",
+                    "registered_evidence_eligible",
+                )
+            }
         return {
             **_prepared_output_metadata(prepared_identities, split=split),
             "split": split,
@@ -1597,11 +1740,8 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
             "source_window_content_sha256": getattr(
                 dataset, "content_identity", _container_hash(source)
             ),
-            "site_id_map": dataset.schema["site_id_map"],
-            "dataset_kind": dataset.schema["dataset_kind"],
-            "simulated": dataset.schema["simulated"],
-            "ramp_method": dataset.schema["ramp_method"],
-            "registered_evidence_eligible": dataset.schema["registered_evidence_eligible"],
+            **dataset_metadata,
+            **({"model_config": asdict(model_config)} if candidate is not None else {}),
             "development_data_override": args.allow_development_data,
             "model_sha256": model_hash,
             "best_checkpoint_sha256": checkpoint_hash,
@@ -1628,6 +1768,7 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
     if not model_stage_restored:
         torch.save(
             {
+                **(_prepared_output_metadata(prepared_identities) if candidate is not None else {}),
                 "model_state_dict": model.state_dict(),
                 "model_config": asdict(model_config),
                 "quantiles": list(experiment.quantiles),
@@ -1758,11 +1899,18 @@ def run_training(args: argparse.Namespace, *, recovery_controller: Any | None = 
                 "selection_data_audit": selection_data_audit,
                 "evidence_mode": {
                     "allow_development_data": args.allow_development_data,
-                    "dataset_kind": train_data.schema["dataset_kind"],
-                    "simulated": train_data.schema["simulated"],
-                    "registered_evidence_eligible": train_data.schema[
-                        "registered_evidence_eligible"
-                    ],
+                    **(
+                        train_data.export_metadata
+                        if candidate is not None
+                        else {
+                            name: train_data.schema[name] for name in ("dataset_kind", "simulated")
+                        }
+                    ),
+                    "registered_evidence_eligible": (
+                        candidate["qualification"].report["formal_ready"]
+                        if candidate is not None
+                        else train_data.schema["registered_evidence_eligible"]
+                    ),
                 },
                 "global_temporal_audit": temporal_audit,
                 "registered_spatial_protocol": spatial_protocol,

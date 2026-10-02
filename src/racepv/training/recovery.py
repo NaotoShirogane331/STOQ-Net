@@ -500,7 +500,7 @@ def _validate_progress_against_trainer(
     if len(history) > trainer.max_epochs:
         raise RecoveryIntegrityError("history exceeds trainer epoch budget")
     expected_terminal: str | None = None
-    if history and stale_epochs >= trainer.patience:
+    if history and stale_epochs >= trainer.patience and len(history) >= getattr(trainer, "min_epochs", 0):
         expected_terminal = "early_stopping"
     elif len(history) == trainer.max_epochs:
         expected_terminal = "max_epochs"
@@ -654,9 +654,10 @@ def load_binding(root: Path, path: Path, expected_sha256: str) -> RunBinding:
     _require_sha256(expected_sha256, "expected binding SHA-256")
     if raw.sha256 != expected_sha256:
         raise RecoveryIntegrityError("binding SHA-256 mismatch")
-    if payload["schema_version"] != 1 or isinstance(payload["schema_version"], bool):
-        raise RecoveryIntegrityError("binding schema_version must be integer 1")
-    if payload["purpose"] != "racepv_epoch_recovery_binding":
+    if type(payload["schema_version"]) is not int or payload["schema_version"] not in (1, 2):
+        raise RecoveryIntegrityError("binding schema_version must be integer 1 or 2")
+    purpose = {1: "racepv_epoch_recovery_binding", 2: "racepv_candidate_epoch_recovery_binding"}
+    if payload["purpose"] != purpose[payload["schema_version"]]:
         raise RecoveryIntegrityError("binding purpose is invalid")
     if payload["selection_boundary"] != "validation_only":
         raise RecoveryIntegrityError("binding selection boundary must be validation_only")
@@ -725,6 +726,10 @@ def load_binding(root: Path, path: Path, expected_sha256: str) -> RunBinding:
     }
     if determinism != expected_determinism:
         raise RecoveryIntegrityError("runtime contract determinism settings differ")
+    if payload["schema_version"] == 2 and any(
+        type(determinism[key]) is not type(value) for key, value in expected_determinism.items()
+    ):
+        raise RecoveryIntegrityError("candidate runtime determinism scalar types differ")
     return RunBinding(
         raw_sha256=raw.sha256,
         run_id=run_id,
@@ -745,7 +750,10 @@ def validate_runtime_contract(
 
     if not isinstance(observed, dict) or frozenset(observed) != _RUNTIME_KEYS:
         raise RecoveryIntegrityError("observed runtime contract keys differ")
-    if observed != dict(binding.runtime_contract):
+    typed_candidate_drift = binding.raw.get("schema_version") == 2 and json.dumps(
+        observed, sort_keys=True, allow_nan=False
+    ) != json.dumps(dict(binding.runtime_contract), sort_keys=True, allow_nan=False)
+    if observed != dict(binding.runtime_contract) or typed_candidate_drift:
         differing = sorted(
             key for key in _RUNTIME_KEYS if observed.get(key) != binding.runtime_contract.get(key)
         )
@@ -771,22 +779,54 @@ def read_pinned_binding_inputs(binding: RunBinding) -> dict[str, SafeBytes]:
         parts = validate_relative_path(relative)
         if parts[0] != "inputs":
             raise RecoveryIntegrityError("pinned inputs must be contained by inputs/")
-        if relative in result:
+        if relative in result or (
+            binding.raw["schema_version"] == 2
+            and any(relative.casefold() == name.casefold() for name in result)
+        ):
             raise RecoveryIntegrityError("pinned input paths must be unique")
         observed = read_regular_file_nofollow(binding.binding_root, Path(relative))
         if observed.sha256 != pin["sha256"]:
             raise RecoveryIntegrityError(f"pinned input SHA-256 mismatch: {role}")
         result[relative] = observed
     reference_path = str(binding.raw["reference_policy"]["path"])
-    for role, pin in _manifest_pins(result[reference_path].data).items():
+    for role, pin in policy_dependency_pins(binding, result[reference_path].data).items():
         relative = str(pin["path"])
-        if relative in result:
+        if relative in result or (
+            binding.raw["schema_version"] == 2
+            and any(relative.casefold() == name.casefold() for name in result)
+        ):
             raise RecoveryIntegrityError("policy dependency paths must be unique")
         observed = read_regular_file_nofollow(binding.binding_root, Path(relative))
         if observed.sha256 != pin["sha256"]:
             raise RecoveryIntegrityError(f"pinned input SHA-256 mismatch: {role}")
         result[relative] = observed
     return result
+
+
+def policy_dependency_pins(binding: RunBinding, policy_bytes: bytes):
+    """Dispatch by binding version; old policy dependencies remain unchanged."""
+    if binding.raw["schema_version"] == 1:
+        return _manifest_pins(policy_bytes)
+    policy = parse_json_bytes(policy_bytes, "candidate policy")
+    _require_exact_keys(
+        policy,
+        frozenset({"schema_version", "purpose", "domain", "selection_boundary", "config"}),
+        "candidate policy",
+    )
+    if (
+        type(policy["schema_version"]) is not int
+        or policy["schema_version"] != 2
+        or policy["purpose"] != "racepv_candidate_recovery_policy"
+        or policy["domain"] not in ("provider_document", "synthetic_fixture")
+        or policy["selection_boundary"] != "validation_only"
+    ):
+        raise RecoveryIntegrityError("candidate policy identity differs")
+    pin = _validate_pin(policy["config"], "candidate config")
+    if validate_relative_path(pin["path"])[0] != "inputs":
+        raise RecoveryIntegrityError("candidate config must be inside inputs/")
+    if pin["sha256"] != binding.protocol_identity["common_config_sha256"]:
+        raise RecoveryIntegrityError("candidate config protocol differs")
+    return {"config": pin}
 
 
 def _manifest_pins(policy_bytes: bytes) -> dict[str, Mapping[str, object]]:

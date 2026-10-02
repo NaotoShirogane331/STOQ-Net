@@ -1,38 +1,34 @@
-# Verification of this source-only draft
+# Verification — source-only update 2026-10-03
 
-Verified on 2026-09-16 using Python 3.12.3, PyTorch 2.13.0+cu130 and pytest 9.1.1.
-CUDA visibility was disabled. Imports were checked to resolve to this extract,
-not the installed main project. No model training, original data access, cloud
-connection, or experimental inference was performed.
+Fresh isolated local Windows CPU verification of the files in this update:
 
-- `tests/test_model.py`: 57 passed.
-- `tests/test_ramp_refinement_losses.py`: 9 passed.
-- `tests/test_sparse_tail_losses.py`: 5 passed.
-- Total: **71 passed in 8.70s**. These are synthetic functional checks, not
-  prediction-performance evidence or a full-project test-suite claim.
-- Ruff static check: original full snapshot passes; extracted source passes
-  with original first-party module classification (`racepv`, `scripts`). The
-  added `ruff.toml` records only that packaging context and suppresses no rules.
-- **Ruff format check does not pass:** 57 files would be reformatted; 76 are
-  already formatted. Historical code bytes are deliberately preserved. Do not
-  describe this draft as passing every formatting gate.
-
-An initial check was stopped before test collection because the local controller
-omitted required Git-isolation environment pins. The controller was corrected,
-not the guard or scientific code. The subsequent default lint check initially
-reported six import-sorting issues because the omitted `scripts` directory was
-no longer recognized as first-party. The original-context comparison established
-the cause. Failure logs are retained privately outside this directory.
-
-Reproduce the supported checks after installing dependencies in an isolated
-environment:
-
-```bash
-python -m pytest -q tests/test_model.py tests/test_ramp_refinement_losses.py tests/test_sparse_tail_losses.py
-python -m ruff check src tests
-# Expected to report the preserved historical formatting differences:
-python -m ruff format --check src tests
+```text
+python -m pytest -q tests experiments/c_pilot/test_pilot_policy.py -p no:cacheprovider
+226 passed, 4 skipped in 3.81s
+exit code 0
 ```
 
-No clean-environment installation, GPU/Mamba execution, scientific validity of
-historical results, or final permission to publish is established by these checks.
+Seven library test modules and the pilot policy module were included. The four
+skips are the parameterized production-experts source-equivalence checks in
+`test_research_variants.py`; `RACEPV_ORIGINAL_EXPERTS` was deliberately unset.
+No production reference file, real dataset, pretrained checkpoint or GPU was
+used. Small temporary synthetic checkpoints are created by the identity tests.
+
+Environment: Python 3.12.14, PyTorch 2.14.1+cpu, pytest 9.1.1, NumPy 2.5.3,
+pandas 3.0.6, PyYAML 6.0.3, SciPy 1.18.1, scikit-learn 1.9.1.
+The package was installed editable in a new isolated environment; the existing
+cloud experiment environment was not changed. These versions describe this
+verification, not a lockfile or a claim that every declared dependency range
+has been tested.
+
+All 160 library source files matched both the runtime-v4 archive and recovered
+source reference byte-for-byte. All included Python files parsed successfully.
+Bounded source-only scans found no matching private-key/token, private SSH-host
+or user-specific credential-path patterns. This is not an exhaustive secret
+audit. Published file identities are recorded in `SHA256SUMS`.
+
+This validates the distributed synthetic suite, not the complete historical
+workspace, native Mamba/CUDA kernels, full cloud orchestration, real-data model
+performance or paper reproduction. No new training or evaluation is claimed.
+Linux parent-death supervision is not independently exercised by this Windows
+run. Source was not reformatted or changed to improve test/benchmark outcomes.

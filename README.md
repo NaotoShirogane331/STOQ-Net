@@ -1,82 +1,61 @@
-# RaCE-PV — legacy source-library snapshot
+# RaCE-PV — research source library
 
-**Historical source-library release candidate. Not the final paper artifact or a complete experiment reproduction package.**
-
-This is a byte-preserving subset of the source snapshot taken on 2026-09-15,
-before the reliability-gate A candidate was added. It includes the original
-three-expert probabilistic photovoltaic forecasting model, its losses, supporting
-Python library, four historical configuration files, and three synthetic test
-modules. The A candidate and its independent objective are not included.
+Current private development source, synchronized on 2026-10-03.
+This is a source-only repository, not a complete data/weights/experiment artifact.
+The previous legacy extract remains available in Git history.
 
 ## 中文说明
 
-这是 RaCE-PV-v1 旧版研究源码快照，不是当前改进版，不是完整实验复现包。
-保留原模型和原配置，不将旧结果重新包装为新结果。`configs/base.yaml`
-中的 `specialist_loss_weight: 0.15` 是历史默认值，不代表当前最终模型决定，
-也不能据此认定任意历史实验都使用了这一配置。
+本次更新包含已核对的 160 个模型库源码文件（runtime v4），包括可靠性门控、
+独立目标函数、C/F 研究变体及训练组件；另包含 2026-10-02 C 短试训的
+配置策略和薄适配层。源码更新不改变已交付的实验结果或模型排名。
 
-已知数据时间口径、观测/插值来源和评估限制应单独核实；本包不声称这些问题
-已经解决，不提供性能排名、SOTA 声明或最终论文结论。见
-[KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md)。
+不上传原始数据、预测数组、检查点、SSH 配置、云端控制脚本、运行记录、
+聊天附件或本地环境。库文件逐字节保留，不改动正在运行的训练。
 
-## Included / excluded
+## Included
 
-- Included: 130 library Python files, 3 synthetic test modules, 4 original YAML
-  configurations, original `pyproject.toml`, existing project MIT `LICENSE`.
-- Excluded: datasets, calibration/test arrays, predictions, checkpoints, run
-  directories, cloud-operation scripts, manuscript/PPT, chat attachments,
-  environment directories, third-party checkouts, credentials and Git history.
-- Original copied file identities are listed in `SNAPSHOT.json`. `SHA256SUMS`
-  records the current release files (excluding the checksum file itself). `SNAPSHOT.json`
-  retains the original extraction-time status; current publication preparation is
-  recorded separately in `RELEASE_STATUS.json`.
-- The wider historical scripts and fixtures are intentionally omitted. Only the
-  CPU synthetic model/loss checks below are the supported validation route for
-  this extract. Do not assume all historical CLI workflows are self-contained.
+- 160 Python library files under `src/racepv`, matched byte-for-byte against
+  the runtime-v4 source archive and the recovered source reference.
+- Seven synthetic model/loss/identity test modules.
+- Four historical YAML configurations, packaging metadata and license notices.
+- `experiments/c_pilot`: fixed C0/C-Reg/C-Temp policy, model/trainer adapter,
+  and four synthetic policy checks. No execution controller or private binding.
 
-## Local CPU check (no dataset, no training)
+`SNAPSHOT.json` records copied-source provenance; `SHA256SUMS` covers the
+published files except itself. See [VERIFICATION.md](VERIFICATION.md) for the
+actual verification scope and [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md).
 
-Use a separate Python 3.12 environment. Do not install this historical package
-over the environment running a current experiment. The original dependency
-ranges are retained; this extract does not provide a reproducible environment
-lock or claim that every dependency version satisfying those ranges was tested.
+## Local CPU verification
+
+Use an isolated Python 3.12 environment; do not modify a running experiment's
+environment. Install an appropriate CPU PyTorch build, then:
 
 ```bash
-python -m venv .venv
-# Activate .venv using the command appropriate to your operating system.
 python -m pip install -e ".[dev]"
-python -m pytest -q tests/test_model.py tests/test_ramp_refinement_losses.py tests/test_sparse_tail_losses.py
+python -m pytest -q tests experiments/c_pilot/test_pilot_policy.py
 ```
 
-The selected tests use synthetic tensors and explicit GRU/other CPU test paths;
-they do not establish official Mamba/CUDA equivalence or prediction performance.
-No GPU, raw data, calibration, or heldout evaluation is needed for these checks.
-The tests perform forward/backward checks, not an experimental training run.
+Tests use synthetic tensors and explicit CPU/GRU paths. Four source-equivalence
+checks require the separately supplied original-experts reference and are
+skipped when `RACEPV_ORIGINAL_EXPERTS` is unset. CPU checks do not establish
+native Mamba/CUDA equivalence, benchmark accuracy, or full reproducibility.
 
-The original extract passed 71 synthetic tests. Static lint passes with the original
-first-party classification recorded in `ruff.toml`; format check still reports
-57 historical files. Source bytes were not reformatted. See
-[VERIFICATION.md](VERIFICATION.md) for the exact scope and limitations.
+The configuration files are historical examples, not the resolved contract of
+every C/F experiment. Some library CLI routes require omitted scripts, qualified
+data and external dependencies. Do not treat them as ready-to-run full campaigns.
 
-## License, attribution and release status
+## C development pilot
 
-The existing MIT [LICENSE](LICENSE) applies to RaCE-PV contributions for which
-the contributors hold the relevant rights. It does not replace upstream terms.
-See [THIRD_PARTY_NOTICE.md](THIRD_PARTY_NOTICE.md) for file-level attribution,
-fixed upstream revisions and full license copies in `licenses/`.
+See [the pilot source notes](experiments/c_pilot/README.md). C0 uses weight decay
+1e-4 and router temperature 1; C-Reg changes weight decay to 1e-3; C-Temp changes
+the shared router temperature to 1.25. Other approved conditions stay fixed.
+These are development variants, not a replacement final-test leaderboard.
 
-The repository owner confirmed on 2026-09-16 that they have the right to publish
-this historical extract, that necessary collaborator/institution permissions
-have been obtained or are unnecessary, and that no relevant confidentiality or
-patent restriction prevents publication. This is the owner's statement, not an
-independent legal certification.
+## License and source boundaries
 
-The source-only publication checks are recorded in
-[PUBLICATION_CHECKLIST.md](PUBLICATION_CHECKLIST.md) and
-[RELEASE_STATUS.json](RELEASE_STATUS.json). Preparing these documents does not
-change GitHub visibility. This version is not a validated replacement for the
-ongoing corrected-data/model experiments, and no new experiment is claimed.
-
-Keep future uploads source-only. Do not upload the parent workspace, local audit
-records, credentials, original Git history, raw data, predictions or checkpoints
-as part of this historical release.
+The existing [MIT license](LICENSE) and retained upstream notices remain.
+[THIRD_PARTY_NOTICE.md](THIRD_PARTY_NOTICE.md) distinguishes local adaptations
+from external implementations, weights and data. Repository visibility is not
+changed by this synchronization. The earlier rights statement concerned the
+historical extract; it is not an independent legal certification of this update.

@@ -1,18 +1,24 @@
 {
-  "schema_version": 2,
-  "date": "2026-10-03",
+  "schema_version": 3,
+  "date": "2026-10-05",
   "scope": "private_source_only_main_update",
   "historical_parent_commit": "74765a555c2788ff682b4032b8ca44b80efa4203",
   "source_library": "runtime-v4-loader-cache-20260917",
   "source_python_files": 160,
-  "new_development_source": "C-pilot-20261002-policy-and-adapter",
+  "new_development_source": [
+    "C2 rawloss/MS/SS",
+    "C3 TimeXer-PV",
+    "C-LG",
+    "C-DH-linear"
+  ],
   "source_bytes_changed": false,
   "synthetic_tests": {
-    "passed": 226,
-    "skipped": 4,
+    "passed": 277,
+    "skipped": 5,
     "failed": 0,
+    "subtests_passed": 25,
     "device": "cpu",
-    "skipped_reason": "independent production experts reference not supplied"
+    "skipped_reason": "one CUDA raw-loss witness and four absent independent original-experts references"
   },
   "data_included": false,
   "weights_included": false,
@@ -22,5 +28,8 @@
   "visibility_change_authorized": false,
   "new_training_claim": false,
   "full_reproduction_claim": false,
-  "independent_rights_certification": false
+  "independent_rights_certification": false,
+  "parent_commit": "6bdaa23d98adc9ec03668da292ffba9f05fee0e6",
+  "original_library_files_preserved": 160,
+  "historical_development_status_documented": true
 }

@@ -1,0 +1,163 @@
+{
+  "feature_signature": {
+    "causal_rules": {
+      "deterministic_history": [
+        "clear_sky_power_norm"
+      ],
+      "endpoint_scope": "same_split_real_observations",
+      "gap_right": "strictly_before_first_target",
+      "imputed_values": "never_exposed",
+      "max_gap_steps": 2,
+      "missing_values": "zero_value_zero_mask",
+      "night": "clear_sky_norm_lt_0.01_source_precision",
+      "power_dependencies": {
+        "clear_sky_index": [
+          0
+        ],
+        "clear_sky_residual": [
+          0
+        ],
+        "power_diff_1": [
+          0,
+          -1
+        ],
+        "power_diff_2": [
+          0,
+          -1,
+          -2
+        ],
+        "power_norm": [
+          0
+        ],
+        "rolling_volatility_1h": [
+          0,
+          -1,
+          -2,
+          -3,
+          -4
+        ],
+        "rolling_volatility_3h": [
+          0,
+          -1,
+          -2,
+          -3,
+          -4,
+          -5,
+          -6,
+          -7,
+          -8,
+          -9,
+          -10,
+          -11,
+          -12
+        ]
+      },
+      "provenance_flag_mask": 1,
+      "provenance_flags": [
+        "power_observed",
+        "power_imputed"
+      ],
+      "unclosed_daylight": "reject",
+      "weather_sources": {
+        "ghi_z": 0,
+        "humidity_z": 2,
+        "temperature_z": 1,
+        "wind_speed_z": 3
+      }
+    },
+    "causality_profile": "as-of-origin-v1",
+    "clock": {
+      "day_ids": "utc_days_since_epoch",
+      "deterministic_sampling_points": {
+        "future_known": {
+          "clear_sky_power_norm": "target_interval_start_point",
+          "day_of_year_cos": "target_interval_start_point",
+          "day_of_year_sin": "target_interval_start_point",
+          "hour_cos": "target_interval_start_point",
+          "hour_sin": "target_interval_start_point",
+          "solar_azimuth_cos": "target_interval_start_point",
+          "solar_azimuth_sin": "target_interval_start_point",
+          "solar_elevation": "target_interval_start_point"
+        },
+        "history": {
+          "clear_sky_power_norm": "history_interval_start_point"
+        },
+        "night_threshold": {
+          "clear_sky_power_norm": "history_interval_start_point"
+        }
+      },
+      "issue": "last_history_interval_end",
+      "lead": "target_interval_end_minus_issue",
+      "sampling_interval_ns": 900000000000,
+      "stored_timezone": "UTC",
+      "timestamps": "target_interval_start_ns"
+    },
+    "dataset_kind": "dkasc",
+    "future_known_columns": [
+      "clear_sky_power_norm",
+      "solar_elevation",
+      "solar_azimuth_sin",
+      "solar_azimuth_cos",
+      "hour_sin",
+      "hour_cos",
+      "day_of_year_sin",
+      "day_of_year_cos",
+      "lead_time_hours"
+    ],
+    "geometry": {
+      "horizon": 24,
+      "lookback": 192,
+      "stride": 4
+    },
+    "history_columns": [
+      "power_norm",
+      "clear_sky_power_norm",
+      "clear_sky_residual",
+      "power_diff_1",
+      "power_diff_2",
+      "rolling_volatility_1h",
+      "rolling_volatility_3h",
+      "clear_sky_index",
+      "power_observed",
+      "power_imputed",
+      "ghi_z",
+      "temperature_z",
+      "humidity_z",
+      "wind_speed_z"
+    ],
+    "ramp_method": "q90",
+    "schema_kind": "racepv.prepared-window-contract",
+    "schema_version": 3,
+    "simulated": false,
+    "site_metadata_names": [
+      "latitude_scaled",
+      "longitude_scaled",
+      "log_capacity_kw_scaled",
+      "surface_tilt_scaled",
+      "surface_azimuth_scaled",
+      "has_geometry"
+    ],
+    "source_clock": {
+      "availability_assumption": "zero_additional_delay_event_time",
+      "available_time_definition": "interval_end",
+      "duplicate_timestamp_policy": "reject",
+      "interval_duration_ns": 300000000000,
+      "invalid_timestamp_policy": "reject",
+      "issue_definition": "last_history_interval_end",
+      "measurement_delay_ns": 0,
+      "resample_closed": "left",
+      "resample_label": "left",
+      "sampling_interval_ns": 900000000000,
+      "source_timestamp_semantics": "interval_end",
+      "stored_label": "interval_start",
+      "timezone": "Australia/Darwin"
+    },
+    "state_labels": {
+      "ignore": -100,
+      "ramp_down": 2,
+      "ramp_up": 1,
+      "stable": 0
+    },
+    "target": "power_norm"
+  }
+}

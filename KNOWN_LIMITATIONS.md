@@ -22,3 +22,7 @@
    licenses and identity checks. They are not redistributed here.
 8. Secret/path screening is bounded, not proof of exhaustive detection; the
    existing project and third-party licenses are retained, not re-certified.
+9. C2/C3/C-LG/C-DH-linear are historical development explorations, not replacements
+   for the final model registry. Their real campaign launchers and data/weights
+   are omitted. C2/C3 raw model outputs need their projection-aware adapter.
+   Windows synthetic tests do not establish original Linux recovery-lock behavior.

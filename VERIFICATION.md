@@ -1,34 +1,48 @@
-# Verification — source-only update 2026-10-03
+# Verification — four development variants, 2026-10-05
 
-Fresh isolated local Windows CPU verification of the files in this update:
+Fresh isolated Windows CPU verification of the actual publication staging tree:
 
 ```text
 python -m pytest -q tests experiments/c_pilot/test_pilot_policy.py -p no:cacheprovider
-226 passed, 4 skipped in 3.81s
+277 passed, 5 skipped, 25 subtests passed in 5.60s
 exit code 0
 ```
 
-Seven library test modules and the pilot policy module were included. The four
-skips are the parameterized production-experts source-equivalence checks in
-`test_research_variants.py`; `RACEPV_ORIGINAL_EXPERTS` was deliberately unset.
-No production reference file, real dataset, pretrained checkpoint or GPU was
-used. Small temporary synthetic checkpoints are created by the identity tests.
+The original seven library test modules and pilot policy tests remain. Added
+tests exercise all four development variant model/trainer entry points using
+small synthetic tensors, initialization/gradient/physics/missingness contracts,
+state-dict roundtrips, raw-loss optimizer recovery and pinned TimeXer encoder
+parity. These are synthetic checks, not new real-data training or evaluation.
 
-Environment: Python 3.12.14, PyTorch 2.14.1+cpu, pytest 9.1.1, NumPy 2.5.3,
-pandas 3.0.6, PyYAML 6.0.3, SciPy 1.18.1, scikit-learn 1.9.1.
-The package was installed editable in a new isolated environment; the existing
-cloud experiment environment was not changed. These versions describe this
-verification, not a lockfile or a claim that every declared dependency range
-has been tested.
+Five skips: one C2 CUDA/AMP raw-loss witness requires a GPU; four original
+production-experts equivalence checks require `RACEPV_ORIGINAL_EXPERTS`, which
+was unset. Neither skip is counted as passing or as new GPU qualification.
+Windows `tests/exploratory/conftest.py` permits importing Linux-oriented
+ResearchTrainer using a test-only `fcntl` stub. Every stub lock call raises;
+native Linux recovery locks/process supervision are not tested or modified.
 
-All 160 library source files matched both the runtime-v4 archive and recovered
-source reference byte-for-byte. All included Python files parsed successfully.
-Bounded source-only scans found no matching private-key/token, private SSH-host
-or user-specific credential-path patterns. This is not an exhaustive secret
-audit. Published file identities are recorded in `SHA256SUMS`.
+Environment reused from the previous isolated source release: Python 3.12.14,
+PyTorch 2.14.1+cpu, pytest 9.1.1, NumPy 2.5.3, pandas 3.0.6, PyYAML 6.0.3,
+SciPy 1.18.1 and scikit-learn 1.9.1. `PYTHONPATH` points explicitly to this
+publication tree, not the editable previous release or experiment workspace.
+These are observed verification versions, not a dependency lockfile.
 
-This validates the distributed synthetic suite, not the complete historical
-workspace, native Mamba/CUDA kernels, full cloud orchestration, real-data model
-performance or paper reproduction. No new training or evaluation is claimed.
-Linux parent-death supervision is not independently exercised by this Windows
-run. Source was not reformatted or changed to improve test/benchmark outcomes.
+A no-dependency/no-build-isolation wheel build exited 0, and
+independent temporary extraction verified the four variant model imports,
+C3 feature signature and retained MIT license. C2/C3 parameter counts were
+180874/455050; the synthetic GRU C-DH configuration was 192622. This build
+check does not qualify a missing production Mamba/CUDA dependency. The wheel
+is a local verification artifact and is not uploaded in this source-only update.
+
+All original 160 Python library files are byte-identical to the previous
+2026-10-03 source release. Copied numerical methods are retained; relative
+import wiring and portable test bootstraps are documented in the variant
+source provenance. Campaign policies include only historical candidate rows
+and their exact validator, no cloud execution functions or expired deadlines.
+
+All publication Python files parse. Bounded key/token/private-host/user-path
+scans found no matching patterns; this is not an exhaustive security audit.
+`SHA256SUMS` records all publication payloads except itself. Data, weights,
+prediction arrays, raw cloud execution logs and machine configuration are not
+included. This verifies distributed source contracts, not full campaign/paper
+reproduction, benchmark rankings, source-data consent or native FLOPs counts.

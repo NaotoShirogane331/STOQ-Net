@@ -1,6 +1,6 @@
 # RaCE-PV — research source library
 
-Current private development source, synchronized on 2026-10-03.
+Current private development source, synchronized on 2026-10-05.
 This is a source-only repository, not a complete data/weights/experiment artifact.
 The previous legacy extract remains available in Git history.
 
@@ -51,6 +51,16 @@ See [the pilot source notes](experiments/c_pilot/README.md). C0 uses weight deca
 1e-4 and router temperature 1; C-Reg changes weight decay to 1e-3; C-Temp changes
 the shared router temperature to 1.25. Other approved conditions stay fixed.
 These are development variants, not a replacement final-test leaderboard.
+
+## Four C-family architecture explorations
+
+The actual historical C2, C3-TimeXer-PV, C-LG and C-DH-linear development
+implementations are now available under `src/racepv/exploratory`, including
+their narrow training adapters and synthetic tests. They are separate from
+the original final-model registry; none replaces C, F or M1 automatically.
+See [variant usage and development status](experiments/c_variants/README.md)
+and [source provenance](experiments/c_variants/SOURCE_PROVENANCE.json).
+No real-data training or scoring was run for this GitHub update.
 
 ## License and source boundaries
 

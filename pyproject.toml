@@ -60,6 +60,9 @@ racepv-scenario = "racepv.scenario.pipeline:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"racepv.exploratory.c3" = ["source-manifest.json", "vendor/timexer_upstream/LICENSE"]
+
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]

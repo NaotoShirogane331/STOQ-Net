@@ -1,0 +1,263 @@
+{
+  "date": "2026-10-05",
+  "source_only": true,
+  "numerical_methods_changed": false,
+  "scope": "actual historical development model and trainer implementations",
+  "published_files": [
+    {
+      "path": "src/racepv/exploratory/c2/c2_model.py",
+      "origin": "c2-rawloss-3h-v1/c2_model.py",
+      "original_sha256": "22e7f8328680c6cfcf4996af4320d0099ae55ff00614d9adbc7ec83ab95655f4",
+      "publication_sha256": "22e7f8328680c6cfcf4996af4320d0099ae55ff00614d9adbc7ec83ab95655f4",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/c2/c2_adapter.py",
+      "origin": "c2-rawloss-3h-v1/c2_adapter.py",
+      "original_sha256": "8e7a96a5145fae3b6808c108718b0fa47ef1985fd5f1d96ac5ef1706056cc992",
+      "publication_sha256": "8894bcbe90818a8758a8fbc7b580ad49f337b075c9dbe19bedcbef8fb1e734b2",
+      "changes": [
+        {
+          "before": "from c2_model import",
+          "after": "from .c2_model import"
+        },
+        {
+          "before": "from cf_policy import",
+          "after": "from .cf_policy import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/c2/cf_policy.py",
+      "origin": "c2-rawloss-3h-v1/cf_policy.py",
+      "original_sha256": "08b17596982b39f5fae3166edce5caea839a49c02c640a4d0b15852ad97a0c2b",
+      "publication_sha256": "cc9078c83128680454e44b0f07467002de61b5633d597cda68c679dad0e52210",
+      "changes": [
+        "extract candidates and validate_candidate functions only"
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/c3/c3_model.py",
+      "origin": "c3-timexer-3h-v1/c3_model.py",
+      "original_sha256": "ee8856aa3923903dc39e96e78cd87bb807d89b4f5b6043e31612944ae8a8c57c",
+      "publication_sha256": "10bf770ba7b60603d3bbded0394c1ab0ca57fdde82d39330ed2ed91ff2815f20",
+      "changes": [
+        {
+          "before": "from timexer_core import",
+          "after": "from .timexer_core import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/c3/c3_adapter.py",
+      "origin": "c3-timexer-3h-v1/c3_adapter.py",
+      "original_sha256": "4a36b11f5c5fc87ae35c88cb77da4355a8dd9ed4a3ee1ba7b38f8eb9ad227f33",
+      "publication_sha256": "13218696a473d18eedf2350bb656f2bc8574875e6f3fae1b8a11f3ae5fabe963",
+      "changes": [
+        {
+          "before": "from c3_model import",
+          "after": "from .c3_model import"
+        },
+        {
+          "before": "from c3_policy import",
+          "after": "from .c3_policy import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/c3/timexer_core.py",
+      "origin": "c3-timexer-3h-v1/timexer_core.py",
+      "original_sha256": "bf2ca52de03e8d62ee58c52f048ea70be36db30360bfa2a5b96109ca2136975b",
+      "publication_sha256": "bf2ca52de03e8d62ee58c52f048ea70be36db30360bfa2a5b96109ca2136975b",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/c3/c3_policy.py",
+      "origin": "c3-timexer-3h-v1/c3_policy.py",
+      "original_sha256": "64d23b91ba32c94d75cb09eccd19f41acd8c2a78c9d18f265c5e1b79a1301535",
+      "publication_sha256": "f251c3f27ba1848c87358d690561770cff4aa7123552f6eabf3890fd5688abce",
+      "changes": [
+        "extract candidates and validate_candidate functions only"
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/location_gap/lg_adapter.py",
+      "origin": "location-gap-screen-4h-v1/lg_adapter.py",
+      "original_sha256": "576830035e8cac08f0db728c177cf0844513e3e8690ca6ba5a467a7e4492ebd3",
+      "publication_sha256": "e9c65344081c0a792f794b41db16728f998288315ceee2e818d23d347f421e04",
+      "changes": [
+        {
+          "before": "from cuda_adapter import",
+          "after": "from .cuda_adapter import"
+        },
+        {
+          "before": "from lg_policy import",
+          "after": "from .lg_policy import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/location_gap/cuda_adapter.py",
+      "origin": "location-gap-screen-4h-v1/cuda_adapter.py",
+      "original_sha256": "3058808515afdc47b60cf58a22fb594652755057eb9af3f35023e00f95975442",
+      "publication_sha256": "1a546961486b645d104afa5b888dc12cf6397115d7592a305a1160bac0270e41",
+      "changes": [
+        {
+          "before": "from fusion import",
+          "after": "from .fusion import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/location_gap/fusion.py",
+      "origin": "location-gap-screen-4h-v1/fusion.py",
+      "original_sha256": "7f45224d1ad3c9c1cd9c78e8af3381b99ca855c59776815035868998db91981d",
+      "publication_sha256": "7f45224d1ad3c9c1cd9c78e8af3381b99ca855c59776815035868998db91981d",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/location_gap/lg_policy.py",
+      "origin": "location-gap-screen-4h-v1/lg_policy.py",
+      "original_sha256": "c5ea8e431783bce119f8411d1898eca5cbc2986000785a2b717c199e008c2e8a",
+      "publication_sha256": "1fb514727d6a932b1059772663a2f36483c3f4ad844535e57a53ba0b73d5adfd",
+      "changes": [
+        "extract candidates and validate_candidate functions only"
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/direct_history/dh_adapter.py",
+      "origin": "direct-history-screen-4h-v1/dh_adapter.py",
+      "original_sha256": "45dc20adafeb5b065bf4a21d398ffa504a9c72c331920ffe89c11a9da6428e91",
+      "publication_sha256": "9d4b120f915054ea0df15f82c405552fd33dcd63e083e813860eff7ab5c69446",
+      "changes": [
+        {
+          "before": "from dh_policy import",
+          "after": "from .dh_policy import"
+        },
+        {
+          "before": "from model_adapter import",
+          "after": "from .model_adapter import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/direct_history/model_adapter.py",
+      "origin": "direct-history-screen-4h-v1/model_adapter.py",
+      "original_sha256": "e6b02c324592fbd77c7ab4c65a9c9863365fe846cd5b8d024ce27857f6d90631",
+      "publication_sha256": "d655e3b1668157b90d8e9e4aa4c95283f3c77f7b516e5c560784f26d1c4eff40",
+      "changes": [
+        {
+          "before": "from history_head import",
+          "after": "from .history_head import"
+        }
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/direct_history/history_head.py",
+      "origin": "direct-history-screen-4h-v1/history_head.py",
+      "original_sha256": "5325b831303cce1fbe6a0dea235ea3d8475e7aae1f2e4a43024d9c205669344e",
+      "publication_sha256": "5325b831303cce1fbe6a0dea235ea3d8475e7aae1f2e4a43024d9c205669344e",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/direct_history/dh_policy.py",
+      "origin": "direct-history-screen-4h-v1/dh_policy.py",
+      "original_sha256": "78c9e95fa65b51102cbeac61ed848b82ed32f9c6f9190baf817bb45690dcf086",
+      "publication_sha256": "f28f31e470ce04ed846399fe12be7bf1f8d0352d537a6b353922b9c7b131e5eb",
+      "changes": [
+        "extract candidates and validate_candidate functions only"
+      ]
+    },
+    {
+      "path": "src/racepv/exploratory/c3/vendor/timexer_upstream/LICENSE",
+      "origin": "c3-timexer-3h-v1/vendor/timexer_upstream/LICENSE",
+      "original_sha256": "8a6caa178ea3f33ebff5d7bb5558628cf5b423305dc30d3630f86564c7db94a2",
+      "publication_sha256": "8a6caa178ea3f33ebff5d7bb5558628cf5b423305dc30d3630f86564c7db94a2",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/c3/vendor/timexer_upstream/layers/Embed.py",
+      "origin": "c3-timexer-3h-v1/vendor/timexer_upstream/layers/Embed.py",
+      "original_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "publication_sha256": "17e7c3577324c41a0da427a199c955b782fde905aabb1f7cbc3c4e15ebd4ae35",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/c3/vendor/timexer_upstream/layers/SelfAttention_Family.py",
+      "origin": "c3-timexer-3h-v1/vendor/timexer_upstream/layers/SelfAttention_Family.py",
+      "original_sha256": "6f6592aed0753e342fc04c01db70528c2eb191eeb067cd5fd4c8d348fddcb794",
+      "publication_sha256": "6f6592aed0753e342fc04c01db70528c2eb191eeb067cd5fd4c8d348fddcb794",
+      "changes": []
+    },
+    {
+      "path": "src/racepv/exploratory/c3/vendor/timexer_upstream/models/TimeXer.py",
+      "origin": "c3-timexer-3h-v1/vendor/timexer_upstream/models/TimeXer.py",
+      "original_sha256": "b334d7869544d0a5de7a35501d0342d7bd0be4ebda06ccc045855a42819728c0",
+      "publication_sha256": "b334d7869544d0a5de7a35501d0342d7bd0be4ebda06ccc045855a42819728c0",
+      "changes": []
+    },
+    {
+      "path": "tests/exploratory/c2/test_c2_model.py",
+      "origin": "c2-rawloss-3h-v1/test_c2_model.py",
+      "original_sha256": "18fc04e75e4b7e012a9ac798d81a06ca30011dd9c39dfa34026761f636c50e28",
+      "publication_sha256": "5af62d97924c79446267da223dfa07a5ec92892eba9ae0d35d37daa6b7e349d2",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/c2/test_rawloss.py",
+      "origin": "c2-rawloss-3h-v1/test_rawloss.py",
+      "original_sha256": "e82fa95b108139d446f8800ec6dd57fc0b9c4eb5e71a2c2b1196ab0acc1afced",
+      "publication_sha256": "553820a3c69058d3cac6120aab46d9ba107fbe8579077bf1579b9f1a69583516",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/c3/test_c3_model.py",
+      "origin": "c3-timexer-3h-v1/test_c3_model.py",
+      "original_sha256": "90df01b8d467a3f1c692916ca6ec88e0cff0af78a10205bd072634d4645bd3f2",
+      "publication_sha256": "0bea4794ecbfc72b7f175ce07c6e948d6c887479cd8a6bcffe70b4057429d375",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/location_gap/test_lg_adapter.py",
+      "origin": "location-gap-screen-4h-v1/test_lg_adapter.py",
+      "original_sha256": "793e113fce1d57ab9f6c890fbf1cb4aa84415fa47447fc9beefa864284f361c8",
+      "publication_sha256": "691f104276a277fdec33e6c227d5a5f0caa4803e5652335aa34302543b922972",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/direct_history/test_history_head.py",
+      "origin": "direct-history-screen-4h-v1/test_history_head.py",
+      "original_sha256": "4f450bb3d2db7550115d1067208fabb91cb1ada03307c90ba10a0218bb33112f",
+      "publication_sha256": "fdfda55e8c5e7c74455c3632065bdf21d2359e43d9e7cebd27fda2914ad602e9",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/direct_history/test_model_adapter.py",
+      "origin": "direct-history-screen-4h-v1/test_model_adapter.py",
+      "original_sha256": "8e7861dafcbffe3419857de886ab6985c63b54047e3d4dd3e0b1fdc86c67e8f5",
+      "publication_sha256": "5d201baa01b1efa86e9eff5bd0e6c70f88c55ef50628b16055a0ee4d57f98cf4",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    },
+    {
+      "path": "tests/exploratory/direct_history/fixtures.py",
+      "origin": "direct-history-screen-4h-v1/fixtures.py",
+      "original_sha256": "86067674dd36166abdc44f36f3482e30f1fd97ea3f0854010cc3d56a981fa7ab",
+      "publication_sha256": "638b351eed98876015ac1f616c232d57b37ee50f2df15c01ce6675ef1cb43adb",
+      "changes": [
+        "portable package imports and removal of machine-specific test bootstrap only"
+      ]
+    }
+  ]
+}

@@ -77,6 +77,15 @@ This review does not independently prove that every line is original.
 
 ## Runtime dependencies (not redistributed)
 
+The C3 exploration additionally redistributes an extracted Time-Series-Library
+TimeXer numerical core and three reference modules at commit
+`4e938a1767106324dd753b2a44832bf870a0252e`, copyright (c) 2021 THUML @
+Tsinghua University, MIT. The full notice is retained at
+`src/racepv/exploratory/c3/vendor/timexer_upstream/LICENSE` and packaged with C3.
+The task adaptation and import wiring are local; this is not the official full
+TimeXer experiment pipeline. The extracted implicit-causal-mask guard fails
+closed; C3 supplies explicit noncausal padding masks.
+
 `pyproject.toml` declares NumPy, pandas, PyYAML, SciPy, scikit-learn and PyTorch.
 Optional groups declare pvlib, LightGBM, NeuralForecast, pytorch-forecasting,
 xLSTM, mamba-ssm, pytest, pytest-cov and Ruff; setuptools and wheel are build

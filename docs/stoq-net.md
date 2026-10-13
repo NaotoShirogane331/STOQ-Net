@@ -1,5 +1,8 @@
 # STOQ-Net model and input guide
 
+Repository: [NaotoShirogane331/STOQ-Net](https://github.com/NaotoShirogane331/STOQ-Net).
+The Python distribution name `race-pv` and import namespace `racepv` are retained.
+
 ## Identity and architecture
 
 The paper name **STOQ-Net** maps to the existing **M1** entry in

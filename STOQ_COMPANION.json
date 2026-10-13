@@ -2,6 +2,13 @@
   "schema_version": 1,
   "date": "2026-10-13",
   "scope": "stoq_model_profile_docs_and_synthetic_interface_example",
+  "repository": {
+    "name": "STOQ-Net",
+    "full_name": "NaotoShirogane331/STOQ-Net",
+    "url": "https://github.com/NaotoShirogane331/STOQ-Net",
+    "python_distribution": "race-pv",
+    "python_import_namespace": "racepv"
+  },
   "base_commit": "b5b658b8a3640c311bffe918bdedc411acdd4b81",
   "model": {
     "display_name": "STOQ-Net",

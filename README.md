@@ -6,13 +6,21 @@ readout and one ordered seven-quantile head. The historical paper configuration
 uses a 48-hour history to forecast the next 6 hours on a 15-minute grid.
 
 The existing implementation is **`SingleHeadRaCEPV`**, registered as **`M1`**.
-The repository name and Python package remain `RaCE-PV-v1` and `race-pv`;
-no model class, checkpoint identifier or original source file is renamed.
+The repository is [STOQ-Net](https://github.com/NaotoShirogane331/STOQ-Net).
+The Python distribution remains `race-pv`, with imports under `racepv`;
+existing model classes and checkpoint identifiers retain their original names.
 
 ## Quick start: synthetic CPU interface demo
 
 Use Python 3.10–3.12 in an isolated environment with an appropriate PyTorch
-build. From this repository's root:
+build. Clone the repository using a GitHub account with access, then enter it:
+
+```bash
+git clone https://github.com/NaotoShirogane331/STOQ-Net.git
+cd STOQ-Net
+```
+
+Continue from the repository root:
 
 Linux/macOS:
 

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "scope": "stoq_model_profile_docs_and_synthetic_interface_example",
+  "base_commit": "b5b658b8a3640c311bffe918bdedc411acdd4b81",
+  "model": {
+    "display_name": "STOQ-Net",
+    "internal_id": "M1",
+    "module": "racepv.models.research_variants",
+    "class": "SingleHeadRaCEPV",
+    "factory": "build_research_candidate",
+    "revision": "racepv.research-single-head.v1",
+    "profile": "configs/stoq-paper-model.json",
+    "profile_scope": "model_constructor_only",
+    "historical_seeds": [13, 29, 47],
+    "resolved_config_fields": 51,
+    "three_seed_model_configs_identical": true,
+    "identity_record_sha256": "1cbcf32250f31639f1c0671f25df736290e4f038186248d34d9003f3f343d240",
+    "historical_backend": "mamba",
+    "demo_backend": "gru"
+  },
+  "preservation": {
+    "preexisting_src_files": 185,
+    "preexisting_src_byte_changes": false,
+    "historical_records_changed": false,
+    "older_configs_changed": false,
+    "license_changed": false,
+    "package_metadata_changed": false,
+    "manuscript_changed": false,
+    "visibility_changed": false
+  },
+  "verification": {
+    "python": "3.12.3",
+    "torch": "2.13.0+cu130",
+    "pytest": "9.1.1",
+    "device": "cpu",
+    "baseline_passed": 276,
+    "final_passed": 281,
+    "skipped": 6,
+    "subtests_passed": 25,
+    "new_example_tests_passed": 5,
+    "native_mamba_cuda_executed": false,
+    "packages_installed": false
+  },
+  "distributed_artifacts": {
+    "data": false,
+    "weights": false,
+    "predictions": false,
+    "private_logs": false,
+    "machine_configuration": false
+  },
+  "new_training_or_scoring": false,
+  "full_paper_reproduction_claim": false
+}

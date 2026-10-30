@@ -1,4 +1,4 @@
-# Keep this repository source-only.
+# Exclude local runtime inputs and private execution artifacts.
 /.git/
 .venv/
 venv/
@@ -36,3 +36,27 @@ id_ed25519*
 credentials*
 secrets*
 .DS_Store
+
+# Track only the reviewed paper result files covered by the companion guide.
+!/paper_results/Support_Counts/data/
+!/paper_results/Support_Counts/daily_valid_counts.csv
+!/paper_results/Support_Counts/data/valid_support_test.npz
+!/paper_results/Support_Counts/data/valid_support_validation.npz
+!/paper_results/Support_Counts/support_summary.csv
+!/paper_results/array-window-counts.csv
+!/paper_results/calibration_corrections.csv
+!/paper_results/common_support_metrics.csv
+!/paper_results/diagnostic-overall-per-seed.csv
+!/paper_results/diagnostic-strata-per-seed.csv
+!/paper_results/diagnostic-unavailable-groups-per-seed.csv
+!/paper_results/figure_data/figure_statistics.csv
+!/paper_results/figure_data/power-state-confusion-proportions.csv
+!/paper_results/main-per-seed.csv
+!/paper_results/main-strata-per-seed.csv
+!/paper_results/partition-support-counts.csv
+!/paper_results/power-state-classification-per-seed.csv
+!/paper_results/power-state-confusion-counts-per-seed.csv
+!/paper_results/prediction-intervals-per-seed.csv
+!/paper_results/six-block-tcn-comparison-per-seed.csv
+!/paper_results/structural-ablation-per-seed.csv
+!/paper_results/test-availability-cutoffs.csv

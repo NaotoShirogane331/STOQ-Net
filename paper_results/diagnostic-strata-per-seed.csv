@@ -1,0 +1,181 @@
+config,seed,stratum_type,stratum,n,test_qcrps_daylight,array_days
+STOQ-Net (complete model),13,true_power_state,stable,1087369,0.06351848290450793,4660
+STOQ-Net (complete model),13,true_power_state,ramp_up,61619,0.0677912044919274,1867
+STOQ-Net (complete model),13,true_power_state,ramp_down,61094,0.03234399816379835,1892
+STOQ-Net (complete model),13,daily_output_condition,low,407135,0.07178953159275107,1491
+STOQ-Net (complete model),13,daily_output_condition,middle,435639,0.05026712283767387,1600
+STOQ-Net (complete model),13,daily_output_condition,high,422472,0.059052253340939054,1564
+STOQ-Net (complete model),29,true_power_state,stable,1087369,0.06336842746659753,4660
+STOQ-Net (complete model),29,true_power_state,ramp_up,61619,0.06808857139166744,1867
+STOQ-Net (complete model),29,true_power_state,ramp_down,61094,0.03273288847747036,1892
+STOQ-Net (complete model),29,daily_output_condition,low,407135,0.07148403752621468,1491
+STOQ-Net (complete model),29,daily_output_condition,middle,435639,0.050139289443080506,1600
+STOQ-Net (complete model),29,daily_output_condition,high,422472,0.059203526455468274,1564
+STOQ-Net (complete model),47,true_power_state,stable,1087369,0.062476211445276764,4660
+STOQ-Net (complete model),47,true_power_state,ramp_up,61619,0.06892425550441127,1867
+STOQ-Net (complete model),47,true_power_state,ramp_down,61094,0.03388340751394033,1892
+STOQ-Net (complete model),47,daily_output_condition,low,407135,0.06992884474166973,1491
+STOQ-Net (complete model),47,daily_output_condition,middle,435639,0.04941916917570333,1600
+STOQ-Net (complete model),47,daily_output_condition,high,422472,0.05946345700483601,1564
+STOQ-Net (complete model),61,true_power_state,stable,1087369,0.06180848858578013,4660
+STOQ-Net (complete model),61,true_power_state,ramp_up,61619,0.06897207332061442,1867
+STOQ-Net (complete model),61,true_power_state,ramp_down,61094,0.03403640831856429,1892
+STOQ-Net (complete model),61,daily_output_condition,low,407135,0.06894674908546182,1491
+STOQ-Net (complete model),61,daily_output_condition,middle,435639,0.04885259468639622,1600
+STOQ-Net (complete model),61,daily_output_condition,high,422472,0.05929686526178843,1564
+STOQ-Net (complete model),79,true_power_state,stable,1087369,0.06272030361128292,4660
+STOQ-Net (complete model),79,true_power_state,ramp_up,61619,0.06887079425922016,1867
+STOQ-Net (complete model),79,true_power_state,ramp_down,61094,0.033787925642113935,1892
+STOQ-Net (complete model),79,daily_output_condition,low,407135,0.07030745695482471,1491
+STOQ-Net (complete model),79,daily_output_condition,middle,435639,0.04963521759805615,1600
+STOQ-Net (complete model),79,daily_output_condition,high,422472,0.059483429197225914,1564
+STOQ-Net (complete model),101,true_power_state,stable,1087369,0.06224901915887354,4660
+STOQ-Net (complete model),101,true_power_state,ramp_up,61619,0.06871956201766788,1867
+STOQ-Net (complete model),101,true_power_state,ramp_down,61094,0.03366286974061295,1892
+STOQ-Net (complete model),101,daily_output_condition,low,407135,0.06967992359306628,1491
+STOQ-Net (complete model),101,daily_output_condition,middle,435639,0.04920815445759846,1600
+STOQ-Net (complete model),101,daily_output_condition,high,422472,0.05926141075642897,1564
+STOQ-Net (complete model),127,true_power_state,stable,1087369,0.06265855272208702,4660
+STOQ-Net (complete model),127,true_power_state,ramp_up,61619,0.06813489873264389,1867
+STOQ-Net (complete model),127,true_power_state,ramp_down,61094,0.03283341161161339,1892
+STOQ-Net (complete model),127,daily_output_condition,low,407135,0.0704308005409287,1491
+STOQ-Net (complete model),127,daily_output_condition,middle,435639,0.04954554581087558,1600
+STOQ-Net (complete model),127,daily_output_condition,high,422472,0.05901786457233952,1564
+STOQ-Net (complete model),151,true_power_state,stable,1087369,0.06241107551617529,4660
+STOQ-Net (complete model),151,true_power_state,ramp_up,61619,0.06854244338180404,1867
+STOQ-Net (complete model),151,true_power_state,ramp_down,61094,0.033336114975242685,1892
+STOQ-Net (complete model),151,daily_output_condition,low,407135,0.06997310085846953,1491
+STOQ-Net (complete model),151,daily_output_condition,middle,435639,0.04935709771558491,1600
+STOQ-Net (complete model),151,daily_output_condition,high,422472,0.059162013513054175,1564
+STOQ-Net (complete model),181,true_power_state,stable,1087369,0.06300480029968444,4660
+STOQ-Net (complete model),181,true_power_state,ramp_up,61619,0.0681601498548307,1867
+STOQ-Net (complete model),181,true_power_state,ramp_down,61094,0.03285623106825063,1892
+STOQ-Net (complete model),181,daily_output_condition,low,407135,0.0709054484503902,1491
+STOQ-Net (complete model),181,daily_output_condition,middle,435639,0.049850219806747836,1600
+STOQ-Net (complete model),181,daily_output_condition,high,422472,0.05915000251825603,1564
+STOQ-Net (complete model),211,true_power_state,stable,1087369,0.06242080812849918,4660
+STOQ-Net (complete model),211,true_power_state,ramp_up,61619,0.06860838107163458,1867
+STOQ-Net (complete model),211,true_power_state,ramp_down,61094,0.033450113829915765,1892
+STOQ-Net (complete model),211,daily_output_condition,low,407135,0.06998931129190428,1491
+STOQ-Net (complete model),211,daily_output_condition,middle,435639,0.049349139255407806,1600
+STOQ-Net (complete model),211,daily_output_condition,high,422472,0.05920914207113504,1564
+Gradient-coupled diagnostic,13,true_power_state,stable,1087369,0.06690753789824848,4660
+Gradient-coupled diagnostic,13,true_power_state,ramp_up,61619,0.06324126673700974,1867
+Gradient-coupled diagnostic,13,true_power_state,ramp_down,61094,0.03015784746224901,1892
+Gradient-coupled diagnostic,13,daily_output_condition,low,407135,0.07768004079466911,1491
+Gradient-coupled diagnostic,13,daily_output_condition,middle,435639,0.05339160261684733,1600
+Gradient-coupled diagnostic,13,daily_output_condition,high,422472,0.057878974183693296,1564
+Gradient-coupled diagnostic,29,true_power_state,stable,1087369,0.06717637348416705,4660
+Gradient-coupled diagnostic,29,true_power_state,ramp_up,61619,0.06340967686697484,1867
+Gradient-coupled diagnostic,29,true_power_state,ramp_down,61094,0.030297566259861523,1892
+Gradient-coupled diagnostic,29,daily_output_condition,low,407135,0.07778350309650331,1491
+Gradient-coupled diagnostic,29,daily_output_condition,middle,435639,0.05368225096660431,1600
+Gradient-coupled diagnostic,29,daily_output_condition,high,422472,0.0582219957985132,1564
+Gradient-coupled diagnostic,47,true_power_state,stable,1087369,0.06629337901019319,4660
+Gradient-coupled diagnostic,47,true_power_state,ramp_up,61619,0.06335827739079826,1867
+Gradient-coupled diagnostic,47,true_power_state,ramp_down,61094,0.030279018149290928,1892
+Gradient-coupled diagnostic,47,daily_output_condition,low,407135,0.07686188892192447,1491
+Gradient-coupled diagnostic,47,daily_output_condition,middle,435639,0.052861071635466154,1600
+Gradient-coupled diagnostic,47,daily_output_condition,high,422472,0.05766046360973206,1564
+Gradient-coupled diagnostic,61,true_power_state,stable,1087369,0.06698285917932163,4660
+Gradient-coupled diagnostic,61,true_power_state,ramp_up,61619,0.06393847972076182,1867
+Gradient-coupled diagnostic,61,true_power_state,ramp_down,61094,0.030868214560138437,1892
+Gradient-coupled diagnostic,61,daily_output_condition,low,407135,0.07737327670140451,1491
+Gradient-coupled diagnostic,61,daily_output_condition,middle,435639,0.053564988583186084,1600
+Gradient-coupled diagnostic,61,daily_output_condition,high,422472,0.058421408127488875,1564
+Gradient-coupled diagnostic,79,true_power_state,stable,1087369,0.06707998044761386,4660
+Gradient-coupled diagnostic,79,true_power_state,ramp_up,61619,0.06289102903970768,1867
+Gradient-coupled diagnostic,79,true_power_state,ramp_down,61094,0.029636244757403864,1892
+Gradient-coupled diagnostic,79,daily_output_condition,low,407135,0.07800882026654593,1491
+Gradient-coupled diagnostic,79,daily_output_condition,middle,435639,0.0535347310792909,1600
+Gradient-coupled diagnostic,79,daily_output_condition,high,422472,0.05771092873960836,1564
+Gradient-coupled diagnostic,101,true_power_state,stable,1087369,0.06694173605897816,4660
+Gradient-coupled diagnostic,101,true_power_state,ramp_up,61619,0.06337277529786618,1867
+Gradient-coupled diagnostic,101,true_power_state,ramp_down,61094,0.03023990215074726,1892
+Gradient-coupled diagnostic,101,daily_output_condition,low,407135,0.0777367285471714,1491
+Gradient-coupled diagnostic,101,daily_output_condition,middle,435639,0.053433324009045616,1600
+Gradient-coupled diagnostic,101,daily_output_condition,high,422472,0.05789695296720746,1564
+Gradient-coupled diagnostic,127,true_power_state,stable,1087369,0.06544782745738739,4660
+Gradient-coupled diagnostic,127,true_power_state,ramp_up,61619,0.06410737653985579,1867
+Gradient-coupled diagnostic,127,true_power_state,ramp_down,61094,0.03140564253807973,1892
+Gradient-coupled diagnostic,127,daily_output_condition,low,407135,0.07542231378736358,1491
+Gradient-coupled diagnostic,127,daily_output_condition,middle,435639,0.05217882921082524,1600
+Gradient-coupled diagnostic,127,daily_output_condition,high,422472,0.057874306883182465,1564
+Gradient-coupled diagnostic,151,true_power_state,stable,1087369,0.06608406716565236,4660
+Gradient-coupled diagnostic,151,true_power_state,ramp_up,61619,0.06374373747790872,1867
+Gradient-coupled diagnostic,151,true_power_state,ramp_down,61094,0.030736044786370716,1892
+Gradient-coupled diagnostic,151,daily_output_condition,low,407135,0.07631913671881127,1491
+Gradient-coupled diagnostic,151,daily_output_condition,middle,435639,0.052705110118166136,1600
+Gradient-coupled diagnostic,151,daily_output_condition,high,422472,0.05793959136835004,1564
+Gradient-coupled diagnostic,181,true_power_state,stable,1087369,0.066667695738592,4660
+Gradient-coupled diagnostic,181,true_power_state,ramp_up,61619,0.0635019783428098,1867
+Gradient-coupled diagnostic,181,true_power_state,ramp_down,61094,0.0303927855098437,1892
+Gradient-coupled diagnostic,181,daily_output_condition,low,407135,0.07738209786024575,1491
+Gradient-coupled diagnostic,181,daily_output_condition,middle,435639,0.05317339182482741,1600
+Gradient-coupled diagnostic,181,daily_output_condition,high,422472,0.05784564984356938,1564
+Gradient-coupled diagnostic,211,true_power_state,stable,1087369,0.06642643061257635,4660
+Gradient-coupled diagnostic,211,true_power_state,ramp_up,61619,0.06330543751648877,1867
+Gradient-coupled diagnostic,211,true_power_state,ramp_down,61094,0.030201415551691316,1892
+Gradient-coupled diagnostic,211,daily_output_condition,low,407135,0.07706510218325796,1491
+Gradient-coupled diagnostic,211,daily_output_condition,middle,435639,0.05299022741996504,1600
+Gradient-coupled diagnostic,211,daily_output_condition,high,422472,0.05765336390708288,1564
+Diagnostic branch removed,13,true_power_state,stable,1087369,0.06684401998101164,4660
+Diagnostic branch removed,13,true_power_state,ramp_up,61619,0.07378342900715505,1867
+Diagnostic branch removed,13,true_power_state,ramp_down,61094,0.0411481634263617,1892
+Diagnostic branch removed,13,daily_output_condition,low,407135,0.08193728679462825,1491
+Diagnostic branch removed,13,daily_output_condition,middle,435639,0.05030627764817579,1600
+Diagnostic branch removed,13,daily_output_condition,high,422472,0.06015884723277989,1564
+Diagnostic branch removed,29,true_power_state,stable,1087369,0.06718546308105174,4660
+Diagnostic branch removed,29,true_power_state,ramp_up,61619,0.07365005653612264,1867
+Diagnostic branch removed,29,true_power_state,ramp_down,61094,0.040862751674971345,1892
+Diagnostic branch removed,29,daily_output_condition,low,407135,0.08278906161025595,1491
+Diagnostic branch removed,29,daily_output_condition,middle,435639,0.05052305909623938,1600
+Diagnostic branch removed,29,daily_output_condition,high,422472,0.059933155016574535,1564
+Diagnostic branch removed,47,true_power_state,stable,1087369,0.06758416563101961,4660
+Diagnostic branch removed,47,true_power_state,ramp_up,61619,0.07319266763198952,1867
+Diagnostic branch removed,47,true_power_state,ramp_down,61094,0.04028765670610509,1892
+Diagnostic branch removed,47,daily_output_condition,low,407135,0.08336693426424834,1491
+Diagnostic branch removed,47,daily_output_condition,middle,435639,0.050923380947145484,1600
+Diagnostic branch removed,47,daily_output_condition,high,422472,0.0598261117369647,1564
+Diagnostic branch removed,61,true_power_state,stable,1087369,0.06915756237057073,4660
+Diagnostic branch removed,61,true_power_state,ramp_up,61619,0.07328268378600097,1867
+Diagnostic branch removed,61,true_power_state,ramp_down,61094,0.04041004798147243,1892
+Diagnostic branch removed,61,daily_output_condition,low,407135,0.08539601536907036,1491
+Diagnostic branch removed,61,daily_output_condition,middle,435639,0.052301098870736,1600
+Diagnostic branch removed,61,daily_output_condition,high,422472,0.060565930420580366,1564
+Diagnostic branch removed,79,true_power_state,stable,1087369,0.06776519773028003,4660
+Diagnostic branch removed,79,true_power_state,ramp_up,61619,0.07440102166820811,1867
+Diagnostic branch removed,79,true_power_state,ramp_down,61094,0.04167513627459284,1892
+Diagnostic branch removed,79,daily_output_condition,low,407135,0.08285713092613108,1491
+Diagnostic branch removed,79,daily_output_condition,middle,435639,0.05115058324579924,1600
+Diagnostic branch removed,79,daily_output_condition,high,422472,0.06097713082610894,1564
+Diagnostic branch removed,101,true_power_state,stable,1087369,0.06696785463475342,4660
+Diagnostic branch removed,101,true_power_state,ramp_up,61619,0.07359666725281039,1867
+Diagnostic branch removed,101,true_power_state,ramp_down,61094,0.0408456803241859,1892
+Diagnostic branch removed,101,daily_output_condition,low,407135,0.08250142676950363,1491
+Diagnostic branch removed,101,daily_output_condition,middle,435639,0.05024690836179586,1600
+Diagnostic branch removed,101,daily_output_condition,high,422472,0.05992379668802396,1564
+Diagnostic branch removed,127,true_power_state,stable,1087369,0.06716609493011716,4660
+Diagnostic branch removed,127,true_power_state,ramp_up,61619,0.07320268914512325,1867
+Diagnostic branch removed,127,true_power_state,ramp_down,61094,0.040492952866220636,1892
+Diagnostic branch removed,127,daily_output_condition,low,407135,0.0830357785834398,1491
+Diagnostic branch removed,127,daily_output_condition,middle,435639,0.05043315079528229,1600
+Diagnostic branch removed,127,daily_output_condition,high,422472,0.05959763548743135,1564
+Diagnostic branch removed,151,true_power_state,stable,1087369,0.06756968336561976,4660
+Diagnostic branch removed,151,true_power_state,ramp_up,61619,0.07363750149532308,1867
+Diagnostic branch removed,151,true_power_state,ramp_down,61094,0.04097309922004711,1892
+Diagnostic branch removed,151,daily_output_condition,low,407135,0.08342394770719487,1491
+Diagnostic branch removed,151,daily_output_condition,middle,435639,0.050838795944689236,1600
+Diagnostic branch removed,151,daily_output_condition,high,422472,0.06000374441726638,1564
+Diagnostic branch removed,181,true_power_state,stable,1087369,0.06720554997181837,4660
+Diagnostic branch removed,181,true_power_state,ramp_up,61619,0.07384002348729991,1867
+Diagnostic branch removed,181,true_power_state,ramp_down,61094,0.04117451366743566,1892
+Diagnostic branch removed,181,daily_output_condition,low,407135,0.08231144368851985,1491
+Diagnostic branch removed,181,daily_output_condition,middle,435639,0.050637867791202246,1600
+Diagnostic branch removed,181,daily_output_condition,high,422472,0.06040892236957956,1564
+Diagnostic branch removed,211,true_power_state,stable,1087369,0.0670401269586538,4660
+Diagnostic branch removed,211,true_power_state,ramp_up,61619,0.07364760535374174,1867
+Diagnostic branch removed,211,true_power_state,ramp_down,61094,0.04107790302760072,1892
+Diagnostic branch removed,211,daily_output_condition,low,407135,0.08243987734015172,1491
+Diagnostic branch removed,211,daily_output_condition,middle,435639,0.05044213581140347,1600
+Diagnostic branch removed,211,daily_output_condition,high,422472,0.060014569010553444,1564

@@ -168,5 +168,7 @@ does not provide a Windows GRU-to-Mamba replacement. Requesting `mamba` leaves
 dependency/construction errors intact, without a silent fallback.
 
 Use `python examples/stoq_minimal.py --help` for supported demo options.
-No data, weights, prediction arrays or private execution bindings are supplied.
-See [`STOQ_COMPANION.md`](../STOQ_COMPANION.md) for the checks actually performed.
+No raw observations, per-cell targets or forecasts, trained weights, or private
+execution bindings are supplied. Recorded evaluation results and support
+exports are available in [paper_results](../paper_results/README.md).
+See the [historical verification record](archive/source-history/STOQ_COMPANION.md) for those interface checks, and the [current companion scope](paper-companion.md) for the supplied evaluation records.

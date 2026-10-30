@@ -77,7 +77,7 @@ Tests use small synthetic tensors; they cover shape/order, missingness, raw-loss
 gradient recovery, physical projection, independent state gradients, initialization
 and RNG preservation, role weights, direct-history locality, state-dict roundtrip,
 actual small synthetic optimizer steps, and copied TimeXer encoder parity.
-No real experiment is rerun. See root `VERIFICATION.md` for actual results/skips.
+No real experiment is rerun. See the [historical verification record](../../docs/archive/source-history/VERIFICATION.md) for those results/skips.
 
 The MIT Time-Series-Library core is pinned to
 `4e938a1767106324dd753b2a44832bf870a0252e`.

@@ -1,126 +1,104 @@
-# STOQ-Net — stable and transient representations for PV quantile forecasting
+# STOQ-Net
 
-STOQ-Net combines a stable pathway (clear-sky anchoring and harmonic residuals)
-with a transient sequence pathway. Their horizon representations feed one shared
-readout and one ordered seven-quantile head. The historical paper configuration
-uses a 48-hour history to forecast the next 6 hours on a 15-minute grid.
+STOQ-Net integrates stable and transient representations for intraday
+photovoltaic forecasting with ordered quantiles. The paper setting uses
+48 hours of history to predict the next six hours at 15-minute resolution.
+A shared readout and one ordered head produce seven forecast quantiles;
+a separate, gradient-isolated classifier provides power-state diagnostics.
 
-The existing implementation is **`SingleHeadRaCEPV`**, registered as **`M1`**.
-The repository is [STOQ-Net](https://github.com/NaotoShirogane331/STOQ-Net).
-The Python distribution remains `race-pv`, with imports under `racepv`;
-existing model classes and checkpoint identifiers retain their original names.
+This repository provides the model implementation and the paper's recorded
+evaluation results. The result archive supports summary aggregation and
+support-count verification. It does not contain the per-cell observations,
+forecasts or trained checkpoints needed for independent re-scoring of every
+reported metric or a complete experimental rerun.
 
-## Quick start: synthetic CPU interface demo
+## Start here
 
-Use Python 3.10–3.12 in an isolated environment with an appropriate PyTorch
-build. Clone the repository using a GitHub account with access, then enter it:
+| Resource | Contents |
+|---|---|
+| [Paper results](paper_results/README.md) | Experiments, manuscript table/figure map, CSV records and evaluation supports |
+| [Result workbook](paper_results/Results.xlsx) | English summaries of forecasting, diagnostic strata, classification, intervals and supports |
+| [Model and input guide](docs/stoq-net.md) | Architecture, tensor channels, masks and configuration semantics |
+| [Paper companion scope](docs/paper-companion.md) | Relationship between the source snapshot, historical model profile and current evaluation records |
+
+## Verify evaluation supports
+
+With Python, NumPy and pandas available, run from the repository root:
 
 ```bash
-git clone https://github.com/NaotoShirogane331/STOQ-Net.git
-cd STOQ-Net
+python paper_results/Support_Counts/reproduce_counts.py
 ```
 
-Continue from the repository root:
+This recomputes the six validation/test support counts used for Tables 7, 8
+and 10 from exported cell IDs. It checks cells, uniqueness, target-local
+array-days and daily counts through 36 comparisons. It does not train a
+model or calculate forecasting scores from predictions.
 
-Linux/macOS:
+The [result guide](paper_results/README.md) explains how to aggregate the
+recorded per-seed scores and how their scoring populations differ. Original
+observation data are identified through the source cited by the manuscript;
+they are not redistributed in this repository.
+
+## Run the model interface example
+
+Use Python 3.10–3.12 and a suitable PyTorch build in an isolated environment.
+From a checkout of this repository:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+```
+
+Activate it with `source .venv/bin/activate` on Linux/macOS or
+`.venv\Scripts\Activate.ps1` in Windows PowerShell, then run:
+
+```bash
 python -m pip install -e ".[dev]"
 python examples/stoq_minimal.py
 ```
 
-Windows PowerShell:
+The default example uses synthetic inputs, random initialization and the
+explicit CPU GRU backend. It checks the `[2, 24, 7]` tensor interface, ordered
+quantiles and night zeroing; it produces no paper-performance scores.
+These interface checks are separate from the evaluation records in
+`paper_results/`.
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install -e ".[dev]"
-python examples/stoq_minimal.py
-```
-
-The demo constructs a randomly initialized model with the **explicit GRU**
-backend and synthetic inputs. It reports the model revision, actual backend
-(`causal_conv_gru`) and output shape `[2, 24, 7]`. It checks finite, ordered,
-bounded quantiles and night zeroing. It reads no data or checkpoints and reports
-no forecast-performance scores.
-
-## Paper model configuration
-
-[configs/stoq-paper-model.json](configs/stoq-paper-model.json) contains the
-complete registered model configuration shared by historical seeds 13, 29 and
-47: `192` history steps, `24` forecast steps, `14/9/6` input dimensions and
-quantiles `0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95`.
-Its backend is explicitly **Mamba**, not the CPU demo's GRU.
-
-For a qualified Linux/CUDA environment with a matching PyTorch build:
+The paper model profile uses **Mamba**. In a compatible Linux/CUDA environment
+with a matching PyTorch build:
 
 ```bash
 python -m pip install -e ".[dev,mamba]"
 python examples/stoq_minimal.py --backbone mamba --device cuda
 ```
 
-Native Mamba requires its optional dependency and compatible CUDA kernels.
-Missing or unusable Mamba dependencies raise an error; this option does not
-silently select GRU. The `mamba` installation extra is Linux-only.
+This is also an untrained interface example. Mamba requires its optional
+dependency and compatible CUDA kernels; selecting Mamba never silently
+falls back to GRU.
 
-This JSON is a **model-only** profile. Preprocessing, training, checkpoint
-selection and interval calibration have separate contracts. The preserved
-[configs/base.yaml](configs/base.yaml) is a generic historical example, not
-the resolved STOQ-Net paper profile. See [the usage guide](docs/stoq-net.md)
-for ordered input fields, masks, output semantics and historical training facts.
+## Code and configuration
 
-## Repository guide
+STOQ-Net maps to `SingleHeadRaCEPV`, registered as `M1`. The existing Python
+distribution `race-pv` and import namespace `racepv` are retained.
 
 | Entry | Purpose |
 |---|---|
-| [src/racepv/models/research_variants.py](src/racepv/models/research_variants.py) | Existing `M1` factory and `SingleHeadRaCEPV` implementation |
-| [src/racepv/models/config.py](src/racepv/models/config.py) | Original configuration dataclass and validation |
-| [src/racepv/io.py](src/racepv/io.py) | Registered input-channel order |
-| [configs/stoq-paper-model.json](configs/stoq-paper-model.json) | Complete historical STOQ-Net model profile |
-| [examples/stoq_minimal.py](examples/stoq_minimal.py) | Small random-initialization synthetic demo |
-| [docs/stoq-net.md](docs/stoq-net.md) | Identity mapping and usage contract |
-| [tests/test_stoq_minimal.py](tests/test_stoq_minimal.py) | New example/configuration interface tests |
-| [STOQ_COMPANION.md](STOQ_COMPANION.md) | Scope and verification of this companion update |
+| [Model factory](src/racepv/models/research_variants.py) | `M1` registration and the single-head implementation |
+| [Model configuration](configs/stoq-paper-model.json) | Constructor profile preserved from three historical runs |
+| [Input ordering](src/racepv/io.py) | Registered history, future-known and static channels |
+| [Training engine](src/racepv/training/engine.py) | Training and checkpoint-selection implementation |
+| [Evaluation entry point](src/racepv/cli/evaluate.py) | Evaluation and calibration implementation requiring its input artifacts |
 
-## Verification
+The model-only JSON and generic `base.yaml` are not a resolved execution
+configuration for all ten seeds in the current result archive. See the
+[scope guide](docs/paper-companion.md) before attempting a paper rerun.
 
-After installing the development dependencies:
+## License and provenance
 
-```bash
-python -m pytest -q tests experiments/c_pilot/test_pilot_policy.py -p no:cacheprovider
-```
+The existing [MIT license](LICENSE), [third-party notices](THIRD_PARTY_NOTICE.md)
+and [upstream license files](licenses/) are retained. The source provider's
+terms govern its original observation data. No original observations or
+external pretrained weights are included here.
 
-These are synthetic engineering checks. Native Mamba/CUDA execution and paper
-performance reproduction are separate from the CPU checks. The actual checks
-for this update are recorded in [STOQ_COMPANION.md](STOQ_COMPANION.md).
-The earlier [VERIFICATION.md](VERIFICATION.md), [SNAPSHOT.json](SNAPSHOT.json)
-and [RELEASE_STATUS.json](RELEASE_STATUS.json) remain historical records;
-[SHA256SUMS](SHA256SUMS) covers the current repository payloads except itself.
-
-## Retained research library
-
-The original library and older C-family explorations remain available:
-[C pilot](experiments/c_pilot/README.md) and
-[architecture explorations](experiments/c_variants/README.md).
-These historical development entries are distinct from the STOQ-Net `M1`
-entrypoint and do not replace it. Existing CLI routes may require data,
-bindings and scripts not supplied in this source-only repository.
-
-## 中文说明
-
-本仓库以论文模型 STOQ-Net 的使用入口为主线。它对应现有
-`SingleHeadRaCEPV`（内部 ID：`M1`），由稳定与瞬态双表征、共享读出和
-单个有序分位头构成。论文模型配置采用 Mamba；默认最小示例使用显式 GRU
-和合成输入，仅检查接口。原源码、旧探索与历史记录保留，不修改实验成绩。
-
-## License and distributed scope
-
-The existing [MIT license](LICENSE) and
-[third-party notices](THIRD_PARTY_NOTICE.md) remain unchanged.
-This is a source-only companion: no raw data, prepared observations,
-predictions, weights, private logs, credentials or machine configuration are
-included. Repository visibility remains private; this update does not publish
-a public release or modify the manuscript. See also
-[KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md).
+[Historical source records](docs/archive/README.md) document earlier code
+synchronizations and their verification scope. They do not validate the
+current paper's forecasting results. This companion is prepared in the
+existing repository; its access follows the repository's visibility settings.

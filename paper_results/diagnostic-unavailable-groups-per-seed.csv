@@ -1,0 +1,61 @@
+config,seed,stratum_type,stratum,n,test_qcrps_daylight,array_days
+STOQ-Net (complete model),13,true_power_state,unavailable,55624,0.01591833912636248,4636
+STOQ-Net (complete model),13,daily_output_condition,unavailable,460,0.07053856959727374,6
+STOQ-Net (complete model),29,true_power_state,unavailable,55624,0.016006717524597782,4636
+STOQ-Net (complete model),29,daily_output_condition,unavailable,460,0.07051797851417778,6
+STOQ-Net (complete model),47,true_power_state,unavailable,55624,0.016208376540052444,4636
+STOQ-Net (complete model),47,daily_output_condition,unavailable,460,0.07031227414130169,6
+STOQ-Net (complete model),61,true_power_state,unavailable,55624,0.016144825018239002,4636
+STOQ-Net (complete model),61,daily_output_condition,unavailable,460,0.06975922006202144,6
+STOQ-Net (complete model),79,true_power_state,unavailable,55624,0.016216531963652126,4636
+STOQ-Net (complete model),79,daily_output_condition,unavailable,460,0.07040183862745536,6
+STOQ-Net (complete model),101,true_power_state,unavailable,55624,0.016104581032763035,4636
+STOQ-Net (complete model),101,daily_output_condition,unavailable,460,0.0697203654876652,6
+STOQ-Net (complete model),127,true_power_state,unavailable,55624,0.015950358710410818,4636
+STOQ-Net (complete model),127,daily_output_condition,unavailable,460,0.07023489225412499,6
+STOQ-Net (complete model),151,true_power_state,unavailable,55624,0.016049458354263038,4636
+STOQ-Net (complete model),151,daily_output_condition,unavailable,460,0.06975649753615784,6
+STOQ-Net (complete model),181,true_power_state,unavailable,55624,0.015990628403446623,4636
+STOQ-Net (complete model),181,daily_output_condition,unavailable,460,0.06999726311950023,6
+STOQ-Net (complete model),211,true_power_state,unavailable,55624,0.016074746857876184,4636
+STOQ-Net (complete model),211,daily_output_condition,unavailable,460,0.06969983192573528,6
+Gradient-coupled diagnostic,13,true_power_state,unavailable,55624,0.01581215383887613,4636
+Gradient-coupled diagnostic,13,daily_output_condition,unavailable,460,0.07406784188933782,6
+Gradient-coupled diagnostic,29,true_power_state,unavailable,55624,0.01584828050653817,4636
+Gradient-coupled diagnostic,29,daily_output_condition,unavailable,460,0.07317290200508013,6
+Gradient-coupled diagnostic,47,true_power_state,unavailable,55624,0.015746279866823237,4636
+Gradient-coupled diagnostic,47,daily_output_condition,unavailable,460,0.07333788487421326,6
+Gradient-coupled diagnostic,61,true_power_state,unavailable,55624,0.01601027508451599,4636
+Gradient-coupled diagnostic,61,daily_output_condition,unavailable,460,0.07293874099595477,6
+Gradient-coupled diagnostic,79,true_power_state,unavailable,55624,0.01565489201941932,4636
+Gradient-coupled diagnostic,79,daily_output_condition,unavailable,460,0.07427997888114295,6
+Gradient-coupled diagnostic,101,true_power_state,unavailable,55624,0.015779682863845096,4636
+Gradient-coupled diagnostic,101,daily_output_condition,unavailable,460,0.07329776178063725,6
+Gradient-coupled diagnostic,127,true_power_state,unavailable,55624,0.01594275343883324,4636
+Gradient-coupled diagnostic,127,daily_output_condition,unavailable,460,0.07216585234721996,6
+Gradient-coupled diagnostic,151,true_power_state,unavailable,55624,0.01584092274431429,4636
+Gradient-coupled diagnostic,151,daily_output_condition,unavailable,460,0.07405773273340609,6
+Gradient-coupled diagnostic,181,true_power_state,unavailable,55624,0.015810212556259903,4636
+Gradient-coupled diagnostic,181,daily_output_condition,unavailable,460,0.07397199571873135,6
+Gradient-coupled diagnostic,211,true_power_state,unavailable,55624,0.01573949334172008,4636
+Gradient-coupled diagnostic,211,daily_output_condition,unavailable,460,0.07399135980500415,6
+Diagnostic branch removed,13,true_power_state,unavailable,55624,0.01750268869256371,4636
+Diagnostic branch removed,13,daily_output_condition,unavailable,460,0.06023798108259652,6
+Diagnostic branch removed,29,true_power_state,unavailable,55624,0.017505841007808776,4636
+Diagnostic branch removed,29,daily_output_condition,unavailable,460,0.060058876626284764,6
+Diagnostic branch removed,47,true_power_state,unavailable,55624,0.017394151625647346,4636
+Diagnostic branch removed,47,daily_output_condition,unavailable,460,0.05910296050573669,6
+Diagnostic branch removed,61,true_power_state,unavailable,55624,0.01766135882685327,4636
+Diagnostic branch removed,61,daily_output_condition,unavailable,460,0.05888508569808443,6
+Diagnostic branch removed,79,true_power_state,unavailable,55624,0.017801299298915895,4636
+Diagnostic branch removed,79,daily_output_condition,unavailable,460,0.061336400257273625,6
+Diagnostic branch removed,101,true_power_state,unavailable,55624,0.017496261275589398,4636
+Diagnostic branch removed,101,daily_output_condition,unavailable,460,0.059788397170087486,6
+Diagnostic branch removed,127,true_power_state,unavailable,55624,0.017339616620397142,4636
+Diagnostic branch removed,127,daily_output_condition,unavailable,460,0.06006505495831307,6
+Diagnostic branch removed,151,true_power_state,unavailable,55624,0.01754758123856121,4636
+Diagnostic branch removed,151,daily_output_condition,unavailable,460,0.060548545707359104,6
+Diagnostic branch removed,181,true_power_state,unavailable,55624,0.017570739866437285,4636
+Diagnostic branch removed,181,daily_output_condition,unavailable,460,0.05928844078539835,6
+Diagnostic branch removed,211,true_power_state,unavailable,55624,0.017539842829612084,4636
+Diagnostic branch removed,211,daily_output_condition,unavailable,460,0.05978514709979036,6

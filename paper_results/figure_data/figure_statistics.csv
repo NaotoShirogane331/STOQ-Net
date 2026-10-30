@@ -1,0 +1,646 @@
+figure,panel,source,filters,metric,n,mean,sd,paper_figure
+Figure05,a,main-per-seed.csv,"{""model"": ""STOQ-Net""}",val_qcrps_daylight,10,0.05941349365346764,0.0004084208543177299,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""LQF-Net""}",val_qcrps_daylight,10,0.059761509892173256,0.00037651026571736113,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""EQF-Net""}",val_qcrps_daylight,10,0.06105262206899874,0.00027918578005678034,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""RQF-Net""}",val_qcrps_daylight,10,0.059794908776305555,0.0003852083358544841,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""LSTM-QR""}",val_qcrps_daylight,10,0.06151998400417452,0.000435860783616666,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""TCN-QR""}",val_qcrps_daylight,10,0.06278136875907554,0.0004438110194894759,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""N-HiTS""}",val_qcrps_daylight,10,0.06185006779513345,0.0003891162445962835,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""xLSTM""}",val_qcrps_daylight,10,0.06296819894508586,0.00046576672298187895,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""S-Mamba-QR""}",val_qcrps_daylight,10,0.06458659407891587,0.00043515685253535564,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""PatchTST-QR""}",val_qcrps_daylight,10,0.0640203432348059,0.000231237168299305,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""DiPE-QR""}",val_qcrps_daylight,10,0.06534325085551529,0.00048755665886214946,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""TimeMixer++-QR""}",val_qcrps_daylight,10,0.06675961642052544,0.00043422556432748546,Figure 3
+Figure05,a,main-per-seed.csv,"{""model"": ""Timer-XL-QR""}",val_qcrps_daylight,10,0.06588535382102984,0.0005295791042571591,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""STOQ-Net""}",test_qcrps_daylight,10,0.059481318930321735,0.00040235211854706575,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""LQF-Net""}",test_qcrps_daylight,10,0.05980093508494102,0.0003726320663053656,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""EQF-Net""}",test_qcrps_daylight,10,0.06105197632361603,0.0002699418922450144,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""RQF-Net""}",test_qcrps_daylight,10,0.05979527824616878,0.00036788170091291844,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""LSTM-QR""}",test_qcrps_daylight,10,0.06151562624232489,0.0004359096482987651,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""TCN-QR""}",test_qcrps_daylight,10,0.06273350714497342,0.00044326833895651707,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""N-HiTS""}",test_qcrps_daylight,10,0.06178967389718567,0.00038063996835800945,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""xLSTM""}",test_qcrps_daylight,10,0.06287459889823886,0.0004504641624053041,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""S-Mamba-QR""}",test_qcrps_daylight,10,0.06448103379316411,0.00043552882881700864,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""PatchTST-QR""}",test_qcrps_daylight,10,0.0639134411123051,0.00023913816479771287,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""DiPE-QR""}",test_qcrps_daylight,10,0.06519163359228575,0.00047843573716559987,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""TimeMixer++-QR""}",test_qcrps_daylight,10,0.0665615984379325,0.0004407610602365832,Figure 3
+Figure05,b,main-per-seed.csv,"{""model"": ""Timer-XL-QR""}",test_qcrps_daylight,10,0.06573245772653026,0.0005378716572785148,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""STOQ-Net""}",test_nrmse_daylight,10,0.1182318364492091,0.0005261034152549833,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""LQF-Net""}",test_nrmse_daylight,10,0.11822164795564469,0.00044457812902547016,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""EQF-Net""}",test_nrmse_daylight,10,0.1194061604367583,0.0004044563331684042,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""RQF-Net""}",test_nrmse_daylight,10,0.11730360178783461,0.0004401585858015208,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""LSTM-QR""}",test_nrmse_daylight,10,0.11867857924076877,0.0005265585141606479,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""TCN-QR""}",test_nrmse_daylight,10,0.120166959784301,0.0006213983642360297,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""N-HiTS""}",test_nrmse_daylight,10,0.1185719283069313,0.0005033492126274694,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""xLSTM""}",test_nrmse_daylight,10,0.1198970898397184,0.0005333481123299952,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""S-Mamba-QR""}",test_nrmse_daylight,10,0.12139743882173618,0.0005969394158120268,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""PatchTST-QR""}",test_nrmse_daylight,10,0.12045459131520131,0.0003154500102893472,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""DiPE-QR""}",test_nrmse_daylight,10,0.12219873528817912,0.0006247121635201011,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""TimeMixer++-QR""}",test_nrmse_daylight,10,0.12410140227754798,0.0005640928639154481,Figure 3
+Figure05,c,main-per-seed.csv,"{""model"": ""Timer-XL-QR""}",test_nrmse_daylight,10,0.12250488922522182,0.0008639602301542398,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""STOQ-Net""}",test_nmbe_daylight,10,0.03791413917585358,0.0012094317690413078,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""LQF-Net""}",test_nmbe_daylight,10,0.03837114351209122,0.000996189352780126,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""EQF-Net""}",test_nmbe_daylight,10,0.041256170899767984,0.0009596780588156094,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""RQF-Net""}",test_nmbe_daylight,10,0.03648076479224592,0.0010035002534714188,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""LSTM-QR""}",test_nmbe_daylight,10,0.0394231445696396,0.0010928625001714052,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""TCN-QR""}",test_nmbe_daylight,10,0.04233008059184813,0.0011234227750114192,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""N-HiTS""}",test_nmbe_daylight,10,0.03849289896695647,0.001303804060415011,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""xLSTM""}",test_nmbe_daylight,10,0.040223125642182035,0.0014106501653497582,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""S-Mamba-QR""}",test_nmbe_daylight,10,0.04256448544422939,0.001158381794602611,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""PatchTST-QR""}",test_nmbe_daylight,10,0.039092619935538545,0.000880094314339957,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""DiPE-QR""}",test_nmbe_daylight,10,0.04141792247054543,0.0013058579456411883,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""TimeMixer++-QR""}",test_nmbe_daylight,10,0.04412190622355856,0.0011310193543150257,Figure 3
+Figure05,d,main-per-seed.csv,"{""model"": ""Timer-XL-QR""}",test_nmbe_daylight,10,0.03896234317913947,0.0015696962675509336,Figure 3
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""STOQ-Net (complete model)""}",val_qcrps_daylight,10,0.05594796952673749,0.00030161050683654935,Figure 4
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""Stable learned outputs zeroed""}",val_qcrps_daylight,10,0.05652166620981104,0.0005611011961503769,Figure 4
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""Transient output zeroed""}",val_qcrps_daylight,10,0.06483347207245586,0.0009152857177268512,Figure 4
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""Two-block TCN replacement""}",val_qcrps_daylight,10,0.05860237633598203,0.0005069173805531559,Figure 4
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""Stable branch removed""}",val_qcrps_daylight,10,0.057087285146303346,0.00042024529290367617,Figure 4
+Figure06,a,structural-ablation-per-seed.csv,"{""model"": ""Transient branch removed""}",val_qcrps_daylight,10,0.06863736533622752,0.0008828176546972656,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""STOQ-Net (complete model)""}",test_qcrps_daylight,10,0.06278087268675295,0.0002915441086139299,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""Stable learned outputs zeroed""}",test_qcrps_daylight,10,0.0629815455815647,0.0004911936287997063,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""Transient output zeroed""}",test_qcrps_daylight,10,0.07158963473181701,0.0008752264135875668,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""Two-block TCN replacement""}",test_qcrps_daylight,10,0.06570548909980779,0.0005840787947614807,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""Stable branch removed""}",test_qcrps_daylight,10,0.06364267374038769,0.00044668399820321,Figure 4
+Figure06,b,structural-ablation-per-seed.csv,"{""model"": ""Transient branch removed""}",test_qcrps_daylight,10,0.07539947727737736,0.0009216565170561069,Figure 4
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""0.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.7800864721802505,0.002453796487585442,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""0.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.7317081021573235,0.004434657457594582,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""0.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.7499873921329668,0.0013546514133374763,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""1.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.7204600951752884,0.0032849085193821905,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""1.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.6987409682274925,0.003963492413119075,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""1.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6795194724676519,0.0028154864786901187,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""1.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.6604988343791243,0.003378926703387828,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""2.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.6459315565756582,0.0028400837677612463,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""2.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.6328340623905422,0.0026458902432206803,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""2.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6276484621945979,0.0034844869774536716,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""2.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.6198526298488106,0.0028249146251521553,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""3.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.6161034119483225,0.0029580017832060313,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""3.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.6128192563323811,0.0028575533335061256,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""3.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6200726422672301,0.0031666550816254017,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""3.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.6163388489734568,0.004013436939441878,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""4.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.617316847987865,0.002736339616690778,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""4.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.613587162198584,0.003386574741361182,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""4.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6176774905993547,0.002746654022894687,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""4.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.613192695787504,0.002250800736293135,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""5.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.6122239671163523,0.0027624818916050053,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""5.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.6112479115888382,0.0036838745528894445,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""5.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6135182080699634,0.002088787357449971,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""5.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.6066112629375434,0.0034465035139168735,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""6.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.6056987057829926,0.00308823924896951,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""0.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.6595205488615483,0.006928886042436123,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""0.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.6432471907481133,0.005806986831898645,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""0.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.6344530471999741,0.010505467102379039,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""1.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.6133305727582824,0.01039659287008381,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""1.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.5974225733582547,0.009542192277090765,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""1.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.5805191395493734,0.010555979701114855,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""1.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.5649444936122833,0.010369802320511448,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""2.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.5515969859136487,0.006634026823931393,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""2.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.544004474305515,0.008142291523665877,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""2.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.5359490809910972,0.010078710274289073,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""2.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.5314433506953502,0.009434001794346293,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""3.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.5252266597128659,0.008610443778916321,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""3.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.5282060649484575,0.006869999643685162,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""3.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.5310714101813374,0.008430746356720554,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""3.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.5285573961969592,0.008549791146100301,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""4.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.5269619553372834,0.00821990154647535,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""4.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.5303758578052038,0.008896902247791827,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""4.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.5293450435562124,0.008344008485331232,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""4.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.5264794971945699,0.008080260681292348,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""5.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.525881430573731,0.007008354835029854,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""5.25"", ""stratum_type"": ""lead""}",macro_f1,10,0.5275328617651455,0.008383443864621911,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""5.5"", ""stratum_type"": ""lead""}",macro_f1,10,0.5264139303118729,0.006150701727487489,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""5.75"", ""stratum_type"": ""lead""}",macro_f1,10,0.5222725831298693,0.0074631206488669066,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""6.0"", ""stratum_type"": ""lead""}",macro_f1,10,0.5197306889702122,0.007874194677115297,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""0.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.905086389877278,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""0.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.8038244094988826,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""0.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.6959455661710812,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""1.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.5881808106330904,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""1.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.5010719296311871,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""1.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.4365773187555592,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""1.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.386896670168978,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""2.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.348524368579463,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""2.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.323711944875741,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""2.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.3133018590280679,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""2.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.3084598347405148,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""3.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.306229421269674,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""3.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.3057977681962617,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""3.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.305952650270575,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""3.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.3058185193117727,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""4.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.3062547919488094,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""4.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.3058307478335295,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""4.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.3059897376235668,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""4.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.3058752984762986,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""5.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.3063283793803797,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""5.25"", ""stratum_type"": ""lead""}",macro_f1,1,0.3059019830149528,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""5.5"", ""stratum_type"": ""lead""}",macro_f1,1,0.3060560048531317,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""5.75"", ""stratum_type"": ""lead""}",macro_f1,1,0.3059414488658661,0.0,Figure 5
+Figure07,b,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""6.0"", ""stratum_type"": ""lead""}",macro_f1,1,0.3063914484753456,0.0,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""low"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.32062708333684176,0.0001588411011694885,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""middle"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.445731897837053,0.0032539648229956853,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""high"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.6997291103964822,0.0016906710436553796,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""unavailable"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.4055319891161667,0.005136852754484733,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""low"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.3109477763914415,0.0013836253196746156,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""middle"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.3741556035313725,0.004650641877873572,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""high"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.6361698109174998,0.006201025942454519,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""unavailable"", ""stratum_type"": ""daily_output_condition""}",macro_f1,10,0.3831302660151067,0.016442790180473985,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""low"", ""stratum_type"": ""daily_output_condition""}",macro_f1,1,0.3333333333333333,0.0,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""middle"", ""stratum_type"": ""daily_output_condition""}",macro_f1,1,0.372723827850785,0.0,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""high"", ""stratum_type"": ""daily_output_condition""}",macro_f1,1,0.3715181781623111,0.0,Figure 5
+Figure07,c,power-state-classification-per-seed.csv,"{""config"": ""State persistence"", ""stratum"": ""unavailable"", ""stratum_type"": ""daily_output_condition""}",macro_f1,1,0.3053297199638663,0.0,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""stable"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.06266361698387643,0.0005172779971537617,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""ramp_up"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.06848123340264213,0.000410829714592694,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""STOQ-Net (complete model)"", ""stratum"": ""ramp_down"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.033292336934152206,0.0005701704643948764,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""stable"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.066600788705273,0.0005419039870894531,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""ramp_up"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.0634870034930181,0.00035574121207625437,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Gradient-coupled diagnostic"", ""stratum"": ""ramp_down"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.030421468172567624,0.0004797067874812037,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Diagnostic branch removed"", ""stratum"": ""stable"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.06744857186548958,0.0006687826852297573,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Diagnostic branch removed"", ""stratum"": ""ramp_up"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.07362343453637742,0.0003587100286792401,Figure 5
+Figure07,d,diagnostic-strata-per-seed.csv,"{""config"": ""Diagnostic branch removed"", ""stratum"": ""ramp_down"", ""stratum_type"": ""true_power_state""}",test_qcrps_daylight,10,0.040894790516899315,0.0004162722672181993,Figure 5
+Figure08,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,48.07488468886139,0.8060210664450653,Figure 6
+Figure08,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",coverage_percent,10,81.99239791863197,0.05187706889499574,Figure 6
+Figure08,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",coverage_percent,10,82.20775598756741,0.06900950158477892,Figure 6
+Figure08,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.08694087286709327,0.0012365292551008021,Figure 6
+Figure08,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",width,10,0.2617960309619788,0.0016951059092812284,Figure 6
+Figure08,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",width,10,0.2620278957123603,0.001637681003708038,Figure 6
+Figure08,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5028529194975,0.003906143281829795,Figure 6
+Figure08,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",interval_score,10,0.39439585713178704,0.0017375193710716405,Figure 6
+Figure08,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",interval_score,10,0.39441074544653776,0.0017292318253294937,Figure 6
+Figure08,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,58.658922372178054,0.7745819237492906,Figure 6
+Figure08,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",coverage_percent,10,91.76508604683869,0.043507888960522524,Figure 6
+Figure08,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",coverage_percent,10,92.0702200985063,0.07913673800146208,Figure 6
+Figure08,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.11134630332005846,0.0015756554372271883,Figure 6
+Figure08,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",width,10,0.3880300481626766,0.002041312947846191,Figure 6
+Figure08,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",width,10,0.3885646284788755,0.001971450283137677,Figure 6
+Figure08,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8225366321188485,0.007375000700974794,Figure 6
+Figure08,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Standard CQR""}",interval_score,10,0.49932409514809317,0.0018633341528136475,Figure 6
+Figure08,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Expansion-only CQR""}",interval_score,10,0.4994109644864263,0.001843896298365438,Figure 6
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,48.07488468886139,0.8060210664450653,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,47.603369186841185,0.8470852115690619,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,46.113141598443875,0.4419844327978823,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,47.256250661686046,0.8421994438390592,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,45.427603250675915,0.6340245093823125,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,45.090044607515495,0.6377014814540254,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,45.71029923220716,0.5635825509168042,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,45.49916015251567,0.7779978378458697,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,44.25259104404972,0.6196495438684266,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,44.87359623798892,0.6310755074327997,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,44.615929765680185,0.6993822192144796,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,44.24570950915931,0.7029999436512562,Figure 7
+Figure09,80-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,44.856198832904326,0.5510374626973661,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.08694087286709327,0.0012365292551008021,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.08937653670750778,0.0013273235900080093,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.09119511515476171,0.00097785099789616,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.09327397964669648,0.0014841213471110176,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.09521622770442255,0.0008999055801741088,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.09857231170011074,0.0014664522308459739,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",width,10,0.10005549045017754,0.0009217181980123363,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",width,10,0.10297498157714087,0.0014024897927565586,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.10472509298055485,0.0013349671123780375,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.10667317338795645,0.0014455381336405193,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.10922908789241341,0.001503595006302615,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.1115790235960914,0.0015757411577543485,Figure 7
+Figure09,80-width,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.11373352605196847,0.0016342118937032867,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5028529194975,0.003906143281829795,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.502094734938936,0.004041862855065103,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5104391353671616,0.0023362786133782195,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.49649325739625655,0.00418562204040981,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5089273721562535,0.004513298149274354,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5160210031443282,0.00415430916774535,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.505430372176985,0.003878793827737135,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5122044823480989,0.0051630952478682575,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5244788682511625,0.004328453143508205,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5172674187694525,0.0030318940547110944,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5264648331995799,0.005185286097870036,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5367855030278144,0.0050059060407020555,Figure 7
+Figure09,80-interval_score,prediction-intervals-per-seed.csv,"{""level"": 80, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.5265848448616117,0.004566065536707282,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,58.658922372178054,0.7745819237492906,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,58.379536796064805,0.8523745034626499,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,56.98367551390292,0.47899718822829673,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,58.03975804807751,0.9086092148295355,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,56.1559082440946,0.6868212961613501,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,55.86136116918148,0.7163635901687019,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,56.4940910448398,0.613715677722173,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,56.221342081020396,0.8822858868608189,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,54.875342299080515,0.6804513324094406,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,55.52552488492588,0.6948683539844135,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,55.21563459444769,0.80495627974402,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,54.8109434576434,0.8101269961692179,Figure 7
+Figure09,90-coverage_percent,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",coverage_percent,10,55.49916015251567,0.6218045926430017,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.11134630332005846,0.0015756554372271883,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.11446714893593221,0.001691037467030523,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.11680395929963443,0.0012466443703332806,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",width,10,0.11946703858482421,0.0018907365240391544,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.12195813512648992,0.001145997669187789,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.1262504171951181,0.001868198646765353,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",width,10,0.12815228491106428,0.0011737744280088227,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",width,10,0.13188806544497517,0.0017857115958222454,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.13412972011312224,0.0016995452064244095,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.13662698243639726,0.0018398213202062764,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.1399019879404136,0.0019136791033296276,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.1429141190977397,0.0020051057772368713,Figure 7
+Figure09,90-width,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",width,10,0.14567206738765562,0.0020797239128478137,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""STOQ-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8225366321188485,0.007375000700974794,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.814743560382578,0.008077508700933395,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""EQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8229706100287256,0.004317507421034969,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""RQF-Net"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.7949196544726078,0.00855043058332293,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""LSTM-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8095654354160086,0.008462837814655903,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TCN-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8146603880368672,0.007743566105536282,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""N-HiTS"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.7933642258765862,0.007271684736945558,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""xLSTM"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.7995348761255041,0.010443065881770974,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""S-Mamba-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8157702655646706,0.00816306205217667,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""PatchTST-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8003925756175073,0.0068052638662211735,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""DiPE-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8119433023133358,0.01041625524025815,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""TimeMixer++-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8257954528943572,0.010315118331042565,Figure 7
+Figure09,90-interval_score,prediction-intervals-per-seed.csv,"{""level"": 90, ""model"": ""Timer-XL-QR"", ""treatment"": ""Uncalibrated""}",interval_score,10,0.8043844712525855,0.007897608035148058,Figure 7
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.006317832708954781,0.0001474771614999805,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0073859640774129294,0.00016480809425710978,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.008825303624898629,0.00016601701205758694,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0105682408902893,0.00017962987986997944,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.012550701939338781,0.0001817697564765968,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.014565733382961812,0.00018776190658152198,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01665861062332931,0.00018745811193811488,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01883846058305469,0.000195026005310414,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.021081490045698578,0.00019129291277937893,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02324394366771533,0.00019349863958767282,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02538149171610633,0.00020158238425278046,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.027516146237526528,0.00019604143143229038,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.029638415587393357,0.0001973494718325965,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03156674692335586,0.00020182553055532928,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.033437616082173896,0.00019877897505219704,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03528630669419554,0.00020446525468419125,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03714983939567472,0.00019967530575315848,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03893270545199802,0.0002035364058896321,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04073104070029199,0.0002035930002234485,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04257157788684779,0.00020073694580657374,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0444756854368832,0.00020387264072751642,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04630515373942619,0.00020716717237626313,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04815974910595135,0.0002075164574248409,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.05004778277516564,0.00021027175378344137,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0070279481778765,0.00014286213057188317,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.00802191713572248,0.00014924018163383086,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.00936934738773432,0.00015443604464724758,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.011021230986799361,0.00016685675372690508,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.012919236520845118,0.0001682020392292152,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.014867930908261651,0.00017126635982943718,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0169144469053375,0.00017547437721079584,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.019044389244718803,0.00017565020919755008,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.021250477264495662,0.000179602191660362,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02337209049338465,0.0001777659326066404,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02548881365091738,0.0001845998591284874,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02760827096043831,0.0001850113989911876,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02970921534571321,0.00018033266794792267,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03164562608093886,0.00018606352959293882,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.033503462303767766,0.00019511605567101942,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03535134130320452,0.0001788616555729503,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0372100105862797,0.00017874186794434395,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.038971325179099,0.00018218169805144844,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04074414012710345,0.00018762433160213993,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04255611579384248,0.0001838674249575201,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04442711050479213,0.00019318638841901687,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04622093969368539,0.00019364725345769366,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.048045042965685555,0.00019420112798756767,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04987789698674931,0.00018991770069374836,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.00810087640252595,0.00010746843457756468,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.00903172605486137,0.00011428281999634524,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.010313302045950221,0.00011706653819395425,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01189246310834265,0.00012179469394323501,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.013735804792311148,0.00012160695349469763,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01562532892013476,0.00012515136794064304,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01761653304726733,0.00013702247412824943,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.019699131880109827,0.00013553550468467428,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02187975927493301,0.00013212281773698789,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02397345315124867,0.00013462055232495585,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.026051576310216824,0.0001328841961409105,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.028153490429539796,0.00014074544332894886,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03024621523819877,0.00013448617548293397,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03217335327000663,0.00014057136672512198,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03403578665717833,0.00014729432194827673,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03587733803267649,0.00013413689422285207,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0377150689089799,0.0001405803465994422,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03945630675018616,0.0001389763177433522,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04121141999838146,0.00013644472378060966,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04300251820414545,0.00013212639103201353,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04484123764582819,0.00014064829430054845,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04658733234886104,0.00014082337644610914,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04836416561646154,0.00013737275927540435,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.05017075193221669,0.00013757570820434602,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.008247977612528021,0.0001466935216414851,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0090675560757053,0.00015440694711076568,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0102202908005755,0.00016475690742519887,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01169220712369195,0.00017046738287480247,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01342581124162141,0.00017040591340293688,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.015227006290579239,0.00018064645508440217,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.01714659072859858,0.00017748875232019782,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.019168429047902988,0.00017672109518792811,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0212928691138869,0.0001883912198303186,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02331766704282514,0.00018132581187540607,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.025377453701641607,0.00019368788449284396,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.02744373576164702,0.00019837560098047506,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.029524122517145163,0.00018550874593046516,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.031440887554473454,0.0002019619394909395,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03329847329489453,0.00019982933834268707,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03514053784882616,0.0001895401287176251,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03696849421426154,0.0001878896680938725,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.03870634736642854,0.00019333172878519325,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04041354319511502,0.00018932005819312172,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.042168259760773326,0.00019046685548616187,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.0439801235510412,0.00018894907037771586,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.045694419654035805,0.00019330137274253885,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.04741898507220153,0.00019559480558393815,Figure S2
+Figure10,validation-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""lead_h""}",qcrps,10,0.049163868910515295,0.00019597822502230661,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0063637979314644984,0.0001484993370843648,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0074883397608774506,0.0001611089588654095,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.00898473268653564,0.00016850170654200808,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01076177936392268,0.00017684734027849808,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01279941086168096,0.0001846669607610783,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.014872291619170008,0.00018240887275322508,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01701826726233957,0.00018550219761938555,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01921676653352744,0.00019250028893099045,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.021499498199419712,0.00019865186940904228,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02369270615853552,0.00018935894738021536,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02585904729149891,0.00020759832142548494,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02798572122495164,0.00019253616840728057,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.030115860372287168,0.00019669182180443533,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.032068577227878335,0.00020441124412719417,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03392523158959927,0.00019807673707295328,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0357441243454511,0.0001946517805268253,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.037588999513174376,0.0002011489866450303,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03936127653808513,0.00020118126927900522,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.041125458354400124,0.00019957639275777812,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04291480819009059,0.00021817448210201677,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04477448739584837,0.0002001109938355077,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04657224509053413,0.00020400375452858435,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04837651545064993,0.00020689560000406593,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.05020594192088157,0.00020096052339588468,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.00707733299321731,0.00013123076005028438,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.008113517553953429,0.00014509367497633375,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.00951303803092947,0.00015536013989623322,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01120887572643723,0.00015760286971458723,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.013148501349304708,0.00017394307998377972,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.015165495636214948,0.00017646375455220785,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01725005361654803,0.00017212671948138285,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.019402622410815792,0.00017842232615417818,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02164480736742147,0.00018109271913841312,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02380292887820887,0.0001813308054135343,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02595039642538064,0.00018368747674471565,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.028057749371108637,0.00018172513075964103,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.030185771606388162,0.00019168303449939558,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03212468659500618,0.00019073219550194953,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03398136121955494,0.0001953831280295332,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.035797057602669116,0.00018863807724115033,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03765382937521352,0.00018381912795506817,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03937853634261166,0.00019066341922738863,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04112701009630719,0.00018744077800362632,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04289181182117381,0.00018628634428330266,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04472672353815514,0.0001842964284308809,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.046477753410305786,0.0001914646353317212,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04825464836568375,0.0001854447436515043,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.05003160279469223,0.000196059393824023,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.008143519264220021,9.689501246447005e-05,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.009109480527611092,0.00010697929950384723,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.010451164853007152,0.00011430238954852986,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01206721142393767,0.00011471916460326334,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01395542330633795,0.000122470634850956,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.015888910036884578,0.00012434249090754977,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.017931477352809512,0.0001326563026554827,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.020028752283288997,0.00013282021307509955,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02225296405342913,0.00012750385802772025,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.024377630765023472,0.0001336843686747025,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.026499864252138274,0.0001412220103936421,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.028599065678612912,0.00013656690143931788,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.030693473305575397,0.00015274690552271675,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0326408181510758,0.0001410724709499408,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.034501308092233764,0.00013019899967082395,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.036306973762642095,0.0001439177884366336,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.038141030076500756,0.00013245671774625024,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03987164906607777,0.0001311782336787413,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04159416835937685,0.00013587907442543534,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0433213166161051,0.00013461554088587261,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04512634622068225,0.00013820473484183108,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04685062063502527,0.00013766637325709997,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04858698269474508,0.00012102227594785449,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.05031367724729674,0.0001472465128991264,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0083048603159148,0.00014961886695051842,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.00916151194951984,0.00015180859523642655,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""0.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01036730904909388,0.00016142642815950763,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.011867798815581952,0.00016962968557725225,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.01363753552126335,0.0001557893664714003,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.015475658462848272,0.00017144768491484758,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""1.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.017440015366543982,0.0001832847461421571,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.019490046532593043,0.00018924621211237244,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.021637079625511237,0.00018068097297014237,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.02372910805076307,0.00018702752448566793,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""2.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.025801700092329488,0.000189837609640478,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.027856933682568606,0.00018393359579992752,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.029958243640352034,0.00018737362696193645,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03187818544572183,0.00017998324523635253,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""3.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03374557510376221,0.000195200472463575,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03554643067557572,0.00018258982717221946,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.037378762594962193,0.0001736926171959232,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.03908867193769711,0.0001891547139930893,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""4.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04080633600303997,0.0001741574169895477,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04249830712981508,0.0001938699964058607,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.25"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.0442783453419819,0.00019139242075552417,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.045959441423367386,0.00017647669344899114,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""5.75"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04765021435898903,0.00017899429148229514,Figure S2
+Figure10,test-lead_h,main-strata-per-seed.csv,"{""label"": ""6.0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""lead_h""}",qcrps,10,0.04934343617853902,0.00019229137354688996,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02741018830401103,0.0002011718103841377,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027712498704461047,0.00019841351788538072,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027709977611294068,0.00019678669799889163,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028257770179893015,0.00019037217339547751,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.0270335628082884,0.00019304717429104347,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02738353430829498,0.00019847027028717574,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02826695571058115,0.00020248145680787355,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028122987946892292,0.00018804552815187848,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028158843018958955,0.0001861263643113627,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028425131759317036,0.00018127624111197627,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028133266965254883,0.0001926766690142615,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028999996599850548,0.00018039882137012658,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027527942187765005,0.00018451418728516778,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027861667345818037,0.00018169696012369237,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02782346057501291,0.00017223679380710656,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02845315442356619,0.00017428449339204058,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027144124719524133,0.00018147868097039615,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.0275039412131317,0.00018584144054660003,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028429793880805448,0.00019329994682628173,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028335388422510138,0.00017577565223544028,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02834741017706689,0.00017245233723179768,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02862913150875417,0.00016776169048399875,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02831898637346348,0.00017403976110021098,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.029205476546985208,0.00016620568610019502,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028123036977173832,0.00014286639514108176,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02847938290872413,0.00013488271053919043,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028390344240277345,0.00013319029037886238,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.029084448695849557,0.0001261161086743153,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02769992694259051,0.00013148476798462453,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028076223708379432,0.0001424356169847749,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.029064141900088665,0.00013903236598071154,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028982470823803806,0.00012644060826900953,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028962683853828563,0.00013026673991931595,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.029245137442495135,0.00011957207208423852,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02894437652128502,0.0001345812305474653,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.029821563191181334,0.00012188767633766908,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.0274445365813899,0.00019394624153283653,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02785475626644097,0.00019559815899971038,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027733963420047608,0.00018258744613454625,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02851911679269884,0.00018137657568856186,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027071634094962972,0.0001797231519448691,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.027417899755317453,0.00018238657094365635,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02843924695271179,0.00018466623146743988,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02843254377002078,0.00018163953093711726,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02841493499677545,0.00018257645541019818,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028739336951929643,0.00016942422387043756,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.028365262639259065,0.00017396956349009644,Figure S2
+Figure10,validation-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""array""}",qcrps,10,0.02933554776999785,0.00017325197720253775,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02799208112047752,0.00021530159316324193,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.027852745308839348,0.0002018097616860651,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02747222853067916,0.0002064250678358986,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028505051969148994,0.00017896957476516131,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028009102902253103,0.00020287662616344022,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028370315841054233,0.00019566571437050714,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028665760504323828,0.00021106188947746438,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029043855666530415,0.0001794975818196893,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02897697179852768,0.00017958167977522225,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02846488422137241,0.00017237559252301495,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028497347770666988,0.0001851350064130841,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02777682000314609,0.0001733978341159433,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028178188902519087,0.00019698114606980032,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02799057457626401,0.00018442688080107784,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.027565597353576332,0.00018621746211474352,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028680160381988985,0.00016849793684226092,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02812191757783284,0.000186756456135027,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02848132751662395,0.0001872386988252727,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028834127352991352,0.00019497602093645393,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029201780485746297,0.00016654976749067447,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02915182725139317,0.0001633653353123822,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02862161445661679,0.00016645641810753684,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028676274371265898,0.00016705499473074046,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02794666492344733,0.00016459746221721285,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028850622342582698,0.0001389386333021506,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02860479439599336,0.00013719942013258452,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028137602853249448,0.0001421818215968968,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02926274944335478,0.0001311631650805826,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028691299505000212,0.0001348479459358442,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029048625450869014,0.00012752739360743083,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029502624115829768,0.0001466123084165314,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02977528938496924,0.00011213926532351352,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029737383040311243,0.00012383591369285711,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02917531271574863,0.0001167588956021222,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029286656729079992,0.0001204713280471994,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02852305810624301,0.00012028312267617693,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""0"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02818571708216746,0.0001910473729496962,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""1"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.027954192538846862,0.00018207352459460033,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""2"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02742731606217847,0.00018512369820460875,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""3"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02872818352697512,0.00016796229009902747,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""4"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028025744966620792,0.0001767603801277195,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""5"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028406016021660152,0.00018788314484108524,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""6"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02884263847625761,0.0001882523706470881,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""7"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02921487986659655,0.000166278324538392,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""8"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.029223121266588832,0.00017332500697020525,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""9"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028660186311019152,0.00016547034935170544,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""10"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.02873607959409231,0.0001671916914682443,Figure S2
+Figure10,test-array,main-strata-per-seed.csv,"{""label"": ""11"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""array""}",qcrps,10,0.028006783028150257,0.0001592244508073564,Figure S2
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03120525870235754,0.0002328555522718233,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02795564932616047,0.0001849797195736378,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.022986289213805793,0.00013993432062572446,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""STOQ-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030310331399556505,0.00021883775396115264,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.031422641922464564,0.00021468957931015676,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02808004119539582,0.00017010428742912306,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.023106094723622357,0.00012977073363546875,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""LQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030518031180701725,0.00020116053872866688,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03217998627999115,0.00016064974736067816,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02862577254105762,0.00012569286232222188,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02355024510006381,9.14860195373485e-05,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""EQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03123287755798152,0.00015479932357478178,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.031474379881514844,0.0002182029447199268,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.028010907129726797,0.00017235154161837982,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02314647646659515,0.000135067641372442,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""RQF-Net"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030574999853231144,0.00020752211987259964,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""LSTM-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03247156619653715,0.00024870294597218774,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""LSTM-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.028719522825246875,0.00019808703668861466,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""LSTM-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02380363735687369,0.00014931982952348132,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""LSTM-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03149208096395387,0.00023187253037452733,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""TCN-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03322489172163344,0.0002538965077503013,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""TCN-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.029236885890065428,0.00020072219035143198,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""TCN-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02423071588626133,0.00015294125016255747,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""TCN-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03220456105584456,0.00023620360558720095,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""N-HiTS"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.032713062773964505,0.00022262287901428065,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""N-HiTS"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02875326208179011,0.00017530898603099098,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""N-HiTS"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02394369225176924,0.0001301658823193084,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""N-HiTS"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03172789394924807,0.00021390487018031979,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""xLSTM"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.033373822398631806,0.0002589795172649858,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""xLSTM"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02919329227395894,0.00021367478399220537,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""xLSTM"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.024347191536605244,0.00016246627708918019,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""xLSTM"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03236269222270692,0.00025166626478316317,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""S-Mamba-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03432749396301276,0.00024345922019998695,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""S-Mamba-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.029840119583746678,0.0001985963332132713,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""S-Mamba-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.0249630257431041,0.0001500028807965421,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""S-Mamba-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03322453979328715,0.000237488429661241,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""PatchTST-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.034019948298599306,0.0001295645749536235,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""PatchTST-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02950955803476001,0.00010688046511401205,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""PatchTST-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.024815503878582466,7.867848262853175e-05,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""PatchTST-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03294660515382281,0.0001285000222638678,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""DiPE-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.034809825574248304,0.0002762059665556232,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""DiPE-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030048674234665014,0.0002188252847624726,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""DiPE-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.025277584984729706,0.0001757447793885601,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""DiPE-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03367908947806289,0.00025503854920610466,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""TimeMixer++-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.035641606475167044,0.0002494081328759378,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""TimeMixer++-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030636702399418812,0.00019630785706023228,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""TimeMixer++-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.025767529631221493,0.00015299934592492807,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""TimeMixer++-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.0344743348145322,0.00022570709523393563,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""Timer-XL-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.035168676622619285,0.0003082990876468294,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""Timer-XL-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.030147450899746814,0.00023546790136899997,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""Timer-XL-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.02554527336562033,0.00017657924326613234,Figure S3
+Figure11,validation,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""Timer-XL-QR"", ""split"": ""validation"", ""stratum"": ""season""}",qcrps,10,0.03400192741569487,0.00028923371684612783,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03115847729702571,0.00022928129230145638,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.028083328907619425,0.00017970904702639028,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02318636898919879,0.00014188910763989008,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""STOQ-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.030388214290638416,0.00021189745325403078,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.031359128589135525,0.00020702014564561827,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.028199644426251603,0.00016997623519450603,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02329028813618677,0.00013398843462686732,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""LQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03056965347857305,0.00019564601643391304,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03208948659745499,0.00015858586027793338,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.028723722880879383,0.00011859135728367864,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02372451639702648,9.049659787630785e-05,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""EQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03124605732208548,0.00014388575915384502,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.0313868800920329,0.00020205005224665075,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02812456624238179,0.00016345966265739,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02329595366678799,0.00013582205604873666,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""RQF-Net"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.030593995124794972,0.00019555952643419912,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""LSTM-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03237527729366372,0.0002434540983866547,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""LSTM-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.028812024506225404,0.00019761141269433453,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""LSTM-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.023962931732018872,0.00015710575647190304,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""LSTM-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03150645243787386,0.00022842586488036382,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""TCN-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03309117594941285,0.0002488162976959133,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""TCN-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.029306289853622536,0.00019138320625850024,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""TCN-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02438546717997287,0.0001569749432551273,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""TCN-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03217396645620255,0.00024158141960158142,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""N-HiTS"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.032581717152749434,0.00021602570927040267,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""N-HiTS"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02882217573569331,0.00017061613194152604,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""N-HiTS"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02407061363742728,0.00013507077021562776,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""N-HiTS"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03169136167874724,0.0002005676568438543,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""xLSTM"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03323046258748179,0.00024990649150270284,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""xLSTM"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02924870494501965,0.0002081767602080572,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""xLSTM"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.024456053344427166,0.00015835368793145195,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""xLSTM"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03228088827451919,0.00023812154551074285,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""S-Mamba-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.034159641304179436,0.0002498760524624783,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""S-Mamba-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.029874186477063507,0.00020039760994978783,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""S-Mamba-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.025084263196936928,0.0001517382829762724,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""S-Mamba-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.0331367660294545,0.00022616142712198915,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""PatchTST-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03385649771605879,0.00013087741128029002,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""PatchTST-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02954838765841849,0.00010735313958814471,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""PatchTST-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.0249111966927572,8.33791681560566e-05,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""PatchTST-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03285852890856573,0.0001329875195856186,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""DiPE-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03461232579932495,0.0002648671270324918,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""DiPE-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03005811863323966,0.00021976434682475309,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""DiPE-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.025367030273677038,0.0001733550079027866,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""DiPE-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.033552637907965616,0.00025249878079542184,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""TimeMixer++-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03543172460579298,0.0002589223269447785,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""TimeMixer++-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03060010874183155,0.000189326119205442,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""TimeMixer++-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02585046701482706,0.0001658115857881644,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""TimeMixer++-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.034296821166989,0.00022635024129779668,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""DJF"", ""model"": ""Timer-XL-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.034972681722799145,0.00029595327119801083,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""MAM"", ""model"": ""Timer-XL-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.030136422163743116,0.0002449797514589503,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""JJA"", ""model"": ""Timer-XL-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.02564005982297376,0.00019054256764355145,Figure S3
+Figure11,test,main-strata-per-seed.csv,"{""label"": ""SON"", ""model"": ""Timer-XL-QR"", ""split"": ""test"", ""stratum"": ""season""}",qcrps,10,0.03385878516495387,0.0002881821728628145,Figure S3

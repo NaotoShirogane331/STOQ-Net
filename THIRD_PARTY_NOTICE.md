@@ -106,7 +106,7 @@ not an endorsement of external terms or a claim that omitted workflows run.
 
 The owner confirmed the right to publish this extract on 2026-09-16, including
 necessary collaborator/institution permissions and absence of relevant
-confidentiality/patent restrictions. See `RELEASE_STATUS.json`.
+confidentiality/patent restrictions. See the historical `docs/archive/source-history/RELEASE_STATUS.json`.
 The review screened the release's source/configuration references and inspected
 the named adapters against available upstream source. It is a bounded attribution
 review, not an exhaustive plagiarism scan, an independent verification of
